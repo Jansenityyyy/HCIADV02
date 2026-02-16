@@ -1,11 +1,9 @@
-// Mobile Navigation Toggle
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
 
 navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
     
-    // Animate hamburger icon
     const spans = navToggle.querySelectorAll('span');
     if (navMenu.classList.contains('active')) {
         spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
@@ -18,7 +16,6 @@ navToggle.addEventListener('click', () => {
     }
 });
 
-// Mobile Dropdown Toggle
 const dropdowns = document.querySelectorAll('.dropdown');
 
 dropdowns.forEach(dropdown => {
@@ -28,20 +25,17 @@ dropdowns.forEach(dropdown => {
         if (window.innerWidth <= 1024) {
             e.preventDefault();
             
-            // Close other dropdowns
             dropdowns.forEach(otherDropdown => {
                 if (otherDropdown !== dropdown) {
                     otherDropdown.classList.remove('active');
                 }
             });
             
-            // Toggle current dropdown
             dropdown.classList.toggle('active');
         }
     });
 });
 
-// Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {
     if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
         navMenu.classList.remove('active');
@@ -52,12 +46,10 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Smooth Scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
         
-        // Don't prevent default for dropdown toggles
         if (href === '#about' || href === '#academics' || href === '#news' || 
             href === '#alumni' || href === '#elibrary' || href === '#admissions' || 
             href === '#contact') {
@@ -70,14 +62,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             e.preventDefault();
             
             const target = document.querySelector(href);
-            const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+            const offsetTop = target.offsetTop - 80;
             
             window.scrollTo({
                 top: offsetTop,
                 behavior: 'smooth'
             });
             
-            // Close mobile menu if open
             navMenu.classList.remove('active');
             const spans = navToggle.querySelectorAll('span');
             spans[0].style.transform = 'none';
@@ -87,7 +78,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Active Navigation Link on Scroll
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link');
 
@@ -112,7 +102,6 @@ function updateActiveLink() {
 
 window.addEventListener('scroll', updateActiveLink);
 
-// Navbar Background on Scroll
 const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
@@ -123,7 +112,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Intersection Observer for Fade-in Animations
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
@@ -138,7 +126,6 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe elements for animation
 const animateElements = document.querySelectorAll('.quick-link-card, .stat-card, .program-card, .news-card');
 
 animateElements.forEach(el => {
@@ -148,7 +135,6 @@ animateElements.forEach(el => {
     observer.observe(el);
 });
 
-// Counter Animation for Stats
 const statNumbers = document.querySelectorAll('.stat-number');
 
 const animateCounter = (element) => {
@@ -190,7 +176,6 @@ statNumbers.forEach(stat => {
     statsObserver.observe(stat);
 });
 
-// Add scroll reveal effect to section headers
 const sectionHeaders = document.querySelectorAll('.section-header');
 
 sectionHeaders.forEach(header => {
@@ -213,7 +198,6 @@ sectionHeaders.forEach(header => {
     headerObserver.observe(header);
 });
 
-// Parallax effect for hero section (subtle)
 const hero = document.querySelector('.hero');
 const heroContent = document.querySelector('.hero-content');
 
@@ -225,7 +209,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Lazy loading for background images (if you add them later)
 const lazyBackgrounds = document.querySelectorAll('[data-bg]');
 
 const bgObserver = new IntersectionObserver((entries) => {
@@ -242,14 +225,12 @@ lazyBackgrounds.forEach(bg => {
     bgObserver.observe(bg);
 });
 
-// Add year to footer copyright
 const currentYear = new Date().getFullYear();
 const footerText = document.querySelector('.footer-bottom p');
 if (footerText) {
     footerText.textContent = `© ${currentYear} University of Excellence. All rights reserved.`;
 }
 
-// Enhanced dropdown behavior for desktop
 if (window.innerWidth > 1024) {
     dropdowns.forEach(dropdown => {
         const menu = dropdown.querySelector('.dropdown-menu');
@@ -272,7 +253,6 @@ if (window.innerWidth > 1024) {
     });
 }
 
-// Prevent dropdown close on click inside (for mobile)
 dropdowns.forEach(dropdown => {
     const menu = dropdown.querySelector('.dropdown-menu');
     if (menu) {
@@ -282,7 +262,6 @@ dropdowns.forEach(dropdown => {
     }
 });
 
-// Add stagger animation to quick links
 const quickLinks = document.querySelectorAll('.quick-link-card');
 quickLinks.forEach((card, index) => {
     card.style.animationDelay = `${index * 0.1}s`;
