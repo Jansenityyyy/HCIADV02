@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amore Academy — Shaping Minds, Building the Future</title>
+    <link rel="stylesheet" href="Style.css" />
+
+    <link rel="icon" type="image/png" href="image/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <div class="school-crest">
+            <a href="Home.html"
+              ><img src="image/Amore_Academy_Logo.png" width="100px"
+            /></a>
+          </div>
+          <div class="brand-text-block">
+            <span class="brand-name">AMORE ACADEMY</span>
+            <span class="brand-tagline"
+              >Shaping Minds, Building the Future</span
+            >
+          </div>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+          <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="Home.html" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="about.html" class="nav-link"
+              >About <span class="dropdown-arrow">▾</span></a
+            >
+            <div class="dropdown-menu">
+              <div class="dropdown-section">
+                <h4>General Information</h4>
+                <a href="about.html#history">School History</a>
+                <a href="about.html#mission-vision">Mission and Vision</a>
+                <a href="about.html#core-values">Core Values</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="academics.html" class="nav-link"
+              >Academics <span class="dropdown-arrow">▾</span></a
+            >
+            <div class="dropdown-menu">
+              <div class="dropdown-section">
+                <h4>Programs Offered</h4>
+                <a href="academics.html#junior-high">Junior High School</a>
+                <a href="academics.html#senior-high">Senior High School</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="news.html" class="nav-link"
+              >News <span class="dropdown-arrow">▾</span></a
+            >
+            <div class="dropdown-menu">
+              <a href="news.html#announcements">Announcements</a>
+              <a href="news.html#events">Upcoming Events</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="admissions.html" class="nav-link"
+              >Admissions <span class="dropdown-arrow">▾</span></a
+            >
+            <div class="dropdown-menu">
+              <div class="dropdown-section">
+                <h4>Apply &amp; Enroll</h4>
+                <a href="admissions.html#apply">Apply Now</a>
+                <a href="admissions.html#enroll">Enroll Online</a>
+                <a href="admissions.html#procedure">Procedure for Enrollment</a>
+              </div>
+              <div class="dropdown-section">
+                <h4>Admission Requirements</h4>
+                <a href="admissions.html#requirements-jhs"
+                  >Junior High School</a
+                >
+                <a href="admissions.html#requirements-shs"
+                  >Senior High School</a
+                >
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="hero" id="home">
+      <div class="hero-background">
+        <img
+          src="image/hci bg.jpg"
+          alt="Campus Background"
+          class="hero-image"
+          loading="eager"
+        />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-logo">
+          <img src="image/Amore_Academy_Logo.png" alt="Amore Academy Logo" />
+        </div>
+        <h1 class="hero-title">
+          <span class="title-line">AMORE</span>
+          <span class="title-line emphasis">ACADEMY</span>
+        </h1>
+        <p class="hero-description">
+          Over the years, Amore Academy has stood firm in its commitment to
+          shaping young minds and nurturing compassionate hearts. Guided by its
+          core values of honor, integrity, and service, the academy has become
+          more than just a place of learning, but a community where students
+          grow into responsible and purpose-driven individuals.
+        </p>
+      </div>
+    </section>
+
+    <section class="quick-links">
+      <div class="container">
+        <div class="quick-link-grid">
+          <a href="admissions.html#apply" class="quick-link-card">
+            <div class="card-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <rect
+                  x="6"
+                  y="6"
+                  width="20"
+                  height="20"
+                  rx="2"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M12 16L14 18L20 12"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <h3>Apply &amp; Enroll</h3>
+            <p>Start your journey with us</p>
+          </a>
+          <a href="news.html" class="quick-link-card">
+            <div class="card-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <rect
+                  x="6"
+                  y="8"
+                  width="20"
+                  height="16"
+                  rx="2"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <line
+                  x1="10"
+                  y1="14"
+                  x2="22"
+                  y2="14"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <line
+                  x1="10"
+                  y1="18"
+                  x2="18"
+                  y2="18"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <h3>News &amp; Events</h3>
+            <p>Stay updated on campus life</p>
+          </a>
+          <a href="#" class="quick-link-card">
+            <div class="card-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <circle
+                  cx="16"
+                  cy="12"
+                  r="4"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M8 24C8 19.58 11.58 16 16 16C20.42 16 24 19.58 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <h3>Student Portal</h3>
+            <p>Access your account</p>
+          </a>
+          <a href="academics.html" class="quick-link-card">
+            <div class="card-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <rect
+                  x="8"
+                  y="10"
+                  width="16"
+                  height="12"
+                  rx="1"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M16 6L24 10L16 14L8 10L16 6Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>Programs</h3>
+            <p>Explore our academic offerings</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-preview" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">About Us</span>
+          <h2>Building Tomorrow's Leaders</h2>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <p class="lead">
+              For over five decades, Amore Academy has been at the forefront of
+              educational innovation, nurturing minds and shaping futures.
+            </p>
+            <p>
+              We believe in holistic education that goes beyond textbooks and
+              classrooms. Our commitment to excellence is reflected in our
+              state-of-the-art facilities, dedicated faculty, and comprehensive
+              programs designed to prepare students for the challenges of
+              tomorrow.
+            </p>
+            <a href="about.html#history" class="text-link"
+              >Explore our history →</a
+            >
+          </div>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number">5,000+</div>
+              <div class="stat-label">Students</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">300+</div>
+              <div class="stat-label">Faculty Members</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">95%</div>
+              <div class="stat-label">Graduate Success Rate</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">50+</div>
+              <div class="stat-label">Years of Excellence</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="programs" id="academics">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="section-label">Academic Programs</span>
+          <h2>Empowering Education at Every Level</h2>
+        </div>
+        <div class="programs-grid">
+          <div class="program-card">
+            <div class="program-number">01</div>
+            <h3>Junior High School</h3>
+            <p>
+              Developing well-rounded individuals with comprehensive core
+              subjects and diverse co-curricular activities.
+            </p>
+            <a href="academics.html#junior-high" class="card-link"
+              >Learn more →</a
+            >
+          </div>
+          <div class="program-card">
+            <div class="program-number">02</div>
+            <h3>Senior High School</h3>
+            <p>
+              Preparing students for higher education and career success through
+              specialized tracks and advanced learning.
+            </p>
+            <a href="academics.html#senior-high" class="card-link"
+              >Learn more →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="news-section" id="news">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Latest Updates</span>
+          <h2>News &amp; Announcements</h2>
+        </div>
+        <div class="news-grid">
+          <article class="news-card featured">
+            <div class="news-image">
+              <img src="image/science fair.jpg" alt="Annual Science Fair 2026" />
+            </div>
+            <div class="news-content">
+              <div class="news-meta">
+                <span class="news-date">February 10, 2026</span
+                ><span class="news-category">Events</span>
+              </div>
+              <h3>Annual Science Fair 2026: Innovation Showcase</h3>
+              <p>
+                Students present groundbreaking projects in science, technology,
+                and engineering. Join us for three days of innovation and
+                discovery.
+              </p>
+              <a href="news.html#featured" class="text-link">Read more →</a>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-image">
+              <img src="image/stemlab.png" alt="New STEM Laboratory" />
+            </div>
+            <div class="news-content">
+              <div class="news-meta">
+                <span class="news-date">February 8, 2026</span
+                ><span class="news-category">Academics</span>
+              </div>
+              <h3>New STEM Laboratory Opens</h3>
+              <p>
+                State-of-the-art facilities for hands-on learning in science and
+                mathematics.
+              </p>
+              <a href="news.html#announcements" class="text-link"
+                >Read more →</a
+              >
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-image">
+              <img src="image/enroll.jfif" alt="Enrollment Period Extended" />
+            </div>
+            <div class="news-content">
+              <div class="news-meta">
+                <span class="news-date">February 5, 2026</span
+                ><span class="news-category">Announcements</span>
+              </div>
+              <h3>Enrollment Period Extended</h3>
+              <p>
+                We're extending our enrollment deadline to accommodate more
+                aspiring students.
+              </p>
+              <a href="news.html#announcements" class="text-link"
+                >Read more →</a
+              >
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-image">
+              <img src="image/sports.jpg" alt="University Sports Fest 2026" />
+            </div>
+            <div class="news-content">
+              <div class="news-meta">
+                <span class="news-date">April 18, 2026</span>
+                <span class="news-category">Campus Life</span>
+              </div>
+              <h3>University Sports Fest 2026 Kicks Off</h3>
+              <p>
+                Get ready for an exciting week of sports competitions, team
+                spirit, and campus unity as students showcase their athletic
+                talents.
+              </p>
+              <a href="news.html#sportsfest" class="text-link">Read more →</a>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-image">
+              <img src="image/research.jfif" alt="College Research Conference 2026" />
+            </div>
+            <div class="news-content">
+              <div class="news-meta">
+                <span class="news-date">March 5, 2026</span>
+                <span class="news-category">Academics</span>
+              </div>
+              <h3>College Research Conference 2026</h3>
+              <p>
+                Faculty and students gather to present innovative research
+                studies across various disciplines. Experience insightful
+                discussions and knowledge sharing.
+              </p>
+              <a href="news.html#research" class="text-link">Read more →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="admissions">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to Join Our Community?</h2>
+          <p>
+            Take the first step towards an exceptional education. Apply now and
+            become part of our legacy of excellence.
+          </p>
+          <div class="cta-buttons">
+            <a href="admissions.html#apply" class="btn btn-light">Apply Now</a>
+            <a href="admissions.html#requirements-jhs" class="btn btn-outline"
+              >Admission Requirements</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <div class="footer-brand">
+              <div class="school-crest">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <circle
+                    cx="20"
+                    cy="20"
+                    r="18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path d="M20 8L26 14H14L20 8Z" fill="currentColor" />
+                  <rect
+                    x="18"
+                    y="14"
+                    width="4"
+                    height="12"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M12 26C12 22 16 20 20 20C24 20 28 22 28 26"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+              <h3>Amore Academy</h3>
+            </div>
+            <p>
+              Shaping minds and building futures. Excellence in education,
+              character, and service.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="academics.html">Academics</a></li>
+              <li><a href="admissions.html">Admissions</a></li>
+              <li><a href="news.html">News &amp; Events</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Programs</h4>
+            <ul>
+              <li>
+                <a href="academics.html#junior-high">Junior High School</a>
+              </li>
+              <li>
+                <a href="academics.html#senior-high">Senior High School</a>
+              </li>
+              <li>
+                <a href="admissions.html#requirements-jhs">JHS Requirements</a>
+              </li>
+              <li>
+                <a href="admissions.html#requirements-shs">SHS Requirements</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Contact</h4>
+            <ul class="contact-info">
+              <li>123 Excellence Avenue</li>
+              <li>Education City, Metro Manila</li>
+              <li>Phone: (02) 8123-4567</li>
+              <li>
+                Email:
+                <a
+                  href="/cdn-cgi/l/email-protection#ee87808881ae8f83819c8b8f8d8f8a8b8397c08b8a9bc09e86"
+                  ><span
+                    class="__cf_email__"
+                    data-cfemail="94fdfaf2fbd4f5f9fbe6f1f5f7f5f0f1f9edbaf1f0e1bae4fc"
+                    >[email&#160;protected]</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Amore Academy. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a><a href="#">Terms of Use</a
+            ><a href="#">Accessibility</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.JS"></script>
+  </body>
+</html>
