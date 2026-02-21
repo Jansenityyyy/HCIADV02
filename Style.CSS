@@ -951,6 +951,8 @@ section {
   overflow: hidden;
   border: 2px solid var(--color-border);
   transition: all var(--transition-normal);
+  display: flex;          
+  flex-direction: column; 
 }
 
 .news-card.featured {
@@ -991,6 +993,9 @@ section {
 
 .news-content {
   padding: var(--spacing-md);
+  display: flex;          
+  flex-direction: column; 
+  flex: 1;                
 }
 .news-meta {
   display: flex;
@@ -1014,7 +1019,9 @@ section {
 .news-card p {
   color: var(--color-text-medium);
   margin-bottom: var(--spacing-sm);
+  flex: 1; 
 }
+
 
 /* ===================================================================
    CTA SECTION
