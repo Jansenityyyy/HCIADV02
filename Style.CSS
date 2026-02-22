@@ -50,6 +50,7 @@
   --navbar-height: 80px;
   --navbar-height-tablet: 68px;
   --navbar-height-mobile: 60px;
+  --tab-bar-height: 64px;
 
   --container-max: 1280px;
   --container-nav-max: 1366px;
@@ -724,7 +725,7 @@ section {
 }
 
 /* ===================================================================
-   ABOUT PREVIEW (index.html)
+   ABOUT PREVIEW
    =================================================================== */
 .about-preview {
   background: var(--color-background);
@@ -933,7 +934,7 @@ section {
 }
 
 /* ===================================================================
-   NEWS SECTION (index.html)
+   NEWS SECTION
    =================================================================== */
 .news-section {
   background: var(--color-background);
@@ -951,8 +952,8 @@ section {
   overflow: hidden;
   border: 2px solid var(--color-border);
   transition: all var(--transition-normal);
-  display: flex;          
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
 }
 
 .news-card.featured {
@@ -993,9 +994,9 @@ section {
 
 .news-content {
   padding: var(--spacing-md);
-  display: flex;          
-  flex-direction: column; 
-  flex: 1;                
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .news-meta {
   display: flex;
@@ -1019,9 +1020,8 @@ section {
 .news-card p {
   color: var(--color-text-medium);
   margin-bottom: var(--spacing-sm);
-  flex: 1; 
+  flex: 1;
 }
-
 
 /* ===================================================================
    CTA SECTION
@@ -1220,12 +1220,10 @@ section {
   padding: 0 var(--container-padding);
   animation: fadeInUp 0.9s ease 0.2s both;
 }
-
 .about-page-hero-content .section-label {
   display: inline-block;
   margin-bottom: 0.75rem;
 }
-
 .about-page-hero-title {
   font-size: clamp(1.75rem, 5vw, 4rem);
   color: var(--color-white);
@@ -1235,7 +1233,6 @@ section {
   margin-bottom: 1rem;
   line-height: 1.1;
 }
-
 .about-page-hero-description {
   font-size: clamp(0.875rem, 1.2vw, 1.05rem);
   color: rgba(255, 255, 255, 0.88);
@@ -1254,7 +1251,6 @@ section {
   border-bottom: 2px solid var(--color-border);
   box-shadow: var(--shadow-sm);
 }
-
 .about-subnav-list {
   list-style: none;
   display: flex;
@@ -1265,7 +1261,6 @@ section {
 .about-subnav-list::-webkit-scrollbar {
   display: none;
 }
-
 .about-subnav-link {
   display: block;
   padding: clamp(0.75rem, 1.5vh, 1.1rem) clamp(1rem, 2vw, 1.75rem);
@@ -1499,7 +1494,6 @@ section {
   transition: all var(--transition-normal);
   box-shadow: var(--shadow-sm);
 }
-
 .about-value-card::after {
   content: "";
   position: absolute;
@@ -1592,7 +1586,6 @@ section {
   overflow: hidden;
   margin-top: var(--navbar-height);
 }
-
 .academics-hero-bg {
   position: absolute;
   inset: 0;
@@ -1627,7 +1620,6 @@ section {
   display: inline-block;
   margin-bottom: 0.75rem;
 }
-
 .academics-hero-title {
   font-size: clamp(1.75rem, 5vw, 4rem);
   color: var(--color-white);
@@ -1637,7 +1629,6 @@ section {
   margin-bottom: 1rem;
   line-height: 1.1;
 }
-
 .academics-hero-description {
   font-size: clamp(0.875rem, 1.2vw, 1.05rem);
   color: rgba(255, 255, 255, 0.88);
@@ -1666,7 +1657,6 @@ section {
 .academics-subnav-list::-webkit-scrollbar {
   display: none;
 }
-
 .academics-subnav-link {
   display: block;
   padding: clamp(0.75rem, 1.5vh, 1.1rem) clamp(1rem, 2vw, 1.75rem);
@@ -1821,6 +1811,16 @@ section {
     var(--color-primary-light) 50%,
     var(--color-info) 100%
   );
+}
+.academics-program-banner--jhs img,
+.academics-program-banner--shs img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 .academics-program-banner--shs {
   background: linear-gradient(
@@ -2109,6 +2109,13 @@ section {
   font-weight: 800;
   box-shadow: 0 6px 20px rgba(10, 36, 99, 0.22);
   transition: all var(--transition-normal);
+  overflow: hidden;
+}
+.academics-faculty-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 .academics-faculty-card:hover .academics-faculty-avatar {
   background: linear-gradient(
@@ -2149,7 +2156,6 @@ section {
   overflow: hidden;
   margin-top: var(--navbar-height);
 }
-
 .news-page-hero-bg {
   position: absolute;
   inset: 0;
@@ -2172,7 +2178,6 @@ section {
     rgba(6, 23, 57, 0.92) 100%
   );
 }
-
 .news-page-hero-content {
   position: relative;
   z-index: 2;
@@ -2221,7 +2226,6 @@ section {
 .news-page-subnav-list::-webkit-scrollbar {
   display: none;
 }
-
 .news-page-subnav-link {
   display: block;
   padding: clamp(0.75rem, 1.5vh, 1.1rem) clamp(1rem, 2vw, 1.75rem);
@@ -2312,6 +2316,15 @@ section {
   justify-content: center;
   overflow: hidden;
 }
+.news-page-featured-visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
 .news-page-featured-visual::after {
   content: "";
   position: absolute;
@@ -2321,6 +2334,8 @@ section {
     rgba(251, 133, 0, 0.15),
     transparent 65%
   );
+  pointer-events: none;
+  z-index: 1;
 }
 .news-page-featured-visual-icon {
   opacity: 0.15;
@@ -2331,6 +2346,7 @@ section {
   position: absolute;
   top: var(--spacing-sm);
   left: var(--spacing-sm);
+  z-index: 2;
   background: var(--color-accent);
   color: var(--color-white);
   padding: 0.4rem 1.1rem;
@@ -2340,7 +2356,6 @@ section {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   box-shadow: 0 4px 16px rgba(251, 133, 0, 0.4);
-  z-index: 2;
 }
 
 .news-page-featured-body {
@@ -2454,6 +2469,15 @@ section {
   justify-content: center;
   position: relative;
   overflow: hidden;
+}
+.news-page-article-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 .news-page-article-thumb--events {
   background: linear-gradient(
@@ -2908,9 +2932,6 @@ section {
   margin: 0;
 }
 
-/* ===================================================================
-   ADM ACTION GRID & CARD — Fixed to match track card style
-   =================================================================== */
 .adm-action-grid {
   display: flex;
   flex-direction: column;
@@ -2918,7 +2939,6 @@ section {
   margin-top: var(--spacing-md);
 }
 
-/* ---- Card: horizontal row ---- */
 .adm-action-card {
   display: flex;
   align-items: center;
@@ -2934,8 +2954,6 @@ section {
   overflow: hidden;
   transition: all var(--transition-normal);
 }
-
-/* Left accent stripe */
 .adm-action-card::before {
   content: "";
   position: absolute;
@@ -2958,7 +2976,6 @@ section {
 .adm-action-card::after {
   display: none;
 }
-
 .adm-action-card:hover {
   transform: translateX(6px);
   box-shadow: var(--shadow-lg);
@@ -2970,7 +2987,6 @@ section {
   );
 }
 
-/* Icon */
 .adm-action-icon {
   width: 52px;
   height: 52px;
@@ -2998,7 +3014,6 @@ section {
   box-shadow: 0 6px 20px rgba(251, 133, 0, 0.3);
 }
 
-/* Text block */
 .adm-action-body {
   flex: 1;
   min-width: 0;
@@ -3017,7 +3032,6 @@ section {
   flex: unset;
 }
 
-/* Arrow circle */
 .adm-action-arrow {
   flex-shrink: 0;
   width: 36px;
@@ -3036,24 +3050,6 @@ section {
   background: var(--color-accent);
   color: var(--color-white);
   transform: translateX(3px);
-}
-/* Mobile */
-@media (max-width: 600px) {
-  .adm-action-card {
-    padding: 1.125rem 1.25rem;
-    gap: 1rem;
-  }
-  .adm-action-icon {
-    width: 44px;
-    height: 44px;
-  }
-  .adm-action-arrow {
-    display: none;
-  }
-}
-/* Hide old card-link */
-.adm-action-card .card-link {
-  display: none;
 }
 
 .adm-req-tabs {
@@ -3255,9 +3251,15 @@ section {
 }
 
 /* ===================================================================
-   RESPONSIVE — MOBILE FIRST MEDIA QUERIES
+   BOTTOM TAB BAR — replaces burger menu on mobile
    =================================================================== */
+.mobile-tab-bar {
+  display: none;
+}
 
+/* ===================================================================
+   RESPONSIVE
+   =================================================================== */
 @media (min-width: 480px) {
   .about-values-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -3591,18 +3593,27 @@ section {
   }
 }
 
+/* ===================================================================
+   MOBILE — Bottom Tab Bar replaces burger (≤ 767px)
+   =================================================================== */
 @media (max-width: 767px) {
+  /* Kill the old hamburger approach entirely */
+  .nav-toggle {
+    display: none !important;
+  }
+  .nav-menu {
+    display: none !important;
+  }
+
   :root {
     --navbar-height: var(--navbar-height-mobile);
   }
+
   .nav-container {
     height: var(--navbar-height-mobile);
     padding: 0 1rem;
   }
-  .nav-menu {
-    top: var(--navbar-height-mobile);
-    max-height: calc(100dvh - var(--navbar-height-mobile));
-  }
+
   .hero {
     margin-top: var(--navbar-height-mobile);
     min-height: 420px;
@@ -3620,6 +3631,102 @@ section {
   .adm-subnav {
     top: var(--navbar-height-mobile);
   }
+
+  /* Show the bottom tab bar */
+  .mobile-tab-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1100;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid var(--color-border);
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.08);
+    padding-bottom: env(safe-area-inset-bottom);
+    height: calc(var(--tab-bar-height) + env(safe-area-inset-bottom));
+    align-items: stretch;
+  }
+
+  .mobile-tab-bar a {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-size: 0.6rem;
+    font-weight: 700;
+    font-family: var(--font-body);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 8px 2px;
+    transition: color var(--transition-fast);
+    position: relative;
+  }
+
+  /* Active indicator pill above icon */
+  .mobile-tab-bar a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 25%;
+    right: 25%;
+    height: 3px;
+    background: var(--color-accent);
+    border-radius: 0 0 3px 3px;
+    transform: scaleX(0);
+    transition: transform var(--transition-fast);
+  }
+
+  .mobile-tab-bar a.active {
+    color: var(--color-primary);
+  }
+
+  .mobile-tab-bar a.active::before {
+    transform: scaleX(1);
+  }
+
+  .mobile-tab-bar a:active {
+    color: var(--color-accent);
+    transform: scale(0.94);
+  }
+
+  /* Icon wrapper with active background pill */
+  .mobile-tab-bar .tab-icon {
+    width: 36px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    transition:
+      background var(--transition-fast),
+      transform var(--transition-fast);
+  }
+
+  .mobile-tab-bar a.active .tab-icon {
+    background: rgba(10, 36, 99, 0.08);
+  }
+
+  .mobile-tab-bar a svg {
+    transition: transform var(--transition-fast);
+  }
+
+  .mobile-tab-bar a:active svg {
+    transform: scale(0.85);
+  }
+
+  /* Push page content above tab bar */
+  body {
+    padding-bottom: calc(var(--tab-bar-height) + env(safe-area-inset-bottom));
+  }
+
+  /* Layout tweaks */
   .about-content {
     grid-template-columns: 1fr;
   }
@@ -3705,6 +3812,19 @@ section {
     grid-template-columns: 62px 1fr auto;
     padding: 0.75rem 1rem;
   }
+
+  /* Mobile action card */
+  .adm-action-card {
+    padding: 1.125rem 1.25rem;
+    gap: 1rem;
+  }
+  .adm-action-icon {
+    width: 44px;
+    height: 44px;
+  }
+  .adm-action-arrow {
+    display: none;
+  }
 }
 
 @media (max-width: 479px) {
@@ -3775,6 +3895,13 @@ section {
   h3 {
     font-size: 1.2rem;
   }
+  /* Tighten tab bar labels on very small screens */
+  .mobile-tab-bar a {
+    font-size: 0.52rem;
+  }
+  .mobile-tab-bar .tab-icon {
+    width: 30px;
+  }
 }
 
 @media (max-width: 767px) and (orientation: landscape) {
@@ -3801,6 +3928,16 @@ section {
     height: max(55vw, 240px);
     min-height: 220px;
   }
+  /* Thinner tab bar in landscape */
+  :root {
+    --tab-bar-height: 52px;
+  }
+  .mobile-tab-bar a {
+    font-size: 0;
+  } /* hide labels in landscape */
+  .mobile-tab-bar .tab-icon {
+    height: 36px;
+  }
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -3825,6 +3962,7 @@ section {
 @media print {
   .navbar,
   .nav-toggle,
+  .mobile-tab-bar,
   .cta-section,
   .footer {
     display: none !important;
