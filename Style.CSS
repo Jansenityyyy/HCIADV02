@@ -913,7 +913,6 @@ section {
   transition: all var(--transition-normal);
 }
 .program-card:hover .program-number {
-
   transform: scale(1.1);
 }
 
