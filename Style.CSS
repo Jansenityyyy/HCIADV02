@@ -908,13 +908,12 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  opacity: 0.2;
   margin-bottom: var(--spacing-sm);
   line-height: 0.9;
   transition: all var(--transition-normal);
 }
 .program-card:hover .program-number {
-  opacity: 0.3;
+
   transform: scale(1.1);
 }
 
