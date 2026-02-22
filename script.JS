@@ -447,7 +447,7 @@ const articleData = {
   },
   'graduation-event': {
     tag: 'Events', tagClass: 'news-page-tag--events',
-    date: 'May 2, 2026', image: 'image/schoolfair.png', imageAlt: 'Graduation Ceremony',
+    date: 'May 2, 2026', image: 'image/grad.jfif', imageAlt: 'Graduation Ceremony',
     title: 'Graduation Ceremony — Senior High School Batch 2026',
     byline: 'By the Amore Academy Academic Affairs Office · February 10, 2026',
     body: `
@@ -468,7 +468,7 @@ const articleData = {
   },
   'movingup-event': {
     tag: 'Events', tagClass: 'news-page-tag--events',
-    date: 'May 15, 2026', image: 'image/schoolfair.png', imageAlt: 'Moving Up Ceremony',
+    date: 'May 15, 2026', image: 'image/grad.jfif', imageAlt: 'Moving Up Ceremony',
     title: 'Junior High School Moving Up Ceremony',
     byline: 'By the Amore Academy Junior High Academic Office · February 10, 2026',
     body: `
