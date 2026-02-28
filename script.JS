@@ -584,3 +584,138 @@ const articleData = {
     }
   });
 })();
+/* ===================================================================
+   APPLY NOW PAGE — apply.html
+   =================================================================== */
+(function () {
+  // Only run on the apply page
+  if (!document.querySelector('.apply-steps-bar')) return;
+
+  // ---- Step bar highlight on scroll ----
+  const applySections = [
+    { id: 'sec-personal',  step: 1 },
+    { id: 'sec-program',   step: 2 },
+    { id: 'sec-academic',  step: 3 },
+    { id: 'sec-documents', step: 4 },
+    { id: 'sec-review',    step: 5 },
+  ];
+
+  function updateActiveStep() {
+    const scrollY = window.scrollY + 160;
+    let current = 1;
+    applySections.forEach(s => {
+      const el = document.getElementById(s.id);
+      if (el && el.offsetTop <= scrollY) current = s.step;
+    });
+    document.querySelectorAll('.apply-step-item').forEach(item => {
+      const step = parseInt(item.dataset.step);
+      item.classList.toggle('active',    step === current);
+      item.classList.toggle('completed', step < current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveStep, { passive: true });
+  updateActiveStep();
+
+  // ---- Scroll to section helper ----
+  window.scrollToSection = function (id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    window.scrollTo({ top: el.offsetTop - 140, behavior: 'smooth' });
+  };
+
+  // ---- SHS strand section reveal ----
+  document.querySelectorAll('input[name="level"]').forEach(r => {
+    r.addEventListener('change', () => {
+      const section = document.getElementById('shs-strand-section');
+      if (section) section.style.display = (r.value === 'SHS' && r.checked) ? 'block' : 'none';
+    });
+  });
+
+  // ---- File upload feedback ----
+  window.triggerUpload = function (id) {
+    const el = document.getElementById(id);
+    if (el) el.click();
+  };
+  window.updateUpload = function (input, labelId) {
+    const lbl = document.getElementById(labelId);
+    if (lbl && input.files.length > 0) {
+      lbl.textContent = '✓ ' + input.files[0].name;
+      lbl.style.color = 'var(--color-success)';
+    }
+  };
+
+  // ---- Live review summary ----
+  function updateReview() {
+    const fn = (document.getElementById('firstName') || {}).value || '';
+    const ln = (document.getElementById('lastName')  || {}).value || '';
+    const name = [fn.trim(), ln.trim()].filter(Boolean).join(' ');
+
+    const nameEl  = document.getElementById('review-name');
+    const emailEl = document.getElementById('review-email');
+    const levelEl = document.getElementById('review-level');
+    const typeEl  = document.getElementById('review-apptype');
+
+    if (nameEl)  nameEl.textContent  = name || '— not yet filled —';
+    if (emailEl) emailEl.textContent = (document.getElementById('email') || {}).value?.trim() || '—';
+
+    const levelRadio = document.querySelector('input[name="level"]:checked');
+    if (levelEl) levelEl.textContent = levelRadio
+      ? (levelRadio.value === 'JHS' ? 'Junior High School' : 'Senior High School')
+      : '—';
+
+    const typeRadio = document.querySelector('input[name="apptype"]:checked');
+    const typeMap   = { new: 'New Student', transfer: 'Transferee', returning: 'Returning Student' };
+    if (typeEl) typeEl.textContent = typeRadio ? (typeMap[typeRadio.value] || '—') : '—';
+  }
+
+  ['firstName', 'lastName', 'email'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('input', updateReview);
+  });
+  document.querySelectorAll('input[name="level"], input[name="apptype"]')
+    .forEach(r => r.addEventListener('change', updateReview));
+
+  // ---- Submit application ----
+  window.submitApplication = function () {
+    const allAgreed = ['agree1', 'agree2', 'agree3']
+      .every(id => document.getElementById(id)?.checked);
+
+    if (!allAgreed) {
+      alert('Please read and agree to all statements before submitting your application.');
+      return;
+    }
+
+    const ref = 'AA-2026-' + String(Math.floor(10000 + Math.random() * 90000));
+    const refEl = document.getElementById('refNumber');
+    if (refEl) refEl.textContent = ref;
+
+    const overlay = document.getElementById('successOverlay');
+    if (overlay) {
+      overlay.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  window.closeSuccess = function () {
+    const overlay = document.getElementById('successOverlay');
+    if (overlay) overlay.classList.remove('show');
+    document.body.style.overflow = '';
+    window.location.href = 'Home.html';
+  };
+
+  // Close modal when clicking backdrop
+  const successOverlay = document.getElementById('successOverlay');
+  if (successOverlay) {
+    successOverlay.addEventListener('click', function (e) {
+      if (e.target === this) window.closeSuccess();
+    });
+  }
+
+  // ---- Save draft toast ----
+  window.showSaveToast = function () {
+    const toast = document.getElementById('saveToast');
+    if (!toast) return;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2400);
+  };
+})();

@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply Now — Amore Academy</title>
+    <link rel="stylesheet" href="Style.css" />
+    <link rel="icon" type="image/png" href="image/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <div class="school-crest">
+            <a href="Home.html"><img src="image/Amore_Academy_Logo.png" width="100px" /></a>
+          </div>
+          <div class="brand-text-block">
+            <span class="brand-name">AMORE ACADEMY</span>
+            <span class="brand-tagline">Shaping Minds, Building the Future</span>
+          </div>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+          <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item"><a href="Home.html" class="nav-link">Home</a></li>
+          <li class="nav-item dropdown">
+            <a href="about.html" class="nav-link">About <span class="dropdown-arrow">▾</span></a>
+            <div class="dropdown-menu">
+              <div class="dropdown-section">
+                <h4>General Information</h4>
+                <a href="about.html#history">School History</a>
+                <a href="about.html#mission-vision">Mission and Vision</a>
+                <a href="about.html#core-values">Core Values</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="academics.html" class="nav-link">Academics <span class="dropdown-arrow">▾</span></a>
+            <div class="dropdown-menu">
+              <div class="dropdown-section">
+                <h4>Programs Offered</h4>
+                <a href="academics.html#junior-high">Junior High School</a>
+                <a href="academics.html#senior-high">Senior High School</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="news.html" class="nav-link">News <span class="dropdown-arrow">▾</span></a>
+            <div class="dropdown-menu">
+              <a href="news.html#announcements">Announcements</a>
+              <a href="news.html#events">Upcoming Events</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="admissions.html" class="nav-link active">Admissions <span class="dropdown-arrow">▾</span></a>
+            <div class="dropdown-menu">
+              <div class="dropdown-section">
+                <h4>Apply &amp; Enroll</h4>
+                <a href="apply.html">Apply Now</a>
+                <a href="admissions.html#enroll">Enroll Online</a>
+                <a href="admissions.html#procedure">Procedure for Enrollment</a>
+              </div>
+              <div class="dropdown-section">
+                <h4>Admission Requirements</h4>
+                <a href="admissions.html#requirements-jhs">Junior High School</a>
+                <a href="admissions.html#requirements-shs">Senior High School</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="apply-hero">
+      <div class="apply-hero-bg">
+        <img src="image/bg.png" alt="Campus" class="apply-hero-img" />
+        <div class="apply-hero-overlay"></div>
+      </div>
+      <div class="apply-hero-content">
+        <span class="apply-hero-label">Admissions 2026–2027</span>
+        <h1 class="apply-hero-title">Apply Now</h1>
+        <p class="apply-hero-sub">Begin your journey at Amore Academy — a place where your potential is shaped into purpose.</p>
+      </div>
+    </section>
+
+    <!-- STEP PROGRESS BAR -->
+    <div class="apply-steps-bar">
+      <div class="apply-steps-inner">
+        <div class="apply-step-item active" data-step="1" onclick="scrollToSection('sec-personal')">
+          <div class="apply-step-num">1</div>
+          <span class="apply-step-label">Personal Info</span>
+        </div>
+        <div class="apply-step-connector"></div>
+        <div class="apply-step-item" data-step="2" onclick="scrollToSection('sec-program')">
+          <div class="apply-step-num">2</div>
+          <span class="apply-step-label">Program &amp; Level</span>
+        </div>
+        <div class="apply-step-connector"></div>
+        <div class="apply-step-item" data-step="3" onclick="scrollToSection('sec-academic')">
+          <div class="apply-step-num">3</div>
+          <span class="apply-step-label">Academic Background</span>
+        </div>
+        <div class="apply-step-connector"></div>
+        <div class="apply-step-item" data-step="4" onclick="scrollToSection('sec-documents')">
+          <div class="apply-step-num">4</div>
+          <span class="apply-step-label">Documents</span>
+        </div>
+        <div class="apply-step-connector"></div>
+        <div class="apply-step-item" data-step="5" onclick="scrollToSection('sec-review')">
+          <div class="apply-step-num">5</div>
+          <span class="apply-step-label">Review &amp; Submit</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN BODY -->
+    <div class="apply-body">
+      <div class="apply-layout">
+
+        <!-- FORM COLUMN -->
+        <div class="apply-form-col">
+
+          <!-- 1. Personal Information -->
+          <div class="apply-panel" id="sec-personal">
+            <div class="apply-panel-header">
+              <div class="apply-panel-icon">
+                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+              </div>
+              <div>
+                <h2 class="apply-panel-title">Personal Information</h2>
+                <p class="apply-panel-subtitle">Tell us about the applicant</p>
+              </div>
+            </div>
+            <div class="apply-panel-body">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label class="form-label">First Name <span class="req">*</span></label>
+                  <input type="text" class="form-control" placeholder="e.g. Maria" id="firstName" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Middle Name</label>
+                  <input type="text" class="form-control" placeholder="e.g. Santos" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Last Name <span class="req">*</span></label>
+                  <input type="text" class="form-control" placeholder="e.g. Cruz" id="lastName" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Suffix</label>
+                  <select class="form-control">
+                    <option value="">None</option>
+                    <option>Jr.</option>
+                    <option>Sr.</option>
+                    <option>II</option>
+                    <option>III</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Date of Birth <span class="req">*</span></label>
+                  <input type="date" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Sex <span class="req">*</span></label>
+                  <select class="form-control">
+                    <option value="">Select</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                </div>
+                <div class="form-group full">
+                  <label class="form-label">Nationality <span class="req">*</span></label>
+                  <input type="text" class="form-control" placeholder="e.g. Filipino" value="Filipino" />
+                </div>
+                <div class="form-group full">
+                  <label class="form-label">Complete Address <span class="req">*</span></label>
+                  <textarea class="form-control" placeholder="House/Unit No., Street, Barangay, City/Municipality, Province" rows="2"></textarea>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <div class="form-section-title">Contact Details</div>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label class="form-label">Email Address <span class="req">*</span></label>
+                    <input type="email" class="form-control" placeholder="applicant@email.com" id="email" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Mobile Number <span class="req">*</span></label>
+                    <input type="tel" class="form-control" placeholder="09XX-XXX-XXXX" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <div class="form-section-title">Parent / Guardian</div>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label class="form-label">Full Name <span class="req">*</span></label>
+                    <input type="text" class="form-control" placeholder="Parent/Guardian name" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Relationship <span class="req">*</span></label>
+                    <select class="form-control">
+                      <option value="">Select</option>
+                      <option>Mother</option>
+                      <option>Father</option>
+                      <option>Legal Guardian</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Contact Number <span class="req">*</span></label>
+                    <input type="tel" class="form-control" placeholder="09XX-XXX-XXXX" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-control" placeholder="parent@email.com" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Program & Level -->
+          <div class="apply-panel" id="sec-program">
+            <div class="apply-panel-header">
+              <div class="apply-panel-icon">
+                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+              <div>
+                <h2 class="apply-panel-title">Program &amp; Level</h2>
+                <p class="apply-panel-subtitle">Choose the program you're applying for</p>
+              </div>
+            </div>
+            <div class="apply-panel-body">
+              <div class="form-group">
+                <label class="form-label">School Year <span class="req">*</span></label>
+                <div class="radio-group">
+                  <div class="radio-card">
+                    <input type="radio" name="sy" id="sy1" value="2026-2027" checked />
+                    <label for="sy1">2026–2027</label>
+                  </div>
+                  <div class="radio-card">
+                    <input type="radio" name="sy" id="sy2" value="2027-2028" />
+                    <label for="sy2">2027–2028</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <div class="form-section-title">Level of Application</div>
+                <div class="form-group">
+                  <div class="radio-group">
+                    <div class="radio-card">
+                      <input type="radio" name="level" id="lvl-jhs" value="JHS" />
+                      <label for="lvl-jhs">
+                        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                        Junior High School
+                      </label>
+                    </div>
+                    <div class="radio-card">
+                      <input type="radio" name="level" id="lvl-shs" value="SHS" />
+                      <label for="lvl-shs">
+                        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                        Senior High School
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-section" id="shs-strand-section" style="display:none;">
+                <div class="form-section-title">SHS Strand</div>
+                <div class="form-group">
+                  <label class="form-label">Preferred Strand <span class="req">*</span></label>
+                  <select class="form-control">
+                    <option value="">Select a strand</option>
+                    <optgroup label="Academic Track">
+                      <option>STEM – Science, Technology, Engineering &amp; Mathematics</option>
+                      <option>ABM – Accountancy, Business &amp; Management</option>
+                      <option>HUMSS – Humanities &amp; Social Sciences</option>
+                      <option>GAS – General Academic Strand</option>
+                    </optgroup>
+                    <optgroup label="Technical-Vocational-Livelihood Track">
+                      <option>TVL – Home Economics</option>
+                      <option>TVL – Information &amp; Communications Technology</option>
+                      <option>TVL – Industrial Arts</option>
+                    </optgroup>
+                  </select>
+                  <span class="form-hint">You may indicate a second preference below.</span>
+                </div>
+                <div class="form-group" style="margin-top:0.75rem;">
+                  <label class="form-label">Second Strand Preference</label>
+                  <select class="form-control">
+                    <option value="">None / Not sure yet</option>
+                    <optgroup label="Academic Track">
+                      <option>STEM</option>
+                      <option>ABM</option>
+                      <option>HUMSS</option>
+                      <option>GAS</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <div class="form-section-title">Application Type</div>
+                <div class="form-group">
+                  <div class="radio-group">
+                    <div class="radio-card">
+                      <input type="radio" name="apptype" id="type-new" value="new" checked />
+                      <label for="type-new">New Student</label>
+                    </div>
+                    <div class="radio-card">
+                      <input type="radio" name="apptype" id="type-transfer" value="transfer" />
+                      <label for="type-transfer">Transferee</label>
+                    </div>
+                    <div class="radio-card">
+                      <input type="radio" name="apptype" id="type-returning" value="returning" />
+                      <label for="type-returning">Returning Student</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Academic Background -->
+          <div class="apply-panel" id="sec-academic">
+            <div class="apply-panel-header">
+              <div class="apply-panel-icon">
+                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              </div>
+              <div>
+                <h2 class="apply-panel-title">Academic Background</h2>
+                <p class="apply-panel-subtitle">Previous school information</p>
+              </div>
+            </div>
+            <div class="apply-panel-body">
+              <div class="form-grid">
+                <div class="form-group full">
+                  <label class="form-label">Previous / Current School <span class="req">*</span></label>
+                  <input type="text" class="form-control" placeholder="Full school name" />
+                </div>
+                <div class="form-group full">
+                  <label class="form-label">School Address</label>
+                  <input type="text" class="form-control" placeholder="City / Municipality, Province" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Last Grade Level Completed <span class="req">*</span></label>
+                  <select class="form-control">
+                    <option value="">Select</option>
+                    <option>Grade 6</option>
+                    <option>Grade 7</option>
+                    <option>Grade 8</option>
+                    <option>Grade 9</option>
+                    <option>Grade 10</option>
+                    <option>Grade 11</option>
+                    <option>Grade 12</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">School Year Completed <span class="req">*</span></label>
+                  <input type="text" class="form-control" placeholder="e.g. 2024–2025" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">General Average <span class="req">*</span></label>
+                  <input type="number" class="form-control" placeholder="e.g. 90" min="60" max="100" step="0.01" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Awards / Honors Received</label>
+                  <input type="text" class="form-control" placeholder="e.g. With Honors, N/A" />
+                </div>
+              </div>
+
+              <div class="form-section">
+                <div class="form-section-title">Extracurricular Activities</div>
+                <div class="form-group">
+                  <label class="form-label">Organizations / Activities (optional)</label>
+                  <textarea class="form-control" placeholder="List any clubs, sports teams, or organizations you participated in..." rows="3"></textarea>
+                  <span class="form-hint">This helps us understand your interests and potential contributions to campus life.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Document Upload -->
+          <div class="apply-panel" id="sec-documents">
+            <div class="apply-panel-header">
+              <div class="apply-panel-icon">
+                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </div>
+              <div>
+                <h2 class="apply-panel-title">Document Uploads</h2>
+                <p class="apply-panel-subtitle">Submit required documents (PDF or JPG, max 5MB each)</p>
+              </div>
+            </div>
+            <div class="apply-panel-body">
+              <div class="form-section" style="margin-top:0; padding-top:0; border-top:none;">
+                <div class="form-group">
+                  <label class="form-label">Report Card / Form 138 <span class="req">*</span></label>
+                  <div class="upload-zone" onclick="triggerUpload('f138')">
+                    <input type="file" id="f138" accept=".pdf,.jpg,.jpeg,.png" style="display:none;" onchange="updateUpload(this,'lbl-f138')" />
+                    <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    <div class="upload-zone-label" id="lbl-f138">Click to upload or drag and drop</div>
+                    <div class="upload-zone-sub">PDF, JPG up to 5MB</div>
+                  </div>
+                </div>
+
+                <div class="form-group" style="margin-top:1.25rem;">
+                  <label class="form-label">Birth Certificate (PSA) <span class="req">*</span></label>
+                  <div class="upload-zone" onclick="triggerUpload('fpsa')">
+                    <input type="file" id="fpsa" accept=".pdf,.jpg,.jpeg,.png" style="display:none;" onchange="updateUpload(this,'lbl-fpsa')" />
+                    <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    <div class="upload-zone-label" id="lbl-fpsa">Click to upload or drag and drop</div>
+                    <div class="upload-zone-sub">PDF, JPG up to 5MB</div>
+                  </div>
+                </div>
+
+                <div class="form-group" style="margin-top:1.25rem;">
+                  <label class="form-label">2×2 ID Photo <span class="req">*</span></label>
+                  <div class="upload-zone" onclick="triggerUpload('fphoto')">
+                    <input type="file" id="fphoto" accept=".jpg,.jpeg,.png" style="display:none;" onchange="updateUpload(this,'lbl-fphoto')" />
+                    <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                    <div class="upload-zone-label" id="lbl-fphoto">Click to upload your photo</div>
+                    <div class="upload-zone-sub">JPG or PNG, white background preferred</div>
+                  </div>
+                </div>
+
+                <div class="form-group" style="margin-top:1.25rem;">
+                  <label class="form-label">Good Moral Certificate</label>
+                  <div class="upload-zone" onclick="triggerUpload('fgoodmoral')">
+                    <input type="file" id="fgoodmoral" accept=".pdf,.jpg,.jpeg,.png" style="display:none;" onchange="updateUpload(this,'lbl-fgoodmoral')" />
+                    <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    <div class="upload-zone-label" id="lbl-fgoodmoral">Click to upload or drag and drop</div>
+                    <div class="upload-zone-sub">PDF, JPG up to 5MB</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Review & Submit -->
+          <div class="apply-panel" id="sec-review">
+            <div class="apply-panel-header">
+              <div class="apply-panel-icon">
+                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <h2 class="apply-panel-title">Review &amp; Submit</h2>
+                <p class="apply-panel-subtitle">Please review and agree before submitting</p>
+              </div>
+            </div>
+            <div class="apply-panel-body">
+
+              <!-- Summary preview -->
+              <div class="apply-review-summary">
+                <div class="apply-review-grid">
+                  <div>
+                    <div class="apply-review-field-label">Applicant Name</div>
+                    <div class="apply-review-field-value" id="review-name">— not yet filled —</div>
+                  </div>
+                  <div>
+                    <div class="apply-review-field-label">Email</div>
+                    <div class="apply-review-field-value" id="review-email">—</div>
+                  </div>
+                  <div>
+                    <div class="apply-review-field-label">Level</div>
+                    <div class="apply-review-field-value" id="review-level">—</div>
+                  </div>
+                  <div>
+                    <div class="apply-review-field-label">Application Type</div>
+                    <div class="apply-review-field-value" id="review-apptype">—</div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="display:flex; flex-direction:column; gap:0.875rem; margin-bottom:1.5rem;">
+                <div class="agree-row">
+                  <input type="checkbox" id="agree1" />
+                  <label for="agree1">I certify that all information provided in this application is true, complete, and accurate to the best of my knowledge. I understand that any false information may result in the cancellation of my application.</label>
+                </div>
+                <div class="agree-row">
+                  <input type="checkbox" id="agree2" />
+                  <label for="agree2">I agree to Amore Academy's <a href="#">Privacy Policy</a> and consent to the processing of my personal data for the purpose of admission evaluation and enrollment procedures.</label>
+                </div>
+                <div class="agree-row">
+                  <input type="checkbox" id="agree3" />
+                  <label for="agree3">I understand that submission of this form does not guarantee admission. I will be notified of my application status via the email address I have provided.</label>
+                </div>
+              </div>
+
+              <button class="btn-submit" onclick="submitApplication()">
+                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Submit Application
+              </button>
+
+              <div class="save-draft-row" onclick="showSaveToast()">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                Save as Draft
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /form col -->
+
+        <!-- SIDEBAR -->
+        <div class="apply-sidebar">
+
+          <!-- Admission Timeline -->
+          <div class="info-card">
+            <div class="info-card-header">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <h3>Admission Timeline</h3>
+            </div>
+            <div class="info-card-body">
+              <div class="apply-timeline-list">
+
+                <div class="apply-timeline-item">
+                  <div class="apply-timeline-dot-col">
+                    <div class="apply-timeline-dot done"></div>
+                    <div class="apply-timeline-line"></div>
+                  </div>
+                  <div class="apply-timeline-content">
+                    <div class="apply-timeline-date">Jan 15 – Mar 15, 2026</div>
+                    <div class="apply-timeline-label">Application Period</div>
+                    <div class="apply-timeline-desc">Online applications are now open</div>
+                  </div>
+                </div>
+
+                <div class="apply-timeline-item">
+                  <div class="apply-timeline-dot-col">
+                    <div class="apply-timeline-dot"></div>
+                    <div class="apply-timeline-line"></div>
+                  </div>
+                  <div class="apply-timeline-content">
+                    <div class="apply-timeline-date">Mar 18 – Mar 28</div>
+                    <div class="apply-timeline-label">Entrance Examination</div>
+                    <div class="apply-timeline-desc">Schedule will be emailed to qualified applicants</div>
+                  </div>
+                </div>
+
+                <div class="apply-timeline-item">
+                  <div class="apply-timeline-dot-col">
+                    <div class="apply-timeline-dot"></div>
+                    <div class="apply-timeline-line"></div>
+                  </div>
+                  <div class="apply-timeline-content">
+                    <div class="apply-timeline-date">Apr 5 – Apr 10</div>
+                    <div class="apply-timeline-label">Results Released</div>
+                    <div class="apply-timeline-desc">Check your email for admission decision</div>
+                  </div>
+                </div>
+
+                <div class="apply-timeline-item">
+                  <div class="apply-timeline-dot-col">
+                    <div class="apply-timeline-dot"></div>
+                    <div class="apply-timeline-line"></div>
+                  </div>
+                  <div class="apply-timeline-content">
+                    <div class="apply-timeline-date">Apr 14 – May 9</div>
+                    <div class="apply-timeline-label">Enrollment Period</div>
+                    <div class="apply-timeline-desc">Accepted students complete enrollment</div>
+                  </div>
+                </div>
+
+                <div class="apply-timeline-item">
+                  <div class="apply-timeline-dot-col">
+                    <div class="apply-timeline-dot"></div>
+                  </div>
+                  <div class="apply-timeline-content">
+                    <div class="apply-timeline-date">June 2026</div>
+                    <div class="apply-timeline-label">Classes Begin</div>
+                    <div class="apply-timeline-desc">Welcome to Amore Academy!</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Requirements Checklist -->
+          <div class="info-card">
+            <div class="info-card-header">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <h3>Requirements Checklist</h3>
+            </div>
+            <div class="info-card-body">
+              <p style="font-size:0.8rem; color:var(--color-text-light); margin-bottom:1rem;">Prepare these documents before submitting your application:</p>
+              <div class="req-checklist">
+                <div class="req-check-item">
+                  <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  Report Card / Form 138
+                </div>
+                <div class="req-check-item">
+                  <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  PSA Birth Certificate
+                </div>
+                <div class="req-check-item">
+                  <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  2×2 ID Photo
+                </div>
+                <div class="req-check-item pending">
+                  <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  Good Moral Certificate (if applicable)
+                </div>
+                <div class="req-check-item pending">
+                  <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  Certificate of Transfer (transferees only)
+                </div>
+                <div class="req-check-item pending">
+                  <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  F137 / Transcript of Records (SHS only)
+                </div>
+              </div>
+              <a href="admissions.html#requirements-jhs" class="req-checklist-link">
+                View full requirements →
+              </a>
+            </div>
+          </div>
+
+          <!-- Need Help -->
+          <div class="contact-callout">
+            <h4>Need Help?</h4>
+            <p>Our admissions team is ready to assist you Monday – Friday, 8 AM to 5 PM.</p>
+            <a href="mailto:admissions@amoreacademy.edu.ph">Contact Admissions</a>
+          </div>
+
+        </div><!-- /sidebar -->
+
+      </div>
+    </div>
+
+    <!-- SUCCESS MODAL -->
+    <div class="success-overlay" id="successOverlay">
+      <div class="success-modal">
+        <div class="success-icon">
+          <svg width="36" height="36" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h2>Application Submitted!</h2>
+        <p>Thank you for applying to Amore Academy. Your reference number is:</p>
+        <div class="success-ref" id="refNumber">AA-2026-00000</div>
+        <p class="success-modal-note">A confirmation has been sent to your email address. Our admissions team will be in touch within 3–5 business days.</p>
+        <div class="success-actions">
+          <button class="success-btn-primary" onclick="closeSuccess()">Back to Home</button>
+          <a href="admissions.html" class="success-btn-outline">Admissions Info</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SAVE TOAST -->
+    <div class="save-toast" id="saveToast">
+      <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      Draft saved
+    </div>
+
+    <!-- MOBILE TAB BAR -->
+    <nav class="mobile-tab-bar">
+      <a href="Home.html">
+        <div class="tab-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        Home
+      </a>
+      <a href="about.html">
+        <div class="tab-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+        </div>
+        About
+      </a>
+      <a href="academics.html">
+        <div class="tab-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        Academics
+      </a>
+      <a href="news.html">
+        <div class="tab-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/>
+            <line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/><line x1="9" y1="15" x2="12" y2="15"/>
+          </svg>
+        </div>
+        News
+      </a>
+      <a href="admissions.html" class="active">
+        <div class="tab-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/>
+          </svg>
+        </div>
+        Admissions
+      </a>
+    </nav>
+
+    <script src="script.JS"></script>
+  </body>
+</html>
