@@ -3619,7 +3619,8 @@ section {
   .about-page-hero,
   .academics-hero,
   .news-page-hero,
-  .adm-hero {
+  .adm-hero,
+  .apply-hero {
     margin-top: var(--navbar-height-mobile);
     height: clamp(240px, 42vh, 360px);
   }
@@ -3657,12 +3658,12 @@ section {
     gap: 3px;
     text-decoration: none;
     color: var(--color-text-light);
-    font-size: 0.6rem;
+    font-size: 0.55rem;
     font-weight: 700;
     font-family: var(--font-body);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
-    padding: 8px 2px;
+    padding: 8px 1px;
     transition: color var(--transition-fast);
     position: relative;
   }
@@ -3696,8 +3697,8 @@ section {
 
   /* Icon wrapper with active background pill */
   .mobile-tab-bar .tab-icon {
-    width: 36px;
-    height: 28px;
+    width: 32px;
+    height: 26px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3893,12 +3894,14 @@ section {
   h3 {
     font-size: 1.2rem;
   }
-  /* Tighten tab bar labels on very small screens */
+  /* Tighten tab bar labels on very small screens (6 tabs) */
   .mobile-tab-bar a {
-    font-size: 0.52rem;
+    font-size: 0.46rem;
+    padding: 6px 1px;
+    letter-spacing: 0.02em;
   }
   .mobile-tab-bar .tab-icon {
-    width: 30px;
+    width: 26px;
   }
 }
 
