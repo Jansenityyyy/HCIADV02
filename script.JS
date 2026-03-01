@@ -1,3 +1,20 @@
+// ── Auto-highlight the correct mobile tab based on current page ──
+(function () {
+  const tabLinks = document.querySelectorAll('.mobile-tab-bar a');
+  if (!tabLinks.length) return;
+
+  // Get just the filename (e.g. "Home.HTML", "about.html") — case-insensitive compare
+  const currentFile = window.location.pathname.split('/').pop().toLowerCase() || 'home.html';
+
+  tabLinks.forEach(link => {
+    link.classList.remove('active');
+    const linkFile = link.getAttribute('href').split('/').pop().toLowerCase();
+    if (linkFile === currentFile) {
+      link.classList.add('active');
+    }
+  });
+})();
+
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
 
