@@ -12,34 +12,27 @@
       href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+
   </head>
   <body>
     <nav class="navbar">
       <div class="nav-container">
         <div class="nav-brand">
           <div class="school-crest">
-            <a href="Home.html"
-              ><img src="image/Amore_Academy_Logo.png" width="100px"
-            /></a>
+            <a href="Home.html"><img src="image/Amore_Academy_Logo.png" width="100px"/></a>
           </div>
           <div class="brand-text-block">
             <span class="brand-name">AMORE ACADEMY</span>
-            <span class="brand-tagline"
-              >Shaping Minds, Building the Future</span
-            >
+            <span class="brand-tagline">Shaping Minds, Building the Future</span>
           </div>
         </div>
         <div class="nav-toggle" id="navToggle">
           <span></span><span></span><span></span>
         </div>
         <ul class="nav-menu" id="navMenu">
-          <li class="nav-item">
-            <a href="Home.html" class="nav-link">Home</a>
-          </li>
+          <li class="nav-item"><a href="Home.html" class="nav-link">Home</a></li>
           <li class="nav-item dropdown">
-            <a href="about.html" class="nav-link"
-              >About <span class="dropdown-arrow">▾</span></a
-            >
+            <a href="about.html" class="nav-link">About <span class="dropdown-arrow">▾</span></a>
             <div class="dropdown-menu">
               <div class="dropdown-section">
                 <h4>General Information</h4>
@@ -50,9 +43,7 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a href="academics.html" class="nav-link"
-              >Academics <span class="dropdown-arrow">▾</span></a
-            >
+            <a href="academics.html" class="nav-link">Academics <span class="dropdown-arrow">▾</span></a>
             <div class="dropdown-menu">
               <div class="dropdown-section">
                 <h4>Programs Offered</h4>
@@ -62,18 +53,14 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a href="news.html" class="nav-link"
-              >News <span class="dropdown-arrow">▾</span></a
-            >
+            <a href="news.html" class="nav-link">News <span class="dropdown-arrow">▾</span></a>
             <div class="dropdown-menu">
               <a href="news.html#announcements">Announcements</a>
               <a href="news.html#events">Upcoming Events</a>
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a href="admissions.html" class="nav-link active"
-              >Admissions <span class="dropdown-arrow">▾</span></a
-            >
+            <a href="admissions.html" class="nav-link active">Admissions <span class="dropdown-arrow">▾</span></a>
             <div class="dropdown-menu">
               <div class="dropdown-section">
                 <h4>Apply &amp; Enroll</h4>
@@ -92,14 +79,10 @@
       </div>
     </nav>
 
+    <!-- HERO -->
     <section class="adm-hero">
       <div class="adm-hero-bg">
-        <img
-          src="image/bg.png"
-          alt="Campus"
-          class="adm-hero-img"
-          loading="eager"
-        />
+        <img src="image/bg.png" alt="Campus" class="adm-hero-img" loading="eager" />
         <div class="adm-hero-overlay"></div>
       </div>
       <div class="adm-hero-content">
@@ -112,144 +95,150 @@
       </div>
     </section>
 
+    <!-- SUBNAV -->
     <nav class="adm-subnav">
       <div class="container">
         <ul class="adm-subnav-list">
           <li><a href="apply.html" class="adm-subnav-link">Apply Now</a></li>
           <li><a href="#procedure" class="adm-subnav-link">Procedure</a></li>
-          <li>
-            <a href="#requirements-jhs" class="adm-subnav-link">Requirements</a>
-          </li>
+          <li><a href="#requirements-jhs" class="adm-subnav-link">Requirements</a></li>
         </ul>
       </div>
     </nav>
 
-    <!-- APPLY NOW -->
-    <section class="adm-section" id="apply">
+    <!-- =====================================================
+         APPLY NOW — ENROLLMENT-FOCUSED
+         ===================================================== -->
+    <section class="adm-enroll-section" id="apply">
       <div class="container">
-        <div class="section-header">
-          <span class="section-label">Start Here</span>
-          <h2>Apply Now</h2>
+
+        <!-- Deadline urgency banner -->
+        <div class="adm-deadline-banner">
+          <div class="adm-deadline-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <div class="adm-deadline-text">
+            <strong>Enrollment Deadline: March 15, 2026</strong>
+            <span>Slots are limited and filling fast — don't miss your chance to become an Amorean.</span>
+          </div>
+          <a href="apply.html" class="adm-deadline-cta">
+            Secure Your Slot
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
         </div>
-        <div class="adm-intro-grid">
-          <div class="adm-intro-text">
-            <p class="lead">
-              We welcome all aspiring Amoreans — students who are ready to
-              commit to academic excellence, personal growth, and service to
-              their community.
+
+        <!-- Hero enrollment card -->
+        <div class="adm-enroll-hero-card">
+          <div class="adm-enroll-hero-text">
+            <div class="adm-enroll-hero-eyebrow">
+              <span class="adm-enroll-eyebrow-dot"></span>
+              Now Accepting Applications — S.Y. 2026–2027
+            </div>
+            <h2 class="adm-enroll-hero-title">
+              Your Future Starts<br><span>at Amore Academy</span>
+            </h2>
+            <p class="adm-enroll-hero-desc">
+              Open for Junior High School (Grades 7–10) and Senior High School (Grades 11–12). Our process is simple, transparent, and fully supported — we're with you every step of the way.
             </p>
-            <p>
-              Applications for School Year 2026–2027 are now open for both
-              Junior High School (Grades 7–10) and Senior High School (Grades
-              11–12). Our admissions process is designed to be straightforward,
-              transparent, and supportive — we are here to guide you every step
-              of the way.
-            </p>
-            <p>
-              Slots are limited. We encourage all interested applicants to
-              submit their requirements as early as possible to secure a place
-              at Amore Academy.
-            </p>
-            <div
-              style="
-                display: flex;
-                gap: 1rem;
-                flex-wrap: wrap;
-                margin-top: var(--spacing-md);
-              "
-            >
-              <a href="#requirements-jhs" class="btn btn-primary"
-                >JHS Requirements</a
-              >
-              <a
-                href="#requirements-shs"
-                class="btn btn-outline"
-                style="
-                  color: var(--color-primary);
-                  border-color: var(--color-primary);
-                "
-                >SHS Requirements</a
-              >
+            <div class="adm-enroll-hero-actions">
+              <a href="apply.html" class="btn-enroll-main">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="12" y1="18" x2="12" y2="12"/>
+                  <line x1="9" y1="15" x2="15" y2="15"/>
+                </svg>
+                Enroll Now
+              </a>
+              <a href="#procedure" class="btn-enroll-ghost">
+                How It Works
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
             </div>
           </div>
-          <div class="adm-action-grid" style="align-content: start">
-            <!-- FIX: href changed from "#" to "apply.html" -->
-            <a href="apply.html" class="adm-action-card" id="enroll">
-              <div class="adm-action-icon">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-                  />
-                  <polyline points="14 2 14 8 20 8" />
-                  <line x1="12" y1="18" x2="12" y2="12" />
-                  <line x1="9" y1="15" x2="15" y2="15" />
-                </svg>
-              </div>
-              <div class="adm-action-body">
-                <h3>Enroll Online</h3>
-                <p>
-                  Fill out the online enrollment form from the comfort of home.
-                </p>
-              </div>
-              <div class="adm-action-arrow">→</div>
-            </a>
-            <a href="#requirements-jhs" class="adm-action-card">
-              <div class="adm-action-icon">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <line x1="12" y1="8" x2="12" y2="12" />
-                  <line x1="12" y1="16" x2="12.01" y2="16" />
-                </svg>
-              </div>
-              <div class="adm-action-body">
-                <h3>Check Requirements</h3>
-                <p>Review the documents needed for your application.</p>
-              </div>
-              <div class="adm-action-arrow">→</div>
-            </a>
-            <a href="news.html#events" class="adm-action-card">
-              <div class="adm-action-icon">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                  <line x1="16" y1="2" x2="16" y2="6" />
-                  <line x1="8" y1="2" x2="8" y2="6" />
-                  <line x1="3" y1="10" x2="21" y2="10" />
-                </svg>
-              </div>
-              <div class="adm-action-body">
-                <h3>Open House Schedule</h3>
-                <p>Visit campus and meet our faculty and staff in person.</p>
-              </div>
-              <div class="adm-action-arrow">→</div>
-            </a>
+
+          <div class="adm-enroll-hero-stats">
+            <div class="adm-enroll-stat-pill">
+              <div class="adm-enroll-stat-num">30+</div>
+              <div class="adm-enroll-stat-lbl">Years of Excellence</div>
+            </div>
+            <div class="adm-enroll-stat-pill">
+              <div class="adm-enroll-stat-num">98%</div>
+              <div class="adm-enroll-stat-lbl">Pass Rate</div>
+            </div>
+            <div class="adm-enroll-stat-pill">
+              <div class="adm-enroll-stat-num">500+</div>
+              <div class="adm-enroll-stat-lbl">Students Enrolled</div>
+            </div>
           </div>
+        </div>
+
+        <!-- 3 Quick-action cards -->
+        <div class="adm-enroll-cards-grid">
+
+          <a href="apply.html" class="adm-enroll-card adm-enroll-card--primary" id="enroll">
+            <div class="adm-enroll-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="12" y1="18" x2="12" y2="12"/>
+                <line x1="9" y1="15" x2="15" y2="15"/>
+              </svg>
+            </div>
+            <div>
+              <span class="adm-enroll-card-label">Online Application</span>
+              <h3>Apply &amp; Enroll Online</h3>
+              <p>Fill out the official enrollment form from the comfort of your home. Fast, easy, and paperless.</p>
+              <div class="adm-enroll-card-cta">
+                Start Application
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </a>
+
+          <a href="#requirements-jhs" class="adm-enroll-card adm-enroll-card--secondary">
+            <div class="adm-enroll-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 11l3 3L22 4"/>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+              </svg>
+            </div>
+            <div>
+              <span class="adm-enroll-card-label">What to Prepare</span>
+              <h3>View Requirements</h3>
+              <p>Check the complete list of documents needed for JHS and SHS admission before you apply.</p>
+              <div class="adm-enroll-card-cta">
+                See Checklist
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </a>
+
+          <a href="news.html#events" class="adm-enroll-card adm-enroll-card--tertiary">
+            <div class="adm-enroll-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <div>
+              <span class="adm-enroll-card-label">Visit the Campus</span>
+              <h3>Open House Schedule</h3>
+              <p>Meet our faculty and students in person. See our facilities and get all your questions answered.</p>
+              <div class="adm-enroll-card-cta">
+                View Schedule
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </a>
+
         </div>
       </div>
     </section>
@@ -261,101 +250,58 @@
           <span class="section-label">How to Enroll</span>
           <h2>Procedure for Enrollment</h2>
         </div>
-        <p
-          style="
-            text-align: center;
-            color: var(--color-text-medium);
-            max-width: 600px;
-            margin: 0 auto var(--spacing-lg);
-          "
-        >
-          Our enrollment process is designed to be clear and accessible. Follow
-          these steps to complete your application and secure your place at
-          Amore Academy.
+        <p style="text-align:center;color:var(--color-text-medium);max-width:600px;margin:0 auto var(--spacing-lg);">
+          Our enrollment process is designed to be clear and accessible. Follow these steps to complete your application and secure your place at Amore Academy.
         </p>
-        <div style="max-width: 680px; margin: 0 auto">
+        <div style="max-width:680px;margin:0 auto">
           <div class="adm-steps">
             <div class="adm-step">
               <div class="adm-step-num">1</div>
               <div class="adm-step-body">
                 <h4>Download or Pick Up the Application Form</h4>
-                <p>
-                  Obtain the official Application for Admission form from the
-                  Registrar's Office or download it from the school website.
-                  Fill it out completely and legibly.
-                </p>
+                <p>Obtain the official Application for Admission form from the Registrar's Office or download it from the school website. Fill it out completely and legibly.</p>
               </div>
             </div>
             <div class="adm-step">
               <div class="adm-step-num">2</div>
               <div class="adm-step-body">
                 <h4>Prepare All Required Documents</h4>
-                <p>
-                  Gather all documentary requirements specific to your program
-                  level (JHS or SHS). Ensure all copies are certified true
-                  copies where required. See the Requirements section below for
-                  the complete list.
-                </p>
+                <p>Gather all documentary requirements specific to your program level (JHS or SHS). Ensure all copies are certified true copies where required. See the Requirements section below for the complete list.</p>
               </div>
             </div>
             <div class="adm-step">
               <div class="adm-step-num">3</div>
               <div class="adm-step-body">
                 <h4>Submit Requirements to the Registrar's Office</h4>
-                <p>
-                  Bring your completed application form and all supporting
-                  documents to the Registrar's Office during office hours
-                  (Monday–Friday, 8:00 AM–5:00 PM). Incomplete submissions will
-                  not be processed.
-                </p>
+                <p>Bring your completed application form and all supporting documents to the Registrar's Office during office hours (Monday–Friday, 8:00 AM–5:00 PM). Incomplete submissions will not be processed.</p>
               </div>
             </div>
             <div class="adm-step">
               <div class="adm-step-num">4</div>
               <div class="adm-step-body">
                 <h4>Take the Entrance Examination</h4>
-                <p>
-                  All applicants are required to take the Amore Academy Entrance
-                  Examination. You will be informed of the schedule upon
-                  submission of your requirements. Bring a valid ID and two
-                  pencils on the day of the exam.
-                </p>
+                <p>All applicants are required to take the Amore Academy Entrance Examination. You will be informed of the schedule upon submission of your requirements. Bring a valid ID and two pencils on the day of the exam.</p>
               </div>
             </div>
             <div class="adm-step">
               <div class="adm-step-num">5</div>
               <div class="adm-step-body">
                 <h4>Wait for Admission Results</h4>
-                <p>
-                  Results will be released within five to seven working days
-                  after the examination. Successful applicants will receive an
-                  official Notice of Acceptance via their registered email
-                  address.
-                </p>
+                <p>Results will be released within five to seven working days after the examination. Successful applicants will receive an official Notice of Acceptance via their registered email address.</p>
               </div>
             </div>
             <div class="adm-step">
               <div class="adm-step-num">6</div>
               <div class="adm-step-body">
                 <h4>Pay the Enrollment Fee and Confirm Your Slot</h4>
-                <p>
-                  Upon receiving your Notice of Acceptance, proceed to the
-                  Cashier's Office to pay the enrollment fee and officially
-                  secure your slot. Slots are reserved on a first-come,
-                  first-served basis after acceptance.
-                </p>
+                <p>Upon receiving your Notice of Acceptance, proceed to the Cashier's Office to pay the enrollment fee and officially secure your slot. Slots are reserved on a first-come, first-served basis after acceptance.</p>
               </div>
             </div>
             <div class="adm-step">
               <div class="adm-step-num">7</div>
               <div class="adm-step-body">
                 <h4>Attend the New Student Orientation</h4>
-                <p>
-                  Newly enrolled students are required to attend the New Student
-                  Orientation before the first day of classes. Details on the
-                  orientation schedule will be included in your enrollment
-                  confirmation.
-                </p>
+                <p>Newly enrolled students are required to attend the New Student Orientation before the first day of classes. Details on the orientation schedule will be included in your enrollment confirmation.</p>
               </div>
             </div>
           </div>
@@ -371,11 +317,8 @@
           <h2>Admission Requirements</h2>
         </div>
 
-        <!-- FIX: changed data-tab to data-target, and values to match panel IDs -->
         <div class="adm-req-tabs">
-          <button class="adm-req-tab active" data-target="panel-jhs">
-            Junior High School
-          </button>
+          <button class="adm-req-tab active" data-target="panel-jhs">Junior High School</button>
           <button class="adm-req-tab" data-target="panel-shs" id="requirements-shs">Senior High School</button>
         </div>
 
@@ -385,132 +328,41 @@
             <div class="adm-req-visual">
               <div class="adm-req-badge">Grades 7 – 10</div>
               <div class="adm-req-banner adm-req-banner--jhs">
-                <svg
-                  class="adm-req-banner-icon"
-                  width="96"
-                  height="96"
-                  viewBox="0 0 96 96"
-                  fill="none"
-                >
-                  <path
-                    d="M48 12L56 28H72L60 38L64 56L48 46L32 56L36 38L24 28H40L48 12Z"
-                    stroke="currentColor"
-                    stroke-width="3"
-                    stroke-linejoin="round"
-                  />
+                <svg class="adm-req-banner-icon" width="96" height="96" viewBox="0 0 96 96" fill="none">
+                  <path d="M48 12L56 28H72L60 38L64 56L48 46L32 56L36 38L24 28H40L48 12Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
                 </svg>
                 <div class="adm-req-banner-label">Junior High School</div>
               </div>
             </div>
             <div class="adm-req-info">
               <h3>Junior High School Requirements</h3>
-              <p>
-                The following documents are required for all Grade 7 applicants
-                to Amore Academy. Please ensure all copies are complete and
-                accurate before submitting to the Registrar's Office.
-              </p>
-
+              <p>The following documents are required for all Grade 7 applicants to Amore Academy. Please ensure all copies are complete and accurate before submitting to the Registrar's Office.</p>
               <div class="adm-req-group">
                 <span class="adm-req-group-label">Academic Records</span>
                 <ul class="adm-req-list">
-                  <li>
-                    <div class="adm-req-check">
-                      <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                        <path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    Form 138 (Report Card) — Original copy from Grade 6 with
-                    complete final grades
-                  </li>
-                  <li>
-                    <div class="adm-req-check">
-                      <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                        <path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    Form 137 (Permanent Record) — For transferees from other
-                    schools
-                  </li>
-                  <li>
-                    <div class="adm-req-check">
-                      <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                        <path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    Certificate of Completion — Issued by the Elementary School
-                    principal
-                  </li>
+                  <li><div class="adm-req-check"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Form 138 (Report Card) — Original copy from Grade 6 with complete final grades</li>
+                  <li><div class="adm-req-check"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Form 137 (Permanent Record) — For transferees from other schools</li>
+                  <li><div class="adm-req-check"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Certificate of Completion — Issued by the Elementary School principal</li>
                 </ul>
               </div>
-
               <div class="adm-req-group">
                 <span class="adm-req-group-label">Personal Documents</span>
                 <ul class="adm-req-list">
-                  <li>
-                    <div class="adm-req-check">
-                      <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                        <path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    PSA-authenticated Birth Certificate — Original copy
-                  </li>
-                  <li>
-                    <div class="adm-req-check">
-                      <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                        <path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    2x2 ID Photos — Four (4) recent, identical, white background
-                  </li>
-                  <li>
-                    <div class="adm-req-check">
-                      <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                        <path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    Barangay Clearance — Issued within the last three months
-                  </li>
+                  <li><div class="adm-req-check"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>PSA-authenticated Birth Certificate — Original copy</li>
+                  <li><div class="adm-req-check"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>2x2 ID Photos — Four (4) recent, identical, white background</li>
+                  <li><div class="adm-req-check"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Barangay Clearance — Issued within the last three months</li>
                 </ul>
               </div>
-
               <div class="adm-req-group">
                 <span class="adm-req-group-label">School Requirements</span>
                 <ul class="adm-req-list">
-                  <li>
-                    <div class="adm-req-check">
-                      <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                        <path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    Completed Application for Admission Form
-                  </li>
-                  <li>
-                    <div class="adm-req-check">
-                      <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                        <path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    Photocopy of Parent or Guardian's valid government-issued ID
-                  </li>
-                  <li>
-                    <div class="adm-req-check">
-                      <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                        <path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    Certificate of Good Moral Character — Signed by previous
-                    school principal
-                  </li>
+                  <li><div class="adm-req-check"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Completed Application for Admission Form</li>
+                  <li><div class="adm-req-check"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Photocopy of Parent or Guardian's valid government-issued ID</li>
+                  <li><div class="adm-req-check"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Certificate of Good Moral Character — Signed by previous school principal</li>
                 </ul>
               </div>
-
               <div class="adm-req-note">
-                <strong>Note:</strong> All documents must be submitted in a long
-                brown envelope, clearly labeled with the applicant's complete
-                name and program level. Incomplete submissions will not be
-                accepted. For questions, please contact the Registrar's Office
-                at <strong>(02) 8123-4567</strong> or email
-                <strong><a href="mailto:registrar@amoreacademy.edu.ph">registrar@amoreacademy.edu.ph</a></strong>.
+                <strong>Note:</strong> All documents must be submitted in a long brown envelope, clearly labeled with the applicant's complete name and program level. Incomplete submissions will not be accepted. For questions, please contact the Registrar's Office at <strong>(02) 8123-4567</strong> or email <strong><a href="/cdn-cgi/l/email-protection#87f5e2e0eef4f3f5e6f5c7e6eae8f5e2e6e4e6e3e2eafea9e2e3f2a9f7ef"><span class="__cf_email__" data-cfemail="6c1e090b051f181e0d1e2c0d01031e090d0f0d0809011542090819421c04">[email&#160;protected]</span></a></strong>.
               </div>
             </div>
           </div>
@@ -522,149 +374,43 @@
             <div class="adm-req-visual">
               <div class="adm-req-badge">Grades 11 – 12</div>
               <div class="adm-req-banner adm-req-banner--shs">
-                <svg
-                  class="adm-req-banner-icon"
-                  width="96"
-                  height="96"
-                  viewBox="0 0 96 96"
-                  fill="none"
-                >
-                  <path
-                    d="M88 40v24M8 40l40-20 40 20-40 20z"
-                    stroke="currentColor"
-                    stroke-width="3"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M24 48v20c12 12 36 12 48 0V48"
-                    stroke="currentColor"
-                    stroke-width="3"
-                    stroke-linejoin="round"
-                  />
+                <svg class="adm-req-banner-icon" width="96" height="96" viewBox="0 0 96 96" fill="none">
+                  <path d="M88 40v24M8 40l40-20 40 20-40 20z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                  <path d="M24 48v20c12 12 36 12 48 0V48" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
                 </svg>
                 <div class="adm-req-banner-label">Senior High School</div>
               </div>
             </div>
             <div class="adm-req-info">
               <h3>Senior High School Requirements</h3>
-              <p>
-                The following documents are required for all Grade 11 applicants
-                to Amore Academy. Applicants must also indicate their preferred
-                SHS Track and Strand on the Application Form.
-              </p>
-
+              <p>The following documents are required for all Grade 11 applicants to Amore Academy. Applicants must also indicate their preferred SHS Track and Strand on the Application Form.</p>
               <div class="adm-req-group">
                 <span class="adm-req-group-label">Academic Records</span>
                 <ul class="adm-req-list">
-                  <li>
-                    <div class="adm-req-check">
-                      <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                        <path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    Form 138 (Report Card) — Original copy from Grade 10 with
-                    complete final grades
-                  </li>
-                  <li>
-                    <div class="adm-req-check">
-                      <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                        <path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    Form 137 (Permanent Record) — For transferees from other JHS
-                    schools
-                  </li>
-                  <li>
-                    <div class="adm-req-check">
-                      <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                        <path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    Certificate of Junior High School Completion — Issued by
-                    school principal
-                  </li>
+                  <li><div class="adm-req-check"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Form 138 (Report Card) — Original copy from Grade 10 with complete final grades</li>
+                  <li><div class="adm-req-check"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Form 137 (Permanent Record) — For transferees from other JHS schools</li>
+                  <li><div class="adm-req-check"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Certificate of Junior High School Completion — Issued by school principal</li>
                 </ul>
               </div>
-
               <div class="adm-req-group">
                 <span class="adm-req-group-label">Personal Documents</span>
                 <ul class="adm-req-list">
-                  <li>
-                    <div class="adm-req-check">
-                      <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                        <path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    PSA-authenticated Birth Certificate — Original copy
-                  </li>
-                  <li>
-                    <div class="adm-req-check">
-                      <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                        <path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    2x2 ID Photos — Four (4) recent, identical, white background
-                  </li>
-                  <li>
-                    <div class="adm-req-check">
-                      <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                        <path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    Barangay Clearance — Issued within the last three months
-                  </li>
+                  <li><div class="adm-req-check"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>PSA-authenticated Birth Certificate — Original copy</li>
+                  <li><div class="adm-req-check"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>2x2 ID Photos — Four (4) recent, identical, white background</li>
+                  <li><div class="adm-req-check"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Barangay Clearance — Issued within the last three months</li>
                 </ul>
               </div>
-
               <div class="adm-req-group">
                 <span class="adm-req-group-label">School Requirements</span>
                 <ul class="adm-req-list">
-                  <li>
-                    <div class="adm-req-check">
-                      <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                        <path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    Completed Application for Admission Form (indicate preferred
-                    Track and Strand)
-                  </li>
-                  <li>
-                    <div class="adm-req-check">
-                      <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                        <path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    Photocopy of Parent or Guardian's valid government-issued ID
-                  </li>
-                  <li>
-                    <div class="adm-req-check">
-                      <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                        <path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    Certificate of Good Moral Character — Signed by JHS
-                    principal or adviser
-                  </li>
-                  <li>
-                    <div class="adm-req-check">
-                      <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                        <path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                    Personal Essay — One page, topic: "Why I chose this SHS
-                    Track and how it will help me achieve my goals"
-                  </li>
+                  <li><div class="adm-req-check"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Completed Application for Admission Form (indicate preferred Track and Strand)</li>
+                  <li><div class="adm-req-check"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Photocopy of Parent or Guardian's valid government-issued ID</li>
+                  <li><div class="adm-req-check"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Certificate of Good Moral Character — Signed by JHS principal or adviser</li>
+                  <li><div class="adm-req-check"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Personal Essay — One page, topic: "Why I chose this SHS Track and how it will help me achieve my goals"</li>
                 </ul>
               </div>
-
               <div class="adm-req-note">
-                <strong>Note:</strong> All documents must be submitted in a long
-                brown envelope, clearly labeled with the applicant's complete
-                name and preferred SHS Track and Strand. Applicants with special
-                academic distinctions (honors, awards) are encouraged to attach
-                supporting documents. For questions, contact the Registrar's
-                Office at <strong>(02) 8123-4567</strong> or email
-                <strong><a href="mailto:registrar@amoreacademy.edu.ph">registrar@amoreacademy.edu.ph</a></strong>.
+                <strong>Note:</strong> All documents must be submitted in a long brown envelope, clearly labeled with the applicant's complete name and preferred SHS Track and Strand. Applicants with special academic distinctions (honors, awards) are encouraged to attach supporting documents. For questions, contact the Registrar's Office at <strong>(02) 8123-4567</strong> or email <strong><a href="/cdn-cgi/l/email-protection#a6d4c3c1cfd5d2d4c7d4e6c7cbc9d4c3c7c5c7c2c3cbdf88c3c2d388d6ce"><span class="__cf_email__" data-cfemail="dba9bebcb2a8afa9baa99bbab6b4a9bebab8babfbeb6a2f5bebfaef5abb3">[email&#160;protected]</span></a></strong>.
               </div>
             </div>
           </div>
@@ -677,15 +423,10 @@
       <div class="container">
         <div class="cta-content">
           <h2>Ready to Join Our Community?</h2>
-          <p>
-            Take the first step towards an exceptional education. Apply now and
-            become part of our legacy of excellence.
-          </p>
+          <p>Take the first step towards an exceptional education. Apply now and become part of our legacy of excellence.</p>
           <div class="cta-buttons">
             <a href="apply.html" class="btn btn-light">Apply Now</a>
-            <a href="#requirements-jhs" class="btn btn-outline"
-              >Admission Requirements</a
-            >
+            <a href="#requirements-jhs" class="btn btn-outline">Admission Requirements</a>
           </div>
         </div>
       </div>
@@ -701,10 +442,7 @@
               </div>
               <h3>Amore Academy</h3>
             </div>
-            <p>
-              Shaping minds and building futures. Excellence in education,
-              character, and service.
-            </p>
+            <p>Shaping minds and building futures. Excellence in education, character, and service.</p>
           </div>
           <div class="footer-column">
             <h4>Admissions</h4>
@@ -730,18 +468,14 @@
               <li>123 Excellence Avenue</li>
               <li>Education City, Metro Manila</li>
               <li>Phone: (02) 8123-4567</li>
-              <li>
-                Email:
-                <a href="mailto:info@amoreacademy.edu.ph">info@amoreacademy.edu.ph</a>
-              </li>
+              <li>Email: <a href="/cdn-cgi/l/email-protection#1a73747c755a7b7775687f7b797b7e7f7763347f7e6f346a72"><span class="__cf_email__" data-cfemail="1871767e77587975776a7d797b797c7d7561367d7c6d366870">[email&#160;protected]</span></a></li>
             </ul>
           </div>
         </div>
         <div class="footer-bottom">
           <p>&copy; 2026 Amore Academy. All rights reserved.</p>
           <div class="footer-links">
-            <a href="#">Privacy Policy</a><a href="#">Terms of Use</a
-            ><a href="#">Accessibility</a>
+            <a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Accessibility</a>
           </div>
         </div>
       </div>
@@ -751,58 +485,39 @@
     <nav class="mobile-tab-bar">
       <a href="about.html">
         <div class="tab-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="8" r="4" />
-            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-          </svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
         </div>
         About
       </a>
       <a href="academics.html">
         <div class="tab-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-            <path d="M6 12v5c3 3 9 3 12 0v-5" />
-          </svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
         </div>
         Academics
       </a>
       <a href="Home.html">
         <div class="tab-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z" />
-            <polyline points="9 22 9 12 15 12 15 22" />
-          </svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </div>
         Home
       </a>
       <a href="news.html">
         <div class="tab-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/>
-            <line x1="9" y1="7" x2="15" y2="7" />
-            <line x1="9" y1="11" x2="15" y2="11" />
-            <line x1="9" y1="15" x2="12" y2="15" />
-          </svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/><line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/><line x1="9" y1="15" x2="12" y2="15"/></svg>
         </div>
         News
       </a>
       <a href="admissions.html" class="active">
         <div class="tab-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-            <polyline points="14 2 14 8 20 8" />
-            <line x1="9" y1="13" x2="15" y2="13" />
-            <line x1="9" y1="17" x2="13" y2="17" />
-          </svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
         </div>
         Admissions
       </a>
     </nav>
 
-    <script src="script.JS"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.JS"></script>
     <script>
-      // Requirements tab switcher — FIX: reads data-target to match panel IDs
+      // Requirements tab switcher
       document.querySelectorAll(".adm-req-tab").forEach((tab) => {
         tab.addEventListener("click", () => {
           document.querySelectorAll(".adm-req-tab").forEach((t) => t.classList.remove("active"));
@@ -812,7 +527,7 @@
         });
       });
 
-      // Handle deep-linking to #requirements-shs — auto-switch to SHS tab
+      // Deep-link: auto-switch to SHS tab if URL hash is #requirements-shs
       if (window.location.hash === "#requirements-shs") {
         const shsTab = document.querySelector('[data-target="panel-shs"]');
         if (shsTab) shsTab.click();
