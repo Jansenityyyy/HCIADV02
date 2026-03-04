@@ -194,7 +194,7 @@
           <h2>Available Tracks &amp; Strands</h2>
         </div>
         <div class="academics-tracks-grid">
-          <div class="academics-track-card">
+          <button class="academics-track-card track-clickable" data-track="academic">
             <div class="academics-track-icon">
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                 <rect x="4" y="4" width="20" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
@@ -212,8 +212,9 @@
               <span class="academics-strand-tag">HUMSS</span>
               <span class="academics-strand-tag">GAS</span>
             </div>
-          </div>
-          <div class="academics-track-card">
+            <div class="track-card-cta">Explore Strands →</div>
+          </button>
+          <button class="academics-track-card track-clickable" data-track="tvl">
             <div class="academics-track-icon">
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                 <path d="M6 22L6 12L14 6L22 12L22 22" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
@@ -228,8 +229,9 @@
               <span class="academics-strand-tag">Home Economics</span>
               <span class="academics-strand-tag">Industrial Arts</span>
             </div>
-          </div>
-          <div class="academics-track-card">
+            <div class="track-card-cta">Explore Strands →</div>
+          </button>
+          <button class="academics-track-card track-clickable" data-track="arts">
             <div class="academics-track-icon">
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                 <circle cx="14" cy="14" r="10" stroke="currentColor" stroke-width="2"/>
@@ -244,8 +246,9 @@
               <span class="academics-strand-tag">Visual Arts</span>
               <span class="academics-strand-tag">Performing Arts</span>
             </div>
-          </div>
-          <div class="academics-track-card">
+            <div class="track-card-cta">Explore Strands →</div>
+          </button>
+          <button class="academics-track-card track-clickable" data-track="sports">
             <div class="academics-track-icon">
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                 <circle cx="14" cy="14" r="10" stroke="currentColor" stroke-width="2"/>
@@ -260,6 +263,20 @@
               <span class="academics-strand-tag">Sports Science</span>
               <span class="academics-strand-tag">Coaching</span>
             </div>
+            <div class="track-card-cta">Explore Strands →</div>
+          </button>
+        </div>
+
+        <!-- STRAND DETAIL OVERLAY (news.html style) -->
+        <div class="article-detail-overlay" id="strandDetailOverlay" aria-hidden="true">
+          <div class="article-detail-inner">
+            <button class="article-detail-back" id="strandDetailBack" aria-label="Back to Academics">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M12 15L7 10L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Back to Academics
+            </button>
+            <div id="strandDetailContent"><!-- JS renders content here --></div>
           </div>
         </div>
       </div>
@@ -376,7 +393,7 @@
               <li>123 Excellence Avenue</li>
               <li>Education City, Metro Manila</li>
               <li>Phone: (02) 8123-4567</li>
-              <li>Email: <a href="mailto:info@amoreacademy.edu.ph">info@amoreacademy.edu.ph</a></li>
+              <li>Email: <a href="/cdn-cgi/l/email-protection#f1989f979eb1909c9e839490929095949c88df949584df8199"><span class="__cf_email__" data-cfemail="5c35323a331c3d31332e393d3f3d3839312572393829722c34">[email&#160;protected]</span></a></li>
             </ul>
           </div>
         </div>
@@ -435,6 +452,7 @@
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
             <polyline points="14 2 14 8 20 8" />
             <line x1="9" y1="13" x2="15" y2="13" />
+            <line x1="9" y1="17" x2="13" y2="
             <line x1="9" y1="17" x2="13" y2="17" />
           </svg>
         </div>
@@ -442,6 +460,7 @@
       </a>
     </nav>
 
+    <!-- Strand detail JS is in script.JS -->
     <script src="script.JS"></script>
   </body>
 </html>

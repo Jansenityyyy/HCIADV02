@@ -736,3 +736,368 @@ const articleData = {
     setTimeout(() => toast.classList.remove('show'), 2400);
   };
 })();
+
+// ===================================================================
+// ACADEMICS — TRACK & STRAND DETAIL OVERLAY (news.html style)
+// ===================================================================
+(function () {
+
+  // ── STRAND DATA ──────────────────────────────────────────────────
+  const STRAND_DATA = {
+    stem: {
+      track: "Academic Track", color: "#0a2463", accent: "#fb8500",
+      icon: `<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/><path d="M12 28L18 16L24 24L28 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+      label: "STEM", full: "Science, Technology, Engineering & Mathematics",
+      tagline: "Where curiosity meets innovation — build the future through the power of science and math.",
+      overview: "The STEM strand is designed for students with a passion for discovery, analysis, and problem-solving. It offers a rigorous curriculum that prepares graduates for college courses in Engineering, Medicine, Computer Science, Architecture, and the Natural Sciences.",
+      subjects: ["General Mathematics","Pre-Calculus","Basic Calculus","General Biology 1 & 2","General Chemistry 1 & 2","General Physics 1 & 2","Research / Capstone Project","Empowerment Technologies"],
+      careers: ["Engineer","Doctor / Physician","Computer Scientist","Data Analyst","Architect","Research Scientist","Nurse / Allied Health"],
+      colleges: ["BS Engineering","BS Computer Science","BS Medicine / Nursing","BS Architecture","BS Biology / Chemistry"],
+      highlight: "STEM graduates at Amore Academy consistently earn top placements in national entrance exams for top universities.",
+    },
+    abm: {
+      track: "Academic Track", color: "#14532d", accent: "#22c55e",
+      icon: `<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="6" y="8" width="28" height="24" rx="3" stroke="currentColor" stroke-width="2"/><path d="M14 20h12M14 25h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
+      label: "ABM", full: "Accountancy, Business & Management",
+      tagline: "Learn to lead, manage, and build — the foundations of every thriving enterprise.",
+      overview: "The ABM strand equips students with a deep understanding of business operations, financial management, and entrepreneurial thinking. It is the ideal pathway for students aiming to enter courses related to business, finance, economics, and law.",
+      subjects: ["Business Mathematics","Fundamentals of ABM","Applied Economics","Organization & Management","Business Finance","Business Ethics","Principles of Marketing","Work Immersion (Business)"],
+      careers: ["Accountant / CPA","Business Manager","Entrepreneur","Financial Analyst","Marketing Officer","Economist","Lawyer (Pre-Law)"],
+      colleges: ["BS Accountancy","BS Business Administration","BS Economics","BS Marketing","AB Political Science / Pre-Law"],
+      highlight: "ABM students develop real-world business plans and present to industry mentors as part of their capstone immersion.",
+    },
+    humss: {
+      track: "Academic Track", color: "#4c1d95", accent: "#a78bfa",
+      icon: `<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M10 32V14l10-6 10 6v18" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="20" cy="20" r="4" stroke="currentColor" stroke-width="2"/></svg>`,
+      label: "HUMSS", full: "Humanities & Social Sciences",
+      tagline: "Understand people, societies, and cultures — and use that knowledge to change the world.",
+      overview: "HUMSS is crafted for students drawn to literature, philosophy, sociology, political science, and communication. This strand develops critical thinking, writing mastery, and empathy — essential traits for leaders in public service, media, education, and the arts.",
+      subjects: ["Creative Writing","Introduction to Philosophy","Understanding Culture & Society","Creative Nonfiction","Trends in Media & Information","Community Engagement & Leadership","Philippine Politics & Governance","Research in Social Sciences"],
+      careers: ["Journalist / Writer","Educator / Professor","Psychologist","Social Worker","Lawyer / Politician","Diplomat / Foreign Affairs","Content Creator / Media"],
+      colleges: ["AB Communication","BS Psychology","AB Political Science","BS Education","AB Sociology","AB Literature / Philosophy"],
+      highlight: "HUMSS students at Amore regularly publish in the school journal and lead student government initiatives.",
+    },
+    gas: {
+      track: "Academic Track", color: "#1e3a8a", accent: "#60a5fa",
+      icon: `<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="2"/><path d="M20 6v14l8 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>`,
+      label: "GAS", full: "General Academic Strand",
+      tagline: "Explore broadly, decide confidently — the open pathway for the curious and undecided.",
+      overview: "GAS offers students the widest academic exposure across multiple disciplines. Ideal for those still exploring their interests, it combines elements of STEM, ABM, and HUMSS while providing flexibility for diverse college and career paths.",
+      subjects: ["Humanities 1 & 2","Social Science 1 & 2","Applied Mathematics in the Modern World","Organization & Management","Disaster Readiness & Risk Reduction","Elective Subjects (flexible)"],
+      careers: ["Any college course is accessible","General Management","Public Administration","Teaching / Education","Media & Communication"],
+      colleges: ["Open to all BS / AB programs","Education, Tourism, Hotel & Restaurant","Liberal Arts","Criminology","Public Administration"],
+      highlight: "GAS is perfect for multi-talented students who want to experience a range of disciplines before specializing in college.",
+    },
+    ict: {
+      track: "TVL Track", color: "#0c4a6e", accent: "#38bdf8",
+      icon: `<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="6" y="10" width="28" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M14 34h12M20 28v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M14 18l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+      label: "ICT", full: "Information & Communications Technology",
+      tagline: "Code, create, connect — become the tech talent the world needs.",
+      overview: "The ICT strand immerses students in the world of programming, networking, multimedia production, and digital systems. Graduates are equipped for tech careers and higher education in IT, Computer Science, and Engineering right out of SHS.",
+      subjects: ["Computer Programming (Python / Java)","Web Development","Networking Fundamentals","Digital Arts & Multimedia","Animation & Video Production","Database Management","Work Immersion (Tech Industry)","Capstone Project"],
+      careers: ["Software Developer","Web Designer / Developer","Network Administrator","Graphic Designer","IT Support Specialist","Game Developer","Digital Content Creator"],
+      colleges: ["BS Information System","BS Information Technology","BS Computer Science","BS Computer Engineering","BS Multimedia Arts","TESDA NC II / NC III Certification"],
+      highlight: "ICT students undergo live industry immersion with partner tech companies and earn TESDA certifications before graduation.",
+    },
+    he: {
+      track: "TVL Track", color: "#7c2d12", accent: "#fb923c",
+      icon: `<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M8 32V18l12-10 12 10v14" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M15 32v-8h10v8" stroke="currentColor" stroke-width="2"/></svg>`,
+      label: "Home Economics", full: "Home Economics",
+      tagline: "Master the art and science of living — from culinary excellence to family entrepreneurship.",
+      overview: "The Home Economics strand prepares students for careers in hospitality, food service, cosmetology, and household management. Grounded in practical skills and enterprise thinking, it opens paths both to higher education and immediate employment.",
+      subjects: ["Bread & Pastry Production","Cookery (NC II)","Food & Beverage Services","Housekeeping (NC II)","Beauty Care / Nail Care","Entrepreneurship in HE","Nutrition & Dietetics Basics","Work Immersion (Hotel / Restaurant)"],
+      careers: ["Chef / Pastry Chef","Restaurant / Hotel Manager","Catering Entrepreneur","Cosmetologist / Beautician","Nutritionist / Dietitian","Food Quality Specialist"],
+      colleges: ["BS Hotel & Restaurant Management","BS Tourism Management","BS Nutrition & Dietetics","BS Culinary Arts","TESDA NC II (Cookery, Housekeeping, Beauty Care)"],
+      highlight: "HE students operate the school's student-run café during practical immersion, building real business acumen.",
+    },
+    ia: {
+      track: "TVL Track", color: "#1c1917", accent: "#a8a29e",
+      icon: `<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M10 30L20 10l10 20" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 22h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
+      label: "Industrial Arts", full: "Industrial Arts",
+      tagline: "Build, fabricate, create — train your hands for the trades that drive the economy.",
+      overview: "Industrial Arts trains students in skilled trades such as electrical installation, welding, plumbing, and automotive servicing. Graduates are job-ready and eligible for TESDA certifications, giving them an immediate edge in the labor market.",
+      subjects: ["Electrical Installation & Maintenance (NC II)","Welding (NC I / NC II)","Plumbing (NC I)","Automotive Servicing (NC II)","Carpentry / Furniture Making","Drafting Technology","Entrepreneurship in Industrial Arts","Work Immersion (Trade Industry)"],
+      careers: ["Licensed Electrician","Welder / Fabricator","Plumber / Pipefitter","Automotive Technician","Construction Foreman","Industrial Entrepreneur"],
+      colleges: ["BS Electrical Engineering","BS Mechanical Engineering","BS Civil Engineering","TESDA NC I–III Certifications","Technical / Vocational Programs"],
+      highlight: "IA students complete supervised shop-floor immersions and graduate with industry-recognized TESDA competency certifications.",
+    },
+    "visual-arts": {
+      track: "Arts & Design Track", color: "#701a75", accent: "#e879f9",
+      icon: `<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="2"/><path d="M13 27C15 22 18 17 20 15C22 17 25 22 27 27" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+      label: "Visual Arts", full: "Visual Arts",
+      tagline: "Express, imagine, and design — transform vision into art that moves the world.",
+      overview: "The Visual Arts strand develops students into skilled artists and designers through intensive studio practice, art history, and creative theory. It is ideal for students aspiring to careers in fine arts, graphic design, architecture, and multimedia.",
+      subjects: ["Drawing & Painting Studio","Graphic Design Fundamentals","Photography & Digital Imaging","Art History & Appreciation","Sculpture & Mixed Media","Layout & Typography","Portfolio Development","Capstone Exhibition"],
+      careers: ["Graphic Designer","Illustrator / Fine Artist","UI / UX Designer","Art Director","Photographer","Animator / Motion Designer","Art Teacher / Curator"],
+      colleges: ["BS Fine Arts","BS Graphic Technology","BS Architecture","BS Interior Design","BA Communication Arts","BS Multimedia Arts"],
+      highlight: "Visual Arts students present a full-scale gallery exhibition in Grade 12, showcasing original works to industry professionals.",
+    },
+    "performing-arts": {
+      track: "Arts & Design Track", color: "#831843", accent: "#f472b6",
+      icon: `<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M12 32V16l8-8 8 8v16" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="20" cy="14" r="3" stroke="currentColor" stroke-width="2"/></svg>`,
+      label: "Performing Arts", full: "Performing Arts",
+      tagline: "Take the stage — dance, sing, act, and perform your way to a creative career.",
+      overview: "The Performing Arts strand is a dynamic, performance-driven program that trains students in theater, dance, and music. Through rigorous rehearsals, workshops, and live productions, students build discipline, confidence, and artistry.",
+      subjects: ["Theater Arts & Acting","Dance (Ballet / Contemporary / Folk)","Music Theory & Composition","Voice Training & Choral","Stage Management & Production","Script Writing & Dramaturgy","Production Design & Lighting","Capstone Performance"],
+      careers: ["Actor / Stage Performer","Dancer / Choreographer","Singer / Musician","Theater Director","Dance / Drama Educator","Events & Production Manager","Performing Arts Therapist"],
+      colleges: ["BFA Theater Arts","BFA Dance","BS Music / BS Music Education","BA Communication","PAFTE / Conservatory Programs"],
+      highlight: "Performing Arts students headline the annual Amore Grand Showcase — a full production staged in partnership with local theater companies.",
+    },
+    "sports-science": {
+      track: "Sports Track", color: "#1a2e05", accent: "#84cc16",
+      icon: `<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="13" stroke="currentColor" stroke-width="2"/><path d="M10 26c2-3 5-5 10-5s8 2 10 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
+      label: "Sports Science", full: "Sports Science",
+      tagline: "Apply the science of human performance — train smarter, compete stronger.",
+      overview: "The Sports Science strand blends kinesiology, anatomy, nutrition, and performance analytics with active athletic training. It prepares students for careers in sports medicine, coaching, physical education, and sports management.",
+      subjects: ["Exercise & Sports Science","Anatomy & Physiology","Sports Nutrition","Sports Psychology","Biomechanics & Movement Analysis","First Aid & Sports Medicine","Athletic Training & Conditioning","Research in Sports (Capstone)"],
+      careers: ["Sports Scientist / Analyst","Physical Therapist","Sports Nutritionist","Kinesiologist","PE Teacher","Athletic Trainer","Sports Medicine Doctor (pre-med)"],
+      colleges: ["BS Sports Science","BS Physical Therapy","BS Kinesiology","BS Physical Education","BS Sports Management","BS Nutrition & Dietetics"],
+      highlight: "Sports Science students partner with local sports clubs for practicum, collecting real performance data for their capstone research.",
+    },
+    coaching: {
+      track: "Sports Track", color: "#052e16", accent: "#4ade80",
+      icon: `<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M8 30l12-16 12 16" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><circle cx="20" cy="12" r="4" stroke="currentColor" stroke-width="2"/></svg>`,
+      label: "Coaching", full: "Coaching",
+      tagline: "Lead, inspire, and develop champions — on the field and in life.",
+      overview: "The Coaching strand develops future sports leaders who understand game strategy, athlete psychology, and team management. Students are trained in officiating, program design, and the ethical responsibilities of a coach at all levels.",
+      subjects: ["Principles of Coaching","Team Dynamics & Leadership","Sports Officiating & Rules","Game Strategy & Tactics","Athlete Psychology & Motivation","Sports Management & Administration","Event & Tournament Organizing","Practicum (On-Site Coaching)"],
+      careers: ["Sports Coach","Athletic Director","Team Manager","Sports Official / Referee","Sports Event Organizer","Physical Education Teacher","Sports Broadcaster / Analyst"],
+      colleges: ["BS Sports Management","BS Physical Education (major: coaching)","BS Sports Science","Certificate in Coaching (NSTP / PSC programs)"],
+      highlight: "Coaching students earn officiating certifications and lead junior-level training camps as part of their hands-on practicum.",
+    },
+  };
+
+  // ── TRACK DATA ───────────────────────────────────────────────────
+  const TRACK_DATA = {
+    academic: {
+      number: "01",
+      color: "#0a2463", accent: "#fb8500",
+      icon: `<svg width="44" height="44" viewBox="0 0 44 44" fill="none"><rect x="6" y="6" width="32" height="32" rx="3" stroke="currentColor" stroke-width="2.2"/><line x1="12" y1="15" x2="32" y2="15" stroke="currentColor" stroke-width="2.2"/><line x1="12" y1="22" x2="32" y2="22" stroke="currentColor" stroke-width="2.2"/><line x1="12" y1="29" x2="23" y2="29" stroke="currentColor" stroke-width="2.2"/></svg>`,
+      label: "Academic Track",
+      tagline: "Your gateway to the country's top universities and professional careers.",
+      overview: "The Academic Track is designed for Grade 11 and 12 students who intend to pursue higher education after Senior High School. It provides rigorous preparation across four specialized strands, each aligned to distinct college and career pathways. Students develop strong analytical, communication, and research skills that are essential for university life and beyond.",
+      strands: ["stem","abm","humss","gas"],
+    },
+    tvl: {
+      number: "02",
+      color: "#0c4a6e", accent: "#38bdf8",
+      icon: `<svg width="44" height="44" viewBox="0 0 44 44" fill="none"><path d="M8 36V18l14-10 14 10v18" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><rect x="14" y="24" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="2.2"/></svg>`,
+      label: "Technical-Vocational-Livelihood Track",
+      tagline: "Hands-on skills, industry certifications, and career-ready graduates.",
+      overview: "The TVL Track prepares students for skilled trade careers, technical employment, and entrepreneurship. Each strand is aligned with TESDA qualifications, meaning graduates can earn nationally recognized certificates before leaving high school — giving them a direct advantage in the job market or as a foundation for further technical education.",
+      strands: ["ict","he","ia"],
+    },
+    arts: {
+      number: "03",
+      color: "#701a75", accent: "#e879f9",
+      icon: `<svg width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="16" stroke="currentColor" stroke-width="2.2"/><circle cx="22" cy="22" r="4" fill="currentColor"/><path d="M22 6v8M22 30v8M6 22h8M30 22h8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>`,
+      label: "Arts & Design Track",
+      tagline: "Cultivate your creative voice and launch a life in the arts.",
+      overview: "The Arts & Design Track nurtures students with a passion for creative expression, visual storytelling, and performance. Through intensive studio practice, live productions, and portfolio development, students build both the technical skills and artistic identity needed to thrive in design, media, and the performing arts industries.",
+      strands: ["visual-arts","performing-arts"],
+    },
+    sports: {
+      number: "04",
+      color: "#1a2e05", accent: "#84cc16",
+      icon: `<svg width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="16" stroke="currentColor" stroke-width="2.2"/><path d="M10 30c3-5 7-8 12-8s9 3 12 8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M10 14c3 5 7 8 12 8s9-3 12-8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>`,
+      label: "Sports Track",
+      tagline: "Where athletic passion meets academic purpose.",
+      overview: "The Sports Track combines rigorous athletic training with academic study, preparing student-athletes for careers in sports science, coaching, physical education, and sports management. Students gain both the physical conditioning and the theoretical knowledge needed to compete at the highest levels — or to lead and develop athletes of tomorrow.",
+      strands: ["sports-science","coaching"],
+    },
+  };
+
+  // ── OVERLAY ELEMENTS ─────────────────────────────────────────────
+  const overlay   = document.getElementById('strandDetailOverlay');
+  const contentEl = document.getElementById('strandDetailContent');
+  const backBtn   = document.getElementById('strandDetailBack');
+
+  if (!overlay || !contentEl || !backBtn) return;
+
+  // Track what level we're viewing so Back knows where to go
+  let viewStack = []; // e.g. ['track:academic'] or ['track:academic','strand:stem']
+
+  // ── BUILDERS ─────────────────────────────────────────────────────
+  function buildTrackHTML(t) {
+    const strandCards = t.strands.map(key => {
+      const s = STRAND_DATA[key];
+      if (!s) return '';
+      const subjectPreview = s.subjects.slice(0, 3).map(sub => `<li>${sub}</li>`).join('');
+      return `
+        <button class="track-strand-card" data-strand="${key}" style="--ts-accent:${s.accent};">
+          <div class="track-strand-card-icon" style="color:${s.accent};">${s.icon}</div>
+          <div class="track-strand-card-body">
+            <div class="track-strand-card-label">${s.label}</div>
+            <p class="track-strand-card-full">${s.full}</p>
+            <p class="track-strand-card-tagline">"${s.tagline}"</p>
+            <ul class="track-strand-card-subjects">${subjectPreview}<li class="track-strand-more">+ ${s.subjects.length - 3} more subjects…</li></ul>
+          </div>
+          <div class="track-strand-card-cta">View Full Details <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </button>`;
+    }).join('');
+
+    return `
+      <div class="strand-article-hero" style="background:${t.color};">
+        <div class="strand-article-hero-content">
+          <div class="track-hero-number">${t.number}</div>
+          <div class="sp-icon">${t.icon}</div>
+          <h1 class="strand-article-title">${t.label}</h1>
+          <p class="sp-tagline" style="border-left-color:${t.accent};">"${t.tagline}"</p>
+        </div>
+      </div>
+      <div class="strand-article-body">
+        <div class="strand-article-section">
+          <h3 class="sp-section-title">About This Track</h3>
+          <p>${t.overview}</p>
+        </div>
+        <div class="strand-article-section">
+          <h3 class="sp-section-title">Available Strands — tap to explore</h3>
+          <div class="track-strands-list">${strandCards}</div>
+        </div>
+        <div class="sp-cta">
+          <a href="apply.html" class="btn btn-primary">Apply for This Track</a>
+          <a href="admissions.html#requirements-shs" class="btn btn-outline" style="color:var(--color-primary);border-color:var(--color-primary);">See Requirements</a>
+        </div>
+      </div>`;
+  }
+
+  function buildStrandHTML(d) {
+    const subjectItems = d.subjects.map(s => `<li>${s}</li>`).join('');
+    const careerTags   = d.careers.map(c => `<span class="sp-career-tag">${c}</span>`).join('');
+    const collegeItems = d.colleges.map(c => `<li>${c}</li>`).join('');
+    return `
+      <div class="strand-article-hero" style="background:${d.color};">
+        <div class="strand-article-hero-content">
+          <span class="sp-track-badge">${d.track}</span>
+          <div class="sp-icon">${d.icon}</div>
+          <h1 class="strand-article-title">${d.label}</h1>
+          <p class="sp-full-name">${d.full}</p>
+          <p class="sp-tagline" style="border-left-color:${d.accent};">"${d.tagline}"</p>
+        </div>
+      </div>
+      <div class="strand-article-body">
+        <div class="strand-article-section">
+          <h3 class="sp-section-title">Overview</h3>
+          <p>${d.overview}</p>
+        </div>
+        <div class="strand-article-section">
+          <h3 class="sp-section-title">Core Subjects</h3>
+          <ul class="sp-subject-list">${subjectItems}</ul>
+        </div>
+        <div class="strand-article-section">
+          <h3 class="sp-section-title">Career Pathways</h3>
+          <div class="sp-careers">${careerTags}</div>
+        </div>
+        <div class="strand-article-section">
+          <h3 class="sp-section-title">College Courses to Pursue</h3>
+          <ul class="sp-subject-list">${collegeItems}</ul>
+        </div>
+        <div class="sp-highlight">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>${d.highlight}</span>
+        </div>
+        <div class="sp-cta">
+          <a href="apply.html" class="btn btn-primary">Apply for This Strand</a>
+          <a href="admissions.html#requirements-shs" class="btn btn-outline" style="color:var(--color-primary);border-color:var(--color-primary);">See Requirements</a>
+        </div>
+      </div>`;
+  }
+
+  // ── OPEN / CLOSE ─────────────────────────────────────────────────
+  function render(html, backLabel) {
+    contentEl.innerHTML = html;
+    backBtn.childNodes[backBtn.childNodes.length - 1].textContent = ' ' + backLabel;
+    overlay.scrollTop = 0;
+
+    // Wire strand cards inside track view
+    contentEl.querySelectorAll('.track-strand-card').forEach(card => {
+      card.addEventListener('click', () => openStrand(card.dataset.strand, true));
+    });
+  }
+
+  function openTrack(key) {
+    const t = TRACK_DATA[key];
+    if (!t) return;
+    viewStack = [{ type: 'track', key }];
+    render(buildTrackHTML(t), 'Back to Academics');
+    overlay.classList.add('is-open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    history.pushState({ academicsOverlay: true, type: 'track', key }, '', `#track-${key}`);
+  }
+
+  function openStrand(key, fromTrack) {
+    const d = STRAND_DATA[key];
+    if (!d) return;
+    if (fromTrack) {
+      viewStack.push({ type: 'strand', key });
+    } else {
+      viewStack = [{ type: 'strand', key }];
+    }
+    const backLabel = viewStack.length > 1 ? `Back to ${TRACK_DATA[viewStack[0].key]?.label || 'Track'}` : 'Back to Academics';
+    render(buildStrandHTML(d), backLabel);
+    overlay.classList.add('is-open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    history.pushState({ academicsOverlay: true, type: 'strand', key, fromTrack }, '', `#strand-${key}`);
+  }
+
+  function goBack() {
+    viewStack.pop();
+    if (viewStack.length > 0) {
+      const prev = viewStack[viewStack.length - 1];
+      if (prev.type === 'track') {
+        const t = TRACK_DATA[prev.key];
+        render(buildTrackHTML(t), 'Back to Academics');
+        history.pushState({ academicsOverlay: true, type: 'track', key: prev.key }, '', `#track-${prev.key}`);
+      }
+    } else {
+      closeOverlay();
+    }
+  }
+
+  function closeOverlay() {
+    overlay.classList.remove('is-open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    viewStack = [];
+  }
+
+  // ── EVENT LISTENERS ──────────────────────────────────────────────
+  // Track cards
+  document.querySelectorAll('.track-clickable').forEach(card => {
+    card.addEventListener('click', () => openTrack(card.dataset.track));
+  });
+
+  // Back button
+  backBtn.addEventListener('click', () => {
+    if (viewStack.length > 1) {
+      history.back();
+    } else {
+      closeOverlay();
+      if (history.state && history.state.academicsOverlay) history.back();
+    }
+  });
+
+  // Browser back
+  window.addEventListener('popstate', () => {
+    if (!overlay.classList.contains('is-open')) return;
+    if (viewStack.length > 1) {
+      goBack();
+    } else {
+      closeOverlay();
+    }
+  });
+
+  // ESC
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && overlay.classList.contains('is-open')) {
+      if (viewStack.length > 1) goBack();
+      else {
+        closeOverlay();
+        if (history.state && history.state.academicsOverlay) history.back();
+      }
+    }
+  });
+
+})();
