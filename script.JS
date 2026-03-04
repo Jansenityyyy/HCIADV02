@@ -245,7 +245,7 @@ lazyBackgrounds.forEach(bg => {
 const currentYear = new Date().getFullYear();
 const footerText = document.querySelector('.footer-bottom p');
 if (footerText) {
-    footerText.textContent = `© ${currentYear} University of Excellence. All rights reserved.`;
+    footerText.textContent = `© ${1972} Amore Academy. All rights reserved.`;
 }
 
 if (window.innerWidth > 1024) {
@@ -284,7 +284,7 @@ quickLinks.forEach((card, index) => {
     card.style.animationDelay = `${index * 0.1}s`;
 });
 
-console.log('University of Excellence Website Loaded Successfully! 🎓');
+console.log('Amore Academy Website Loaded Successfully! 🎓');
 // ===================================================================
 // NEWS ARTICLE DETAIL OVERLAY
 // ===================================================================
