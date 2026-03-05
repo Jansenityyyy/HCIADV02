@@ -503,7 +503,6 @@
 
     <script src="script.JS"></script>
     <script>
-      // Requirements tab switcher
       document.querySelectorAll(".adm-req-tab").forEach((tab) => {
         tab.addEventListener("click", () => {
           document.querySelectorAll(".adm-req-tab").forEach((t) => t.classList.remove("active"));
@@ -512,8 +511,6 @@
           document.getElementById(tab.dataset.target).classList.add("active");
         });
       });
-
-      // Deep-link: auto-switch to SHS tab if URL hash is #requirements-shs
       if (window.location.hash === "#requirements-shs") {
         const shsTab = document.querySelector('[data-target="panel-shs"]');
         if (shsTab) shsTab.click();
