@@ -1864,7 +1864,7 @@ section {
 
 .academics-tracks-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--spacing-md);
   margin-top: var(--spacing-md);
 }
@@ -3654,7 +3654,7 @@ section {
     direction: ltr;
   }
   .academics-tracks-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .academics-faculty-grid {
     grid-template-columns: repeat(4, 1fr);
