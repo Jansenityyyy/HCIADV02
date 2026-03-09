@@ -77,37 +77,51 @@
     </nav>
 
     <!-- ═══════════ HERO ═══════════ -->
-    <section class="legal-hero">
-      <div class="legal-hero-pattern"></div>
-      <div class="legal-hero-inner">
-        <div class="legal-hero-left">
-          <div class="legal-hero-badge">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            Legal &amp; Compliance
+    <section class="legal-hero" style="background:none;position:relative;display:flex;align-items:center;justify-content:center;min-height:clamp(320px,52vh,520px);">
+      <!-- bg image layer -->
+      <div style="position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none;">
+        <img src="image/bg.png" alt="" aria-hidden="true" style="position:absolute;width:100%;height:100%;object-fit:cover;object-position:center;filter:blur(3px) brightness(0.8);transform:scale(1.06);" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(6,23,57,0.50) 0%,rgba(6,23,57,0.68) 55%,rgba(6,23,57,0.90) 100%);"></div>
+      </div>
+
+      <div style="position:relative;z-index:1;text-align:center;width:100%;max-width:min(780px,90vw);padding:0 var(--container-padding);display:flex;flex-direction:column;align-items:center;animation:fadeInUp 0.9s ease 0.2s both;">
+        <div class="legal-hero-badge" style="margin-bottom:1.25rem;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Legal &amp; Compliance
+        </div>
+
+        <h1 style="font-family:var(--font-display);font-size:clamp(2.25rem,5vw,3.75rem);font-weight:900;color:#fff;line-height:1.1;letter-spacing:0.03em;text-shadow:0 4px 24px rgba(0,0,0,0.4);margin-bottom:1rem;">Privacy, Terms<br>&amp; Accessibility</h1>
+
+        <p class="legal-hero-desc" style="text-align:center;max-width:580px;margin:0 auto 2rem;">At Amore Academy, trust is the foundation of every relationship we build — with students, families, and our wider community. This page brings together our full commitment to data privacy, fair terms of use, and barrier-free digital access.</p>
+
+        <div class="legal-hero-meta" style="margin:0 auto 1.75rem;">
+          <div class="legal-meta-item">
+            <span class="legal-meta-label">Last Updated</span>
+            <span class="legal-meta-value">January 15, 2026</span>
           </div>
-          <h1>Privacy, Terms<br>&amp; Accessibility</h1>
-          <p class="legal-hero-desc">Amore Academy is committed to transparency, responsible data practices, and an inclusive digital experience for every student, parent, and visitor in our community.</p>
-          <div class="legal-hero-meta">
-            <div class="legal-meta-item">
-              <span class="legal-meta-label">Last Updated</span>
-              <span class="legal-meta-value">January 15, 2026</span>
-            </div>
-            <div class="legal-meta-item">
-              <span class="legal-meta-label">Effective Date</span>
-              <span class="legal-meta-value">February 1, 2026</span>
-            </div>
-            <div class="legal-meta-item">
-              <span class="legal-meta-label">Applies To</span>
-              <span class="legal-meta-value">All Users &amp; Visitors</span>
-            </div>
+          <div class="legal-meta-item">
+            <span class="legal-meta-label">Effective Date</span>
+            <span class="legal-meta-value">February 1, 2026</span>
+          </div>
+          <div class="legal-meta-item">
+            <span class="legal-meta-label">Applies To</span>
+            <span class="legal-meta-value">All Users &amp; Visitors</span>
           </div>
         </div>
-        <div class="legal-hero-shield">
-          <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M60 4L108 24V68C108 96 88 120 60 136C32 120 12 96 12 68V24L60 4Z" stroke="currentColor" stroke-width="4" fill="none"/>
-            <path d="M60 20L96 36V68C96 89 82 108 60 120C38 108 24 89 24 68V36L60 20Z" stroke="currentColor" stroke-width="2" fill="rgba(255,255,255,0.04)"/>
-            <path d="M44 70L56 82L78 58" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+          <a href="#panel-privacy" onclick="activateTab('privacy');return false;" style="display:inline-flex;align-items:center;gap:6px;padding:9px 20px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:6px;color:#fff;text-decoration:none;font-size:0.82rem;font-weight:600;letter-spacing:0.03em;backdrop-filter:blur(6px);transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Privacy Policy
+          </a>
+          <a href="#panel-terms" onclick="activateTab('terms');return false;" style="display:inline-flex;align-items:center;gap:6px;padding:9px 20px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:6px;color:#fff;text-decoration:none;font-size:0.82rem;font-weight:600;letter-spacing:0.03em;backdrop-filter:blur(6px);transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Terms of Use
+          </a>
+          <a href="#panel-accessibility" onclick="activateTab('accessibility');return false;" style="display:inline-flex;align-items:center;gap:6px;padding:9px 20px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:6px;color:#fff;text-decoration:none;font-size:0.82rem;font-weight:600;letter-spacing:0.03em;backdrop-filter:blur(6px);transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="5" r="2"/><path d="M12 7v5l-3 4"/><path d="M9 12h6"/></svg>
+            Accessibility
+          </a>
         </div>
       </div>
     </section>
