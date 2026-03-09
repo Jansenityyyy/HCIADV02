@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legal & Accessibility — Amore Academy</title>
+    <link rel="stylesheet" href="Style.css" />
+    <link rel="icon" type="image/png" href="image/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <div class="school-crest">
+            <a href="Home.html"><img src="image/Amore_Academy_Logo.png" width="100px" /></a>
+          </div>
+          <div class="brand-text-block">
+            <span class="brand-name">AMORE ACADEMY</span>
+            <span class="brand-tagline">Shaping Minds, Building the Future</span>
+          </div>
+        </div>
+        <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item"><a href="Home.html" class="nav-link">Home</a></li>
+          <li class="nav-item dropdown">
+            <a href="about.html" class="nav-link">About <span class="dropdown-arrow">▾</span></a>
+            <div class="dropdown-menu">
+              <div class="dropdown-section">
+                <h4>General Information</h4>
+                <a href="about.html#history">School History</a>
+                <a href="about.html#mission-vision">Mission and Vision</a>
+                <a href="about.html#core-values">Core Values</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="academics.html" class="nav-link">Academics <span class="dropdown-arrow">▾</span></a>
+            <div class="dropdown-menu">
+              <div class="dropdown-section">
+                <h4>Programs Offered</h4>
+                <a href="academics.html#junior-high">Junior High School</a>
+                <a href="academics.html#senior-high">Senior High School</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="news.html" class="nav-link">News <span class="dropdown-arrow">▾</span></a>
+            <div class="dropdown-menu">
+              <a href="news.html#announcements">Announcements</a>
+              <a href="news.html#events">Upcoming Events</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="admissions.html" class="nav-link">Admissions <span class="dropdown-arrow">▾</span></a>
+            <div class="dropdown-menu">
+              <div class="dropdown-section">
+                <h4>Apply &amp; Enroll</h4>
+                <a href="apply.html">Apply Now</a>
+                <a href="admissions.html#enroll">Enroll Online</a>
+                <a href="admissions.html#procedure">Procedure for Enrollment</a>
+              </div>
+              <div class="dropdown-section">
+                <h4>Admission Requirements</h4>
+                <a href="admissions.html#requirements-jhs">Junior High School</a>
+                <a href="admissions.html#requirements-shs">Senior High School</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="legal-hero">
+      <div class="legal-hero-pattern"></div>
+      <div class="legal-hero-inner">
+        <div class="legal-hero-left">
+          <div class="legal-hero-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Legal &amp; Compliance
+          </div>
+          <h1>Privacy, Terms<br>&amp; Accessibility</h1>
+          <p class="legal-hero-desc">Amore Academy is committed to transparency, responsible data practices, and an inclusive digital experience for every student, parent, and visitor in our community.</p>
+          <div class="legal-hero-meta">
+            <div class="legal-meta-item">
+              <span class="legal-meta-label">Last Updated</span>
+              <span class="legal-meta-value">January 15, 2026</span>
+            </div>
+            <div class="legal-meta-item">
+              <span class="legal-meta-label">Effective Date</span>
+              <span class="legal-meta-value">February 1, 2026</span>
+            </div>
+            <div class="legal-meta-item">
+              <span class="legal-meta-label">Applies To</span>
+              <span class="legal-meta-value">All Users &amp; Visitors</span>
+            </div>
+          </div>
+        </div>
+        <div class="legal-hero-shield">
+          <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M60 4L108 24V68C108 96 88 120 60 136C32 120 12 96 12 68V24L60 4Z" stroke="currentColor" stroke-width="4" fill="none"/>
+            <path d="M60 20L96 36V68C96 89 82 108 60 120C38 108 24 89 24 68V36L60 20Z" stroke="currentColor" stroke-width="2" fill="rgba(255,255,255,0.04)"/>
+            <path d="M44 70L56 82L78 58" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ TAB NAV ═══════════ -->
+    <div class="legal-tabs-wrap">
+      <div class="legal-tabs" role="tablist">
+        <button class="legal-tab active" data-panel="privacy" role="tab" aria-selected="true">
+          <span class="legal-tab-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+          Privacy Policy
+        </button>
+        <button class="legal-tab" data-panel="terms" role="tab" aria-selected="false">
+          <span class="legal-tab-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg></span>
+          Terms of Use
+        </button>
+        <button class="legal-tab" data-panel="accessibility" role="tab" aria-selected="false">
+          <span class="legal-tab-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="2"/><path d="M12 7v5l-3 4"/><path d="M9 16l-2 3"/><path d="M15 16l2 3"/><path d="M9 12h6"/></svg></span>
+          Accessibility
+        </button>
+      </div>
+    </div>
+
+    <!-- ═══════════ MAIN CONTENT ═══════════ -->
+    <main>
+      <div class="legal-layout">
+
+        <!-- Sidebar -->
+        <aside class="legal-toc" aria-label="Page contents">
+          <div class="legal-toc-inner">
+            <span class="legal-toc-title">On This Page</span>
+            <ul id="tocList"></ul>
+          </div>
+          <div class="legal-help-card">
+            <h4>Need Help?</h4>
+            <p>Questions about our policies or your rights? Our team is here for you.</p>
+            <a href="mailto:info@amoreacademy.edu.ph">Email us →</a>
+          </div>
+        </aside>
+
+        <!-- ══ PRIVACY POLICY ══ -->
+        <div class="legal-panel active" id="panel-privacy">
+
+          <div class="legal-section" id="privacy-overview">
+            <span class="legal-section-label">Privacy Policy</span>
+            <h2 class="legal-section-heading">
+              <span class="legal-heading-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+              Overview
+            </h2>
+            <p class="lead">Amore Academy values the trust you place in us when you share your personal information. This Privacy Policy explains how we collect, use, and protect the data of students, parents, guardians, and visitors in compliance with applicable Philippine law.</p>
+            <p>This policy applies to the Amore Academy website and all related digital services we operate. By using our website, you acknowledge that you have read and understood this policy.</p>
+            <div class="legal-note">
+              <p>This policy is governed by the <strong>Data Privacy Act of 2012 (Republic Act No. 10173)</strong> and its implementing rules and regulations. We are registered with the National Privacy Commission (NPC) of the Philippines.</p>
+            </div>
+          </div>
+
+          <div class="legal-section" id="privacy-collection">
+            <span class="legal-section-label">Collection</span>
+            <h2 class="legal-section-heading">
+              <span class="legal-heading-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+              Information We Collect
+            </h2>
+            <div class="legal-info-grid">
+              <div class="legal-info-card">
+                <div class="legal-info-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+                <h4>Information You Provide</h4>
+                <p>Submitted through forms, applications, emails, and registration — including names, contact details, and academic records.</p>
+              </div>
+              <div class="legal-info-card">
+                <div class="legal-info-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+                <h4>Automatically Collected</h4>
+                <p>Technical data such as IP addresses, browser type, pages visited, and session duration — used only for site improvement.</p>
+              </div>
+            </div>
+            <h3>Personal Information We May Request</h3>
+            <p>When you engage with our admissions process, contact us, or register for school programs, we may ask for:</p>
+            <ul>
+              <li>Full name, date of birth, and gender</li>
+              <li>Home address and contact number</li>
+              <li>Email address of parent or guardian</li>
+              <li>Academic records or prior school information</li>
+              <li>Government-issued identification (for enrollment purposes only)</li>
+            </ul>
+            <h3>Sensitive Personal Information</h3>
+            <p>In limited cases related to student health, safety, or learning support, we may collect sensitive information such as medical conditions or special learning needs. This is handled with the highest level of care and is only disclosed on a strict need-to-know basis.</p>
+          </div>
+
+          <div class="legal-section" id="privacy-use">
+            <span class="legal-section-label">Use of Data</span>
+            <h2 class="legal-section-heading">
+              <span class="legal-heading-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></span>
+              How We Use Your Information
+            </h2>
+            <p>We process personal data only for legitimate and specified purposes. The information we collect is used to:</p>
+            <ul>
+              <li>Process and evaluate admissions applications</li>
+              <li>Facilitate enrollment and manage student records</li>
+              <li>Communicate school announcements, events, and important updates</li>
+              <li>Improve and maintain our website and digital services</li>
+              <li>Ensure the safety and well-being of all students and staff</li>
+              <li>Comply with legal obligations under Philippine law</li>
+              <li>Respond to inquiries, feedback, or complaints</li>
+            </ul>
+            <div class="legal-warning">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <p>We do <strong>not</strong> sell, rent, or trade your personal information to advertisers or marketing companies. Your data is used only to serve you and operate our school.</p>
+            </div>
+          </div>
+
+          <div class="legal-section" id="privacy-sharing">
+            <span class="legal-section-label">Disclosure</span>
+            <h2 class="legal-section-heading">
+              <span class="legal-heading-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></span>
+              Information Sharing &amp; Disclosure
+            </h2>
+            <p>We treat your information with discretion. We only share data in the following limited, necessary circumstances:</p>
+            <div class="legal-rights-list">
+              <div class="legal-right-item"><div class="legal-right-num">1</div><p><strong>Service Providers</strong> — Trusted vendors who support our operations (e.g., learning management systems, email platforms) under strict confidentiality agreements.</p></div>
+              <div class="legal-right-item"><div class="legal-right-num">2</div><p><strong>Government Authorities</strong> — The Department of Education (DepEd) and other regulatory agencies as required by the K-12 law and Philippine educational regulations.</p></div>
+              <div class="legal-right-item"><div class="legal-right-num">3</div><p><strong>Legal Compliance</strong> — When required by court order, subpoena, or applicable law to protect the rights and safety of our community.</p></div>
+              <div class="legal-right-item"><div class="legal-right-num">4</div><p><strong>Emergency Situations</strong> — To protect the vital interests of a student or any person in situations involving immediate health or safety risks.</p></div>
+            </div>
+          </div>
+
+          <div class="legal-section" id="privacy-rights">
+            <span class="legal-section-label">Your Rights</span>
+            <h2 class="legal-section-heading">
+              <span class="legal-heading-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+              Your Data Privacy Rights
+            </h2>
+            <p>Under the <strong>Data Privacy Act of 2012 (RA 10173)</strong>, every data subject has protected rights. As a member of the Amore Academy community, you are entitled to:</p>
+            <div class="legal-rights-list">
+              <div class="legal-right-item"><div class="legal-right-num">✓</div><p><strong>Right to Be Informed</strong> — Know what personal data is being collected, why, and how it is being processed.</p></div>
+              <div class="legal-right-item"><div class="legal-right-num">✓</div><p><strong>Right to Access</strong> — Request a copy of your personal data that we hold, along with details of how it has been used.</p></div>
+              <div class="legal-right-item"><div class="legal-right-num">✓</div><p><strong>Right to Correct</strong> — Dispute and request correction of any inaccurate, incomplete, or outdated personal information.</p></div>
+              <div class="legal-right-item"><div class="legal-right-num">✓</div><p><strong>Right to Erasure</strong> — Request the deletion or blocking of your data when it is no longer necessary for the purpose for which it was collected.</p></div>
+              <div class="legal-right-item"><div class="legal-right-num">✓</div><p><strong>Right to Object</strong> — Object to the processing of your personal data in certain circumstances, including for direct marketing.</p></div>
+              <div class="legal-right-item"><div class="legal-right-num">✓</div><p><strong>Right to Data Portability</strong> — Receive a copy of your data in a structured, commonly used format where technically feasible.</p></div>
+            </div>
+            <p>To exercise any of these rights, please contact our designated Data Privacy Officer. We aim to respond to all verified requests within fifteen (15) business days.</p>
+            <div class="legal-contact-card">
+              <div class="legal-contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div>
+                <h4>Data Privacy Officer</h4>
+                <p><strong>Email:</strong> <a href="mailto:privacy@amoreacademy.edu.ph">privacy@amoreacademy.edu.ph</a></p>
+                <p><strong>Phone:</strong> (02) 8123-4567 local 205</p>
+                <p><strong>Office:</strong> Administration Building, Room 201 — Mon–Fri, 8:00 AM – 5:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="legal-section" id="privacy-cookies">
+            <span class="legal-section-label">Cookies</span>
+            <h2 class="legal-section-heading">
+              <span class="legal-heading-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="8" cy="9" r="1" fill="currentColor"/><circle cx="15" cy="9" r="1" fill="currentColor"/><circle cx="10" cy="15" r="1" fill="currentColor"/></svg></span>
+              Cookies &amp; Tracking
+            </h2>
+            <p>Our website uses cookies — small text files stored on your device — to enhance your experience, remember preferences, and analyze how visitors interact with our site. We use only essential and analytics cookies.</p>
+            <div class="legal-info-grid">
+              <div class="legal-info-card">
+                <div class="legal-info-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+                <h4>Essential Cookies</h4>
+                <p>Necessary for the website to function. These enable navigation, form submissions, and basic security features.</p>
+              </div>
+              <div class="legal-info-card">
+                <div class="legal-info-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+                <h4>Analytics Cookies</h4>
+                <p>Help us understand how visitors use our site so we can improve content and navigation over time.</p>
+              </div>
+            </div>
+            <p>You may disable cookies through your browser settings at any time. We do not use advertising or third-party tracking cookies.</p>
+          </div>
+
+          <div class="legal-section" id="privacy-retention">
+            <span class="legal-section-label">Security</span>
+            <h2 class="legal-section-heading">
+              <span class="legal-heading-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+              Data Retention &amp; Security
+            </h2>
+            <p>We retain personal data only for as long as necessary to fulfill the purpose for which it was collected, or as required by law. Student academic records are retained in accordance with DepEd regulations. Inquiry and application data from non-enrolled individuals is deleted after two (2) years unless otherwise required.</p>
+            <h3>How We Protect Your Data</h3>
+            <p>We implement appropriate technical and organizational measures to safeguard personal data against unauthorized access, loss, misuse, or alteration. These include:</p>
+            <ul>
+              <li>Secure, encrypted transmission (HTTPS) across our entire website</li>
+              <li>Access controls limiting data to authorized personnel only</li>
+              <li>Regular security reviews and staff data privacy training</li>
+              <li>Secure physical storage for printed records and documents</li>
+            </ul>
+            <div class="legal-note">
+              <p>While we employ reasonable security measures, no digital system is completely invulnerable. We encourage you to protect your account credentials and contact us immediately if you suspect unauthorized access to your information.</p>
+            </div>
+          </div>
+
+        </div><!-- END PRIVACY -->
+
+
+        <!-- ══ TERMS OF USE ══ -->
+        <div class="legal-panel" id="panel-terms">
+
+          <div class="legal-section" id="terms-overview">
+            <span class="legal-section-label">Terms of Use</span>
+            <h2 class="legal-section-heading">
+              <span class="legal-heading-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span>
+              Overview
+            </h2>
+            <p class="lead">These Terms of Use govern your access to and use of the Amore Academy website. By visiting or interacting with our site, you agree to be bound by these terms. Please read them carefully.</p>
+            <p>If you do not agree to any part of these terms, you should discontinue use of the website. We reserve the right to update these terms at any time, and your continued use of the site following any changes constitutes acceptance of the revised terms.</p>
+            <div class="legal-note">
+              <p>These terms apply to all users — including students, parents, guardians, applicants, and general visitors — who access any page of the Amore Academy website.</p>
+            </div>
+          </div>
+
+          <div class="legal-section" id="terms-use">
+            <span class="legal-section-label">Conduct</span>
+            <h2 class="legal-section-heading">
+              <span class="legal-heading-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+              Acceptable Use
+            </h2>
+            <p>You may use this website for personal, informational, and non-commercial purposes only. You agree not to engage in any of the following:</p>
+            <ul>
+              <li>Violating any applicable local, national, or international law or regulation</li>
+              <li>Transmitting unsolicited or unauthorized promotional content (spam)</li>
+              <li>Attempting to gain unauthorized access to any portion of the site or its servers</li>
+              <li>Impersonating any person or misrepresenting your affiliation with Amore Academy</li>
+              <li>Uploading or transmitting viruses, malware, or other malicious code</li>
+              <li>Conducting automated data collection, scraping, or crawling without written consent</li>
+              <li>Posting or sharing content that is defamatory, obscene, or harmful to minors</li>
+              <li>Interfering with the security or integrity of the website or its systems</li>
+            </ul>
+            <p>Violations of this acceptable use policy may result in immediate termination of access and may be referred to the appropriate legal authorities.</p>
+          </div>
+
+          <div class="legal-section" id="terms-ip">
+            <span class="legal-section-label">Intellectual Property</span>
+            <h2 class="legal-section-heading">
+              <span class="legal-heading-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+              Intellectual Property
+            </h2>
+            <p>All content published on this website — including text, articles, images, photographs, graphics, logos, icons, audio clips, and software — is the exclusive property of Amore Academy or its respective content owners, and is protected under applicable intellectual property laws of the Republic of the Philippines.</p>
+            <div class="legal-info-grid">
+              <div class="legal-info-card">
+                <div class="legal-info-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/></svg></div>
+                <h4>What Is Permitted</h4>
+                <p>Viewing, printing, or downloading content for personal, non-commercial use. Sharing links to our publicly accessible pages.</p>
+              </div>
+              <div class="legal-info-card">
+                <div class="legal-info-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+                <h4>What Is Not Permitted</h4>
+                <p>Reproducing, modifying, distributing, or commercially exploiting any site content without prior written permission from Amore Academy.</p>
+              </div>
+            </div>
+            <div class="legal-warning">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <p>The <strong>Amore Academy name, logo, and tagline</strong> are protected trademarks. Unauthorized use may constitute trademark infringement under Philippine law.</p>
+            </div>
+          </div>
+
+          <div class="legal-section" id="terms-liability">
+            <span class="legal-section-label">Liability</span>
+            <h2 class="legal-section-heading">
+              <span class="legal-heading-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+              Disclaimer &amp; Limitation of Liability
+            </h2>
+            <p>This website is provided on an <em>"as is"</em> and <em>"as available"</em> basis. While we strive to keep information accurate and current, Amore Academy makes no warranty, express or implied, regarding the completeness, accuracy, or reliability of any content on this site.</p>
+            <p>We specifically disclaim liability for:</p>
+            <ul>
+              <li>Errors, omissions, or inaccuracies in content</li>
+              <li>Interruption or unavailability of the website due to technical issues</li>
+              <li>Any damage to your device arising from accessing our site or downloading files</li>
+              <li>Any decision made in reliance on information contained on this website</li>
+            </ul>
+            <p>To the fullest extent permitted by Philippine law, Amore Academy shall not be held liable for any indirect, incidental, special, or consequential damages arising from the use of, or inability to use, this website.</p>
+          </div>
+
+          <div class="legal-section" id="terms-links">
+            <span class="legal-section-label">External Links</span>
+            <h2 class="legal-section-heading">
+              <span class="legal-heading-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>
+              Third-Party Links
+            </h2>
+            <p>Our website may contain links to external websites operated by third parties (such as DepEd portals, partner institutions, or reference resources). These links are provided for your convenience and information only.</p>
+            <p>Amore Academy has no control over and accepts no responsibility for the content, privacy practices, or accuracy of any third-party website. The inclusion of a link does not constitute endorsement of that site or its content. We encourage you to review the privacy policies of any external sites you visit.</p>
+          </div>
+
+          <div class="legal-section" id="terms-changes">
+            <span class="legal-section-label">Updates</span>
+            <h2 class="legal-section-heading">
+              <span class="legal-heading-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.8"/></svg></span>
+              Changes to These Terms
+            </h2>
+            <p>Amore Academy reserves the right to amend these Terms of Use at any time to reflect changes in our practices, legal requirements, or the nature of our services. Updated terms will be posted on this page with a revised effective date.</p>
+            <p>We encourage all users to review this page periodically. For significant changes, we may also notify registered users via email or through an announcement on our website. Your continued use of the site following any update constitutes acceptance of the revised terms.</p>
+          </div>
+
+          <div class="legal-section" id="terms-law">
+            <span class="legal-section-label">Legal</span>
+            <h2 class="legal-section-heading">
+              <span class="legal-heading-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></span>
+              Governing Law &amp; Jurisdiction
+            </h2>
+            <p>These Terms of Use and any disputes arising from your use of the Amore Academy website are governed by and construed in accordance with the laws of the <strong>Republic of the Philippines</strong>, without regard to its conflict of law provisions.</p>
+            <p>Any legal action or proceeding relating to your access or use of this website shall be instituted in a court of competent jurisdiction in <strong>Metro Manila, Philippines</strong>. You agree to submit to the personal jurisdiction of such courts.</p>
+            <div class="legal-contact-card">
+              <div class="legal-contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+              <div>
+                <h4>Legal Inquiries</h4>
+                <p>For questions regarding these Terms of Use, please reach out to our administration:</p>
+                <p><strong>Email:</strong> <a href="mailto:legal@amoreacademy.edu.ph">legal@amoreacademy.edu.ph</a></p>
+                <p><strong>Phone:</strong> (02) 8123-4567 &nbsp;|&nbsp; Mon–Fri, 8:00 AM – 5:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- END TERMS -->
+
+
+        <!-- ══ ACCESSIBILITY ══ -->
+        <div class="legal-panel" id="panel-accessibility">
+
+          <div class="legal-section" id="a11y-commitment">
+            <span class="legal-section-label">Accessibility</span>
+            <h2 class="legal-section-heading">
+              <span class="legal-heading-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="2"/><path d="M12 7v5l-3 4"/><path d="M9 16l-2 3"/><path d="M15 16l2 3"/><path d="M9 12h6"/></svg></span>
+              Our Commitment
+            </h2>
+            <p class="lead">Amore Academy believes that education belongs to everyone — and that commitment extends to our digital presence. We are dedicated to ensuring that our website is accessible to all people, including those with disabilities.</p>
+            <p>We are actively working toward conformance with the <strong>Web Content Accessibility Guidelines (WCAG) 2.1, Level AA</strong> — the internationally recognized standard for accessible web content. This is an ongoing effort, and we continuously review and improve our website with accessibility in mind.</p>
+            <div class="legal-note">
+              <p>Our accessibility efforts are also aligned with <strong>Republic Act No. 7277</strong> (the Magna Carta for Persons with Disability), which upholds the rights and privileges of persons with disabilities in the Philippines.</p>
+            </div>
+          </div>
+
+          <div class="legal-section" id="a11y-features">
+            <span class="legal-section-label">Features</span>
+            <h2 class="legal-section-heading">
+              <span class="legal-heading-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>
+              Accessibility Features
+            </h2>
+            <p>We have implemented the following features to support users with a range of needs and preferences:</p>
+            <div class="a11y-features-grid">
+              <div class="a11y-feature-card">
+                <div class="a11y-feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+                <h4>Screen Reader Support</h4>
+                <p>Semantic HTML, ARIA landmarks, descriptive alt text, and form labels ensure compatibility with screen reader software.</p>
+              </div>
+              <div class="a11y-feature-card">
+                <div class="a11y-feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg></div>
+                <h4>Keyboard Navigation</h4>
+                <p>All interactive elements are fully navigable using only a keyboard, with clear and visible focus indicators throughout.</p>
+              </div>
+              <div class="a11y-feature-card">
+                <div class="a11y-feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/></svg></div>
+                <h4>Color Contrast</h4>
+                <p>Text and interface elements maintain at least a 4.5:1 contrast ratio against their background for comfortable reading.</p>
+              </div>
+              <div class="a11y-feature-card">
+                <div class="a11y-feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></div>
+                <h4>Scalable Text</h4>
+                <p>Text on all pages can be resized up to 200% using standard browser zoom without loss of content or functionality.</p>
+              </div>
+              <div class="a11y-feature-card">
+                <div class="a11y-feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+                <h4>Mobile Responsive</h4>
+                <p>A fully responsive layout ensures the website is usable and legible across phones, tablets, and desktop screens of all sizes.</p>
+              </div>
+              <div class="a11y-feature-card">
+                <div class="a11y-feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+                <h4>Plain Language</h4>
+                <p>Content is written in clear, straightforward language appropriate for students, parents, and the general community.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="legal-section" id="a11y-standards">
+            <span class="legal-section-label">Standards</span>
+            <h2 class="legal-section-heading">
+              <span class="legal-heading-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+              Conformance Standards
+            </h2>
+            <p>We measure and guide our accessibility work against the following recognized standards and legal frameworks:</p>
+            <div class="legal-standards">
+              <div class="legal-standard-row">
+                <span class="legal-standard-badge">WCAG 2.1 AA</span>
+                <div class="legal-standard-desc">
+                  <strong>Web Content Accessibility Guidelines</strong>
+                  International standard by the W3C covering perceivability, operability, understandability, and robustness of web content.
+                </div>
+                <span class="legal-standard-status status-progress">In Progress</span>
+              </div>
+              <div class="legal-standard-row">
+                <span class="legal-standard-badge">RA 7277</span>
+                <div class="legal-standard-desc">
+                  <strong>Magna Carta for Persons with Disability</strong>
+                  Philippine legislation protecting the rights of persons with disabilities to equal access to education and services.
+                </div>
+                <span class="legal-standard-status status-active">Active</span>
+              </div>
+              <div class="legal-standard-row">
+                <span class="legal-standard-badge">Section 508</span>
+                <div class="legal-standard-desc">
+                  <strong>U.S. Rehabilitation Act Standards</strong>
+                  Referenced as a supplementary benchmark for electronic and information technology accessibility.
+                </div>
+                <span class="legal-standard-status status-progress">In Progress</span>
+              </div>
+            </div>
+            <p>We acknowledge that some areas of our website may not yet fully meet all standards. We are committed to addressing known gaps and appreciate your patience as we continue to improve.</p>
+          </div>
+
+          <div class="legal-section" id="a11y-alternatives">
+            <span class="legal-section-label">Alternatives</span>
+            <h2 class="legal-section-heading">
+              <span class="legal-heading-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+              Alternative Formats &amp; Assistance
+            </h2>
+            <p>If you require information from our website in an alternative format — such as large print, audio recording, simplified language, or Braille — please contact our office and we will do our best to accommodate your request in a timely and respectful manner.</p>
+            <p>We also offer in-person assistance at our Administration Office for community members who have difficulty navigating our website or completing online forms. No one should feel excluded from the Amore Academy experience due to accessibility barriers.</p>
+            <div class="legal-warning">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <p>Amore Academy does not discriminate on the basis of disability. We are committed to providing equal access to all of our programs, services, and communications — online and in person.</p>
+            </div>
+          </div>
+
+          <div class="legal-section" id="a11y-feedback">
+            <span class="legal-section-label">Contact</span>
+            <h2 class="legal-section-heading">
+              <span class="legal-heading-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+              Feedback &amp; Reporting
+            </h2>
+            <p>Your feedback helps us improve. If you experience any accessibility barrier while using our website — a broken feature, a difficult-to-read section, or an inaccessible form — please let us know. We review every report and aim to resolve issues within five (5) business days.</p>
+            <div class="legal-contact-card">
+              <div class="legal-contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8 8.09a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg></div>
+              <div>
+                <h4>Accessibility Support</h4>
+                <p><strong>Email:</strong> <a href="mailto:accessibility@amoreacademy.edu.ph">accessibility@amoreacademy.edu.ph</a></p>
+                <p><strong>Phone:</strong> (02) 8123-4567 local 210</p>
+                <p><strong>Office Hours:</strong> Monday–Friday, 8:00 AM – 5:00 PM</p>
+                <p><strong>In Person:</strong> Administration Building, Ground Floor — Accessibility Services Desk</p>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- END ACCESSIBILITY -->
+
+      </div>
+    </main>
+
+    <!-- ═══════════ CTA ═══════════ -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Questions About Our Policies?</h2>
+          <p>Our team is always ready to help. Whether it's a privacy concern, a legal inquiry, or an accessibility need — reach out and we'll respond promptly.</p>
+          <div class="cta-buttons">
+            <a href="mailto:info@amoreacademy.edu.ph" class="btn btn-light">Contact Us</a>
+            <a href="admissions.html" class="btn btn-outline">Learn About Admissions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <div class="footer-brand">
+              <div class="school-crest"><img src="image/Amore_Academy_Logo.png" alt="footer-logo" /></div>
+              <h3>Amore Academy</h3>
+            </div>
+            <p>Shaping minds and building futures. Excellence in education, character, and service.</p>
+          </div>
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="academics.html">Academics</a></li>
+              <li><a href="admissions.html">Admissions</a></li>
+              <li><a href="news.html">News &amp; Events</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Programs</h4>
+            <ul>
+              <li><a href="academics.html#junior-high">Junior High School</a></li>
+              <li><a href="academics.html#senior-high">Senior High School</a></li>
+              <li><a href="admissions.html#requirements-jhs">JHS Requirements</a></li>
+              <li><a href="admissions.html#requirements-shs">SHS Requirements</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Contact</h4>
+            <ul class="contact-info">
+              <li>123 Excellence Avenue</li>
+              <li>Education City, Metro Manila</li>
+              <li>Phone: (02) 8123-4567</li>
+              <li>Email: <a href="mailto:info@amoreacademy.edu.ph">info@amoreacademy.edu.ph</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Amore Academy. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="legal.html" style="color:var(--color-accent-light)">Privacy Policy</a>
+            <a href="legal.html">Terms of Use</a>
+            <a href="legal.html">Accessibility</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MOBILE BOTTOM TAB BAR -->
+    <nav class="mobile-tab-bar">
+      <a href="about.html"><div class="tab-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>About</a>
+      <a href="academics.html"><div class="tab-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>Academics</a>
+      <a href="Home.html"><div class="tab-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>Home</a>
+      <a href="news.html"><div class="tab-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/><line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/><line x1="9" y1="15" x2="12" y2="15"/></svg></div>News</a>
+      <a href="admissions.html"><div class="tab-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg></div>Admissions</a>
+    </nav>
+
+    <script src="script.JS"></script>
+    <script>
+      const tocData = {
+        privacy: [
+          { id: 'privacy-overview',   label: 'Overview' },
+          { id: 'privacy-collection', label: 'Information We Collect' },
+          { id: 'privacy-use',        label: 'How We Use Your Data' },
+          { id: 'privacy-sharing',    label: 'Information Sharing' },
+          { id: 'privacy-rights',     label: 'Your Rights' },
+          { id: 'privacy-cookies',    label: 'Cookies & Tracking' },
+          { id: 'privacy-retention',  label: 'Retention & Security' },
+        ],
+        terms: [
+          { id: 'terms-overview',  label: 'Overview' },
+          { id: 'terms-use',       label: 'Acceptable Use' },
+          { id: 'terms-ip',        label: 'Intellectual Property' },
+          { id: 'terms-liability', label: 'Disclaimer & Liability' },
+          { id: 'terms-links',     label: 'Third-Party Links' },
+          { id: 'terms-changes',   label: 'Changes to Terms' },
+          { id: 'terms-law',       label: 'Governing Law' },
+        ],
+        accessibility: [
+          { id: 'a11y-commitment',   label: 'Our Commitment' },
+          { id: 'a11y-features',     label: 'Accessibility Features' },
+          { id: 'a11y-standards',    label: 'Conformance Standards' },
+          { id: 'a11y-alternatives', label: 'Alternative Formats' },
+          { id: 'a11y-feedback',     label: 'Feedback & Reporting' },
+        ],
+      };
+
+      const tabs    = document.querySelectorAll('.legal-tab');
+      const panels  = document.querySelectorAll('.legal-panel');
+      const tocList = document.getElementById('tocList');
+      let observer;
+
+      function buildToc(key) {
+        tocList.innerHTML = '';
+        tocData[key].forEach(item => {
+          const li = document.createElement('li');
+          const a  = document.createElement('a');
+          a.href = '#' + item.id;
+          a.innerHTML = `<span class="toc-dot"></span>${item.label}`;
+          a.addEventListener('click', e => {
+            e.preventDefault();
+            document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
+          });
+          li.appendChild(a);
+          tocList.appendChild(li);
+        });
+        if (observer) observer.disconnect();
+        observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              tocList.querySelectorAll('a').forEach(a => {
+                a.classList.toggle('toc-active', a.getAttribute('href') === '#' + entry.target.id);
+              });
+            }
+          });
+        }, { rootMargin: '-15% 0px -75% 0px' });
+        document.querySelectorAll('.legal-panel.active .legal-section').forEach(s => observer.observe(s));
+      }
+
+      function activateTab(key) {
+        tabs.forEach(t => { t.classList.toggle('active', t.dataset.panel === key); t.setAttribute('aria-selected', t.dataset.panel === key); });
+        panels.forEach(p => p.classList.toggle('active', p.id === 'panel-' + key));
+        buildToc(key);
+        const top = document.querySelector('.legal-tabs-wrap').getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({ top: top - 10, behavior: 'smooth' });
+      }
+
+      tabs.forEach(t => t.addEventListener('click', () => activateTab(t.dataset.panel)));
+
+      const h = window.location.hash;
+      if (h.startsWith('#terms')) activateTab('terms');
+      else if (h.startsWith('#a11y') || h === '#accessibility') activateTab('accessibility');
+      else activateTab('privacy');
+    </script>
+  </body>
+</html>
