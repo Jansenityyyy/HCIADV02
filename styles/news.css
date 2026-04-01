@@ -669,6 +669,20 @@
   margin: 0;
   line-height: 1.6;
 }
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+.footer-bottom a {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 /* ── Responsive ── */
 @media (min-width: 480px) {
@@ -817,7 +831,7 @@
     border-radius: 6px;
     width: fit-content;
   }
-  
+
   .article-detail-event-date .day { font-size: 1.5rem; }
   .article-detail-body {
     font-size: 0.97rem;
