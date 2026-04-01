@@ -817,6 +817,7 @@
     border-radius: 6px;
     width: fit-content;
   }
+  
   .article-detail-event-date .day { font-size: 1.5rem; }
   .article-detail-body {
     font-size: 0.97rem;
