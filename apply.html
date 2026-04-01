@@ -12,8 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
   </head>
   <body>
-
-    <!-- NAVBAR -->
     <nav class="navbar">
       <div class="nav-container">
         <div class="nav-brand">
@@ -77,8 +75,6 @@
         </ul>
       </div>
     </nav>
-
-    <!-- HERO -->
     <section class="apply-hero">
       <div class="apply-hero-bg">
         <img src="image/bg.png" alt="Campus" class="apply-hero-img" />
@@ -90,8 +86,6 @@
         <p class="apply-hero-sub">Begin your journey at Amore Academy — a place where your potential is shaped into purpose.</p>
       </div>
     </section>
-
-    <!-- STEP PROGRESS BAR -->
     <div class="apply-steps-bar">
       <div class="apply-steps-inner">
         <div class="apply-step-item active" data-step="1" onclick="scrollToSection('sec-personal')">
@@ -120,15 +114,9 @@
         </div>
       </div>
     </div>
-
-    <!-- MAIN BODY -->
     <div class="apply-body">
       <div class="apply-layout">
-
-        <!-- FORM COLUMN -->
         <div class="apply-form-col">
-
-          <!-- 1. Personal Information -->
           <div class="apply-panel" id="sec-personal">
             <div class="apply-panel-header">
               <div class="apply-panel-icon">
@@ -184,7 +172,6 @@
                   <textarea class="form-control" placeholder="House/Unit No., Street, Barangay, City/Municipality, Province" rows="2"></textarea>
                 </div>
               </div>
-
               <div class="form-section">
                 <div class="form-section-title">Contact Details</div>
                 <div class="form-grid">
@@ -198,7 +185,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="form-section">
                 <div class="form-section-title">Parent / Guardian</div>
                 <div class="form-grid">
@@ -228,8 +214,6 @@
               </div>
             </div>
           </div>
-
-          <!-- 2. Program & Level -->
           <div class="apply-panel" id="sec-program">
             <div class="apply-panel-header">
               <div class="apply-panel-icon">
@@ -254,7 +238,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="form-section">
                 <div class="form-section-title">Level of Application</div>
                 <div class="form-group">
@@ -276,7 +259,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="form-section" id="shs-strand-section" style="display:none;">
                 <div class="form-section-title">SHS Strand</div>
                 <div class="form-group">
@@ -310,7 +292,6 @@
                   </select>
                 </div>
               </div>
-
               <div class="form-section">
                 <div class="form-section-title">Application Type</div>
                 <div class="form-group">
@@ -332,8 +313,6 @@
               </div>
             </div>
           </div>
-
-          <!-- 3. Academic Background -->
           <div class="apply-panel" id="sec-academic">
             <div class="apply-panel-header">
               <div class="apply-panel-icon">
@@ -380,7 +359,6 @@
                   <input type="text" class="form-control" placeholder="e.g. With Honors, N/A" />
                 </div>
               </div>
-
               <div class="form-section">
                 <div class="form-section-title">Extracurricular Activities</div>
                 <div class="form-group">
@@ -391,8 +369,6 @@
               </div>
             </div>
           </div>
-
-          <!-- 4. Document Upload -->
           <div class="apply-panel" id="sec-documents">
             <div class="apply-panel-header">
               <div class="apply-panel-icon">
@@ -414,7 +390,6 @@
                     <div class="upload-zone-sub">PDF, JPG up to 5MB</div>
                   </div>
                 </div>
-
                 <div class="form-group" style="margin-top:1.25rem;">
                   <label class="form-label">Birth Certificate (PSA) <span class="req">*</span></label>
                   <div class="upload-zone" onclick="triggerUpload('fpsa')">
@@ -424,7 +399,6 @@
                     <div class="upload-zone-sub">PDF, JPG up to 5MB</div>
                   </div>
                 </div>
-
                 <div class="form-group" style="margin-top:1.25rem;">
                   <label class="form-label">2×2 ID Photo <span class="req">*</span></label>
                   <div class="upload-zone" onclick="triggerUpload('fphoto')">
@@ -434,7 +408,6 @@
                     <div class="upload-zone-sub">JPG or PNG, white background preferred</div>
                   </div>
                 </div>
-
                 <div class="form-group" style="margin-top:1.25rem;">
                   <label class="form-label">Good Moral Certificate</label>
                   <div class="upload-zone" onclick="triggerUpload('fgoodmoral')">
@@ -447,8 +420,6 @@
               </div>
             </div>
           </div>
-
-          <!-- 5. Review & Submit -->
           <div class="apply-panel" id="sec-review">
             <div class="apply-panel-header">
               <div class="apply-panel-icon">
@@ -460,8 +431,6 @@
               </div>
             </div>
             <div class="apply-panel-body">
-
-              <!-- Summary preview -->
               <div class="apply-review-summary">
                 <div class="apply-review-grid">
                   <div>
@@ -482,7 +451,6 @@
                   </div>
                 </div>
               </div>
-
               <div style="display:flex; flex-direction:column; gap:0.875rem; margin-bottom:1.5rem;">
                 <div class="agree-row">
                   <input type="checkbox" id="agree1" />
@@ -497,25 +465,18 @@
                   <label for="agree3">I understand that submission of this form does not guarantee admission. I will be notified of my application status via the email address I have provided.</label>
                 </div>
               </div>
-
               <button class="btn-submit" onclick="submitApplication()">
                 <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                 Submit Application
               </button>
-
               <div class="save-draft-row" onclick="showSaveToast()">
                 <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
                 Save as Draft
               </div>
             </div>
           </div>
-
-        </div><!-- /form col -->
-
-        <!-- SIDEBAR -->
+        </div>
         <div class="apply-sidebar">
-
-          <!-- Admission Timeline -->
           <div class="info-card">
             <div class="info-card-header">
               <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -523,7 +484,6 @@
             </div>
             <div class="info-card-body">
               <div class="apply-timeline-list">
-
                 <div class="apply-timeline-item">
                   <div class="apply-timeline-dot-col">
                     <div class="apply-timeline-dot done"></div>
@@ -535,7 +495,6 @@
                     <div class="apply-timeline-desc">Online applications are now open</div>
                   </div>
                 </div>
-
                 <div class="apply-timeline-item">
                   <div class="apply-timeline-dot-col">
                     <div class="apply-timeline-dot"></div>
@@ -547,7 +506,6 @@
                     <div class="apply-timeline-desc">Schedule will be emailed to qualified applicants</div>
                   </div>
                 </div>
-
                 <div class="apply-timeline-item">
                   <div class="apply-timeline-dot-col">
                     <div class="apply-timeline-dot"></div>
@@ -559,7 +517,6 @@
                     <div class="apply-timeline-desc">Check your email for admission decision</div>
                   </div>
                 </div>
-
                 <div class="apply-timeline-item">
                   <div class="apply-timeline-dot-col">
                     <div class="apply-timeline-dot"></div>
@@ -571,7 +528,6 @@
                     <div class="apply-timeline-desc">Accepted students complete enrollment</div>
                   </div>
                 </div>
-
                 <div class="apply-timeline-item">
                   <div class="apply-timeline-dot-col">
                     <div class="apply-timeline-dot"></div>
@@ -582,12 +538,9 @@
                     <div class="apply-timeline-desc">Welcome to Amore Academy!</div>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
-
-          <!-- Requirements Checklist -->
           <div class="info-card">
             <div class="info-card-header">
               <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
@@ -626,20 +579,14 @@
               </a>
             </div>
           </div>
-
-          <!-- Need Help -->
           <div class="contact-callout">
             <h4>Need Help?</h4>
             <p>Our admissions team is ready to assist you Monday – Friday, 8 AM to 5 PM.</p>
             <a href="#">Contact Admissions</a>
           </div>
-
-        </div><!-- /sidebar -->
-
+        </div>
       </div>
     </div>
-
-    <!-- SUCCESS MODAL -->
     <div class="success-overlay" id="successOverlay">
       <div class="success-modal">
         <div class="success-icon">
@@ -655,14 +602,10 @@
         </div>
       </div>
     </div>
-
-    <!-- SAVE TOAST -->
     <div class="save-toast" id="saveToast">
       <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
       Draft saved
     </div>
-
-    <!-- MOBILE BOTTOM TAB BAR -->
     <nav class="mobile-tab-bar">
       <a href="about.html">
         <div class="tab-icon">
@@ -714,7 +657,6 @@
         Admissions
       </a>
     </nav>
-
     <script src="javascript/script.JS"></script>
   </body>
 </html>
