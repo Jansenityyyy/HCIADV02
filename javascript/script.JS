@@ -285,9 +285,8 @@ quickLinks.forEach((card, index) => {
 });
 
 console.log('Amore Academy Website Loaded Successfully! 🎓');
-// ===================================================================
+
 // NEWS ARTICLE DETAIL OVERLAY
-// ===================================================================
 const articleData = {
   'school-fair': {
     tag: 'Events', tagClass: 'news-page-tag--events',
