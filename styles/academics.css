@@ -1163,3 +1163,57 @@
     height: 52px;
   }
 }
+/* ── Strand Detail Overlay (article-detail pattern) ── */
+.article-detail-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  background: var(--color-white);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+  /* Hidden by default */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(24px);
+  transition: opacity 0.32s ease, transform 0.36s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.article-detail-overlay.is-open {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.article-detail-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 0 4rem;
+}
+
+.article-detail-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  cursor: pointer;
+  padding: 1.25rem 1.5rem;
+  transition: gap var(--transition-fast), color var(--transition-fast);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+  width: 100%;
+}
+.article-detail-back:hover {
+  gap: 0.65rem;
+  color: var(--color-accent);
+}
