@@ -25,7 +25,6 @@ A fully responsive, multi-page fictional school website for **Amore Academy** �
 - 🖼️ **Hero Parallax** — subtle parallax scroll effect on the home hero section
 - 📌 **Sticky Subnav** — per-page sticky sub-navigation that highlights the active section
 - 🗂️ **Tab Switching** — SPA-style tab navigation on multi-section pages
-- 🍔 **Hamburger Menu** — animated mobile navbar with smooth open/close transitions
 - 📋 **Application Form** — multi-step online application on `apply.html`
 - ⚖️ **Legal Hub** — unified Privacy Policy, Terms of Use & Accessibility page
 
