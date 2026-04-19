@@ -151,9 +151,6 @@ section {
   align-items: center;
   gap: 0.5rem;
   transition: var(--transition-fast);
-  border: 2px solid var(--color-primary);
-  padding: 0.4rem 0.9rem;
-  border-radius: 999px; 
 }
 .text-link:hover {
   gap: 1rem;
