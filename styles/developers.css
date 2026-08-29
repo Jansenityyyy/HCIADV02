@@ -1,0 +1,327 @@
+/* =============================================================================
+   AMORE ACADEMY — developers.css
+   Signature concept: the page is framed like the code editor the team
+   actually built the site in — window chrome, file tabs, monospace
+   annotations — dressed in the school's navy/orange identity.
+   ============================================================================= */
+
+/* ── Mono accent face (loaded alongside Crimson Pro / DM Sans in <head>) ── */
+:root {
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+}
+
+/* ── Page Hero — styled as an editor window ── */
+.dev-page-hero {
+  position: relative;
+  margin-top: var(--navbar-height);
+  padding: clamp(2.5rem, 6vw, 4.5rem) 0 clamp(3rem, 7vw, 5.5rem);
+  background: var(--color-primary-dark);
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.08) 1px, transparent 0);
+  background-size: 22px 22px;
+  overflow: hidden;
+}
+.dev-page-hero::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 60%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(251, 133, 0, 0.16), transparent 65%);
+  pointer-events: none;
+}
+
+.dev-editor-frame {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  animation: fadeInUp 0.8s ease both;
+}
+
+.dev-editor-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: none;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  padding: 0.7rem 1rem;
+}
+.dev-editor-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dev-editor-dot--a { background: var(--color-accent); }
+.dev-editor-dot--b { background: var(--color-accent-light); }
+.dev-editor-dot--c { background: var(--color-success); }
+.dev-editor-tab {
+  margin-left: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.02em;
+}
+
+.dev-editor-body {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  padding: clamp(1.75rem, 4vw, 2.75rem) clamp(1.5rem, 4vw, 2.5rem);
+  text-align: left;
+}
+.dev-editor-prompt {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-accent-light);
+  margin-bottom: 0.9rem;
+}
+.dev-editor-prompt::before { content: "$ "; color: var(--color-success); }
+.dev-editor-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1em;
+  margin-left: 2px;
+  background: var(--color-accent-light);
+  vertical-align: text-bottom;
+  animation: devBlink 1.1s steps(1) infinite;
+}
+
+.dev-page-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5.5vw, 3.4rem);
+  color: var(--color-white);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  margin-bottom: 0.9rem;
+}
+.dev-page-hero-title em {
+  font-style: normal;
+  color: var(--color-accent-light);
+}
+.dev-page-hero-description {
+  font-size: clamp(0.95rem, 1.3vw, 1.08rem);
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 52ch;
+}
+
+/* ── Intro ── */
+.dev-intro {
+  text-align: center;
+  color: var(--color-text-medium);
+  max-width: 640px;
+  margin: 0 auto var(--spacing-lg);
+}
+
+/* ── Team Grid — each card is a tiny editor window ── */
+.dev-team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dev-team-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+.dev-team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-accent-light);
+}
+
+.dev-card-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1rem;
+  background: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+}
+.dev-card-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dev-card-dot--a { background: var(--color-accent); }
+.dev-card-dot--b { background: var(--color-accent-light); }
+.dev-card-dot--c { background: var(--color-success); }
+.dev-card-file {
+  margin-left: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-text-light);
+}
+
+.dev-card-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.6rem 1.75rem 1.85rem;
+  flex: 1;
+}
+
+.dev-team-avatar {
+  flex: none;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(10, 36, 99, 0.2);
+  border: 2px solid var(--color-white);
+  outline: 1px solid var(--color-border);
+}
+.dev-team-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.dev-card-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.dev-card-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.3rem;
+}
+.dev-team-role {
+  display: inline-block;
+  width: fit-content;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-accent-dark);
+  background: rgba(251, 133, 0, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.65rem;
+}
+.dev-team-note {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+  margin: 0;
+  line-height: 1.55;
+}
+.dev-team-note::before {
+  content: "// ";
+  color: var(--color-success);
+}
+
+/* ── Lead badge ── */
+.dev-team-card--lead {
+  border-color: var(--color-accent-light);
+  box-shadow: 0 0 0 1px rgba(251, 133, 0, 0.15), var(--shadow-sm);
+}
+.dev-team-badge {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-white);
+  background: var(--color-accent);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  margin-left: 0.5rem;
+}
+
+/* ── Stack strip — package.json rendered as a real code block ── */
+.dev-section--alt {
+  background: var(--color-primary-dark);
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.06) 1px, transparent 0);
+  background-size: 22px 22px;
+  position: relative;
+  overflow: hidden;
+}
+.dev-section--alt::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -8%;
+  width: 55%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(251, 133, 0, 0.12), transparent 65%);
+  pointer-events: none;
+}
+.dev-stack-section { text-align: center; position: relative; z-index: 1; }
+.dev-stack-section .section-label { color: var(--color-accent-light); }
+.dev-stack-section h2 { color: var(--color-white); }
+
+.dev-stack-editor {
+  max-width: 480px;
+  margin: var(--spacing-md) auto 0;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(251, 133, 0, 0.06);
+  overflow: hidden;
+  text-align: left;
+}
+.dev-stack-editor-titlebar {
+  border-radius: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.dev-stack-code {
+  margin: 0;
+  padding: 1.35rem 1.5rem 1.6rem;
+  background: rgba(255, 255, 255, 0.035);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.85;
+  overflow-x: auto;
+  color: rgba(255, 255, 255, 0.75);
+}
+.dev-stack-code .tok-key  { color: var(--color-accent-light); }
+.dev-stack-code .tok-str  { color: #7ee0c3; }
+.dev-stack-code .tok-punc { color: rgba(255, 255, 255, 0.4); }
+.dev-stack-code .dev-editor-cursor { margin-left: 1px; }
+
+/* ── Motion & accessibility ── */
+@keyframes devBlink {
+  0%, 49%  { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dev-editor-frame { animation: none; }
+  .dev-editor-cursor { animation: none; }
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .dev-team-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .dev-card-body {
+    flex-direction: column;
+    text-align: center;
+  }
+  .dev-team-role { margin-left: auto; margin-right: auto; }
+  .dev-team-badge { display: block; margin: 0.3rem auto 0; width: fit-content; }
+  .dev-stack-code { font-size: 0.76rem; padding: 1.1rem 1.1rem 1.4rem; }
+}
