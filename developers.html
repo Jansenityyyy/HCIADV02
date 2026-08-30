@@ -1,6 +1,13 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+      (function () {
+        var saved = localStorage.getItem('theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Developers — Amore Academy</title>
@@ -79,21 +86,44 @@
             </div>
           </li>
         </ul>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
       </div>
     </nav>
 
     <section class="dev-page-hero">
-      <div class="dev-editor-frame">
-        <div class="dev-editor-titlebar">
-          <span class="dev-editor-dot dev-editor-dot--a"></span>
-          <span class="dev-editor-dot dev-editor-dot--b"></span>
-          <span class="dev-editor-dot dev-editor-dot--c"></span>
-          <span class="dev-editor-tab">developers.html</span>
-        </div>
-        <div class="dev-editor-body">
+      <div class="dev-hero-inner">
+        <div class="dev-hero-text">
+          <div class="dev-editor-titlebar">
+            <span class="dev-editor-dot dev-editor-dot--a"></span>
+            <span class="dev-editor-dot dev-editor-dot--b"></span>
+            <span class="dev-editor-dot dev-editor-dot--c"></span>
+            <span class="dev-editor-tab">developers.html</span>
+          </div>
           <span class="dev-editor-prompt">whoami --team<span class="dev-editor-cursor"></span></span>
           <h1 class="dev-page-hero-title">The people who <em>built</em> this site</h1>
           <p class="dev-page-hero-description">Four faculty members traded lesson plans for line numbers to design, code, and ship the Amore Academy website you're browsing right now.</p>
+          <div class="dev-hero-stats">
+            <div class="dev-hero-stat"><strong>4</strong><span>Developers</span></div>
+            <div class="dev-hero-stat"><strong>9</strong><span>Pages Built</span></div>
+            <div class="dev-hero-stat"><strong>100%</strong><span>In-House</span></div>
+          </div>
+        </div>
+        <div class="dev-hero-avatars">
+          <div class="dev-hero-avatar dev-hero-avatar--1">
+            <img src="image/faculty members/jansen1.png" alt="Jansen" />
+          </div>
+          <div class="dev-hero-avatar dev-hero-avatar--2">
+            <img src="image/faculty members/drilon.png" alt="Drilon" />
+          </div>
+          <div class="dev-hero-avatar dev-hero-avatar--3">
+            <img src="image/faculty members/makabenta.png" alt="Makabenta" />
+          </div>
+          <div class="dev-hero-avatar dev-hero-avatar--4">
+            <img src="image/faculty members/babac.png" alt="Babac" />
+          </div>
         </div>
       </div>
     </section>
@@ -109,94 +139,87 @@
         </p>
         <div class="dev-team-grid">
           <div class="dev-team-card dev-team-card--lead">
-            <div class="dev-card-titlebar">
-              <span class="dev-card-dot dev-card-dot--a"></span>
-              <span class="dev-card-dot dev-card-dot--b"></span>
-              <span class="dev-card-dot dev-card-dot--c"></span>
-              <span class="dev-card-file">jansen.dev</span>
-            </div>
-            <div class="dev-card-body">
+            <div class="dev-card-banner">
+              <div class="dev-card-titlebar">
+                <span class="dev-card-dot dev-card-dot--a"></span>
+                <span class="dev-card-dot dev-card-dot--b"></span>
+                <span class="dev-card-dot dev-card-dot--c"></span>
+                <span class="dev-card-file">jansen.dev</span>
+              </div>
               <div class="dev-team-avatar"><img src="image/faculty members/jansen1.png" alt="Jansen" /></div>
-              <div class="dev-card-info">
-                <h3>Jansen <span class="dev-team-badge">Lead</span></h3>
-                <div class="dev-team-role">Full-Stack Developer</div>
-                <div class="dev-team-role">UI/UX Designer</div>
-                <p class="dev-team-note">built the core site structure end to end</p>
+            </div>
+            <div class="dev-card-body">
+              <div class="dev-card-name-row">
+                <h3>Jansen</h3>
+                <span class="dev-team-badge">Lead</span>
               </div>
+              <div class="dev-team-roles">
+                <span class="dev-team-role">Full-Stack Developer</span>
+                <span class="dev-team-role">UI/UX Designer</span>
+              </div>
+              <p class="dev-team-note">built the core site structure end to end</p>
             </div>
           </div>
           <div class="dev-team-card">
-            <div class="dev-card-titlebar">
-              <span class="dev-card-dot dev-card-dot--a"></span>
-              <span class="dev-card-dot dev-card-dot--b"></span>
-              <span class="dev-card-dot dev-card-dot--c"></span>
-              <span class="dev-card-file">drilon.dev</span>
-            </div>
-            <div class="dev-card-body">
+            <div class="dev-card-banner">
+              <div class="dev-card-titlebar">
+                <span class="dev-card-dot dev-card-dot--a"></span>
+                <span class="dev-card-dot dev-card-dot--b"></span>
+                <span class="dev-card-dot dev-card-dot--c"></span>
+                <span class="dev-card-file">drilon.dev</span>
+              </div>
               <div class="dev-team-avatar"><img src="image/faculty members/drilon.png" alt="Drilon" /></div>
-              <div class="dev-card-info">
+            </div>
+            <div class="dev-card-body">
+              <div class="dev-card-name-row">
                 <h3>Drilon</h3>
-                <div class="dev-team-role">Front-End Developer</div>
-                <p class="dev-team-note">shaped the look and feel of every page</p>
               </div>
+              <div class="dev-team-roles">
+                <span class="dev-team-role">Front-End Developer</span>
+              </div>
+              <p class="dev-team-note">shaped the look and feel of every page</p>
             </div>
           </div>
           <div class="dev-team-card">
-            <div class="dev-card-titlebar">
-              <span class="dev-card-dot dev-card-dot--a"></span>
-              <span class="dev-card-dot dev-card-dot--b"></span>
-              <span class="dev-card-dot dev-card-dot--c"></span>
-              <span class="dev-card-file">makabenta.dev</span>
-            </div>
-            <div class="dev-card-body">
+            <div class="dev-card-banner">
+              <div class="dev-card-titlebar">
+                <span class="dev-card-dot dev-card-dot--a"></span>
+                <span class="dev-card-dot dev-card-dot--b"></span>
+                <span class="dev-card-dot dev-card-dot--c"></span>
+                <span class="dev-card-file">makabenta.dev</span>
+              </div>
               <div class="dev-team-avatar"><img src="image/faculty members/makabenta.png" alt="Makabenta" /></div>
-              <div class="dev-card-info">
+            </div>
+            <div class="dev-card-body">
+              <div class="dev-card-name-row">
                 <h3>Makabenta</h3>
-                <div class="dev-team-role">Front-End Developer</div>
-                <p class="dev-team-note">shaped the look and feel of every page</p>
               </div>
+              <div class="dev-team-roles">
+                <span class="dev-team-role">Front-End Developer</span>
+              </div>
+              <p class="dev-team-note">shaped the look and feel of every page</p>
             </div>
           </div>
           <div class="dev-team-card">
-            <div class="dev-card-titlebar">
-              <span class="dev-card-dot dev-card-dot--a"></span>
-              <span class="dev-card-dot dev-card-dot--b"></span>
-              <span class="dev-card-dot dev-card-dot--c"></span>
-              <span class="dev-card-file">babac.dev</span>
+            <div class="dev-card-banner">
+              <div class="dev-card-titlebar">
+                <span class="dev-card-dot dev-card-dot--a"></span>
+                <span class="dev-card-dot dev-card-dot--b"></span>
+                <span class="dev-card-dot dev-card-dot--c"></span>
+                <span class="dev-card-file">babac.dev</span>
+              </div>
+              <div class="dev-team-avatar"><img src="image/faculty members/babac.png" alt="Babac" /></div>
             </div>
             <div class="dev-card-body">
-              <div class="dev-team-avatar"><img src="image/faculty members/babac.png" alt="Babac" /></div>
-              <div class="dev-card-info">
+              <div class="dev-card-name-row">
                 <h3>Babac</h3>
-                <div class="dev-team-role">Front-End Developer</div>
-                <p class="dev-team-note">shaped the look and feel of every page</p>
               </div>
+              <div class="dev-team-roles">
+                <span class="dev-team-role">Front-End Developer</span>
+              </div>
+              <p class="dev-team-note">shaped the look and feel of every page</p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="dev-stack-section dev-section--alt">
-      <div class="container">
-        <div class="section-header centered">
-          <span class="section-label">package.json</span>
-          <h2>Built With</h2>
-        </div>
-        <div class="dev-stack-editor">
-          <div class="dev-editor-titlebar dev-stack-editor-titlebar">
-            <span class="dev-editor-dot dev-editor-dot--a"></span>
-            <span class="dev-editor-dot dev-editor-dot--b"></span>
-            <span class="dev-editor-dot dev-editor-dot--c"></span>
-            <span class="dev-editor-tab">package.json</span>
-          </div>
-          <pre class="dev-stack-code"><code><span class="tok-punc">{</span>
-  <span class="tok-key">"name"</span><span class="tok-punc">:</span> <span class="tok-str">"amore-academy"</span><span class="tok-punc">,</span>
-  <span class="tok-key">"stack"</span><span class="tok-punc">:</span> <span class="tok-punc">[</span><span class="tok-str">"HTML5"</span><span class="tok-punc">,</span> <span class="tok-str">"CSS3"</span><span class="tok-punc">,</span> <span class="tok-str">"Vanilla JavaScript"</span><span class="tok-punc">]</span><span class="tok-punc">,</span>
-  <span class="tok-key">"dependencies"</span><span class="tok-punc">:</span> <span class="tok-punc">{},</span>
-  <span class="tok-key">"builtBy"</span><span class="tok-punc">:</span> <span class="tok-str">"Amore Academy Dev Team"</span><span class="tok-punc">,</span>
-  <span class="tok-key">"license"</span><span class="tok-punc">:</span> <span class="tok-str">"MIT"</span>
-<span class="tok-punc">}</span><span class="dev-editor-cursor"></span></code></pre>
         </div>
       </div>
     </section>

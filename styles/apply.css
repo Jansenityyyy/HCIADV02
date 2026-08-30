@@ -80,7 +80,7 @@
 
 /* ── Steps Progress Bar ── */
 .apply-steps-bar {
-  background: var(--color-white);
+  background: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
   box-shadow: var(--shadow-sm);
   position: sticky;
@@ -179,7 +179,7 @@
 
 /* ── Panels ── */
 .apply-panel {
-  background: var(--color-white);
+  background: var(--color-surface);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-md);
   border: 1px solid var(--color-border);
@@ -278,7 +278,7 @@
 }
 .form-control:focus {
   border-color: var(--color-primary);
-  background: #fff;
+  background: var(--color-surface);
   box-shadow: 0 0 0 3px rgba(10, 36, 99, 0.09);
 }
 .form-control::placeholder {
@@ -498,7 +498,7 @@ textarea.form-control {
 }
 
 .info-card {
-  background: var(--color-white);
+  background: var(--color-surface);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-md);
   border: 1px solid var(--color-border);
@@ -655,7 +655,7 @@ textarea.form-control {
 }
 .contact-callout a {
   display: inline-block;
-  background: #fff;
+  background: var(--color-surface);
   color: var(--color-accent-dark);
   font-weight: 700;
   font-size: 0.85rem;
@@ -688,7 +688,7 @@ textarea.form-control {
   pointer-events: all;
 }
 .success-modal {
-  background: #fff;
+  background: var(--color-surface);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-xl);
   padding: 3rem 2.5rem;
@@ -784,7 +784,7 @@ textarea.form-control {
   position: fixed;
   bottom: calc(var(--tab-bar-height) + 1.25rem);
   right: 1.25rem;
-  background: var(--color-white);
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-full);
   padding: 0.5rem 1rem;

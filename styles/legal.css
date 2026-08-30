@@ -202,7 +202,7 @@
   top: calc(var(--navbar-height) + 62px);
 }
 .legal-toc-inner {
-  background: var(--color-white);
+  background: var(--color-surface);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
   padding: 1.5rem;
@@ -455,7 +455,7 @@
   margin: 1.5rem 0;
 }
 .legal-info-card {
-  background: var(--color-white);
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 1.25rem 1.4rem;
@@ -522,7 +522,7 @@
   display: flex;
   gap: 1rem;
   align-items: flex-start;
-  background: var(--color-white);
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: 1rem 1.25rem;
@@ -563,7 +563,7 @@
   display: flex;
   gap: 1.25rem;
   align-items: flex-start;
-  background: var(--color-white);
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 1.4rem 1.5rem;
@@ -609,7 +609,7 @@
   margin: 1.5rem 0;
 }
 .a11y-feature-card {
-  background: var(--color-white);
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 1.25rem;
@@ -680,7 +680,7 @@
   gap: 1.25rem;
   align-items: center;
   padding: 1rem 1.4rem;
-  background: var(--color-white);
+  background: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
   transition: background var(--transition-fast);
 }

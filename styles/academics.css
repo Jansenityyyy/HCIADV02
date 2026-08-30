@@ -66,7 +66,7 @@
   position: sticky;
   top: var(--navbar-height);
   z-index: 900;
-  background: var(--color-white);
+  background: var(--color-surface);
   border-bottom: 2px solid var(--color-border);
   box-shadow: var(--shadow-sm);
 }
@@ -101,7 +101,7 @@
   background: var(--color-background);
 }
 .academics-section--alt {
-  background: var(--color-white);
+  background: var(--color-surface);
 }
 
 /* ── Overview Stats ── */
@@ -126,7 +126,7 @@
 }
 
 .academics-stat-card {
-  background: linear-gradient(135deg, var(--color-white), rgba(251, 133, 0, 0.02));
+  background: linear-gradient(135deg, var(--color-surface), rgba(251, 133, 0, 0.02));
   padding: var(--spacing-md) 1.25rem;
   border-radius: var(--radius-lg);
   text-align: center;
@@ -294,7 +294,7 @@
   align-items: center;
   gap: 0.6rem;
   padding: 0.6rem 1rem;
-  background: var(--color-white);
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   font-size: 0.88rem;
@@ -325,7 +325,7 @@
 }
 
 .academics-track-card {
-  background: var(--color-white);
+  background: var(--color-surface);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
   padding: var(--spacing-md) 1.5rem;
@@ -490,7 +490,7 @@
 .strand-panel {
   width: min(560px, 100vw);
   height: 100%;
-  background: var(--color-white);
+  background: var(--color-surface);
   box-shadow: -8px 0 60px rgba(0, 0, 0, 0.18);
   display: flex;
   flex-direction: column;
@@ -824,7 +824,7 @@
   grid-template-columns: 72px 1fr;
   gap: 1.25rem;
   align-items: start;
-  background: var(--color-white);
+  background: var(--color-surface);
   border: 1.5px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
@@ -946,7 +946,7 @@
 }
 
 .academics-faculty-card {
-  background: var(--color-white);
+  background: var(--color-surface);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
   padding: var(--spacing-md) 1.5rem;
@@ -1168,7 +1168,7 @@
   position: fixed;
   inset: 0;
   z-index: 3000;
-  background: var(--color-white);
+  background: var(--color-surface);
   overflow-y: auto;
   overscroll-behavior: contain;
   scrollbar-width: thin;

@@ -1100,3 +1100,35 @@ const articleData = {
   });
 
 })();
+
+// ── Dark Mode Toggle ──
+(function () {
+  const toggle = document.getElementById('themeToggle');
+  if (!toggle) return;
+
+  const root = document.documentElement;
+
+  const applyTheme = (theme) => {
+    if (theme === 'dark') {
+      root.setAttribute('data-theme', 'dark');
+    } else {
+      root.removeAttribute('data-theme');
+    }
+  };
+
+  // Sync in case this page loaded before the inline head script ran,
+  // or the user has an OS-level preference with no saved choice yet.
+  const saved = localStorage.getItem('theme');
+  if (saved) {
+    applyTheme(saved);
+  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    applyTheme('dark');
+  }
+
+  toggle.addEventListener('click', () => {
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    const next = isDark ? 'light' : 'dark';
+    applyTheme(next);
+    localStorage.setItem('theme', next);
+  });
+})();
