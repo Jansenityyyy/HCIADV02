@@ -153,7 +153,7 @@
                 </div>
                 <div class="form-group">
                   <label class="form-label">Middle Name</label>
-                  <input type="text" class="form-control" placeholder="e.g. Santos" />
+                  <input type="text" class="form-control" placeholder="e.g. Santos" id="middleName" />
                 </div>
                 <div class="form-group">
                   <label class="form-label">Last Name <span class="req">*</span></label>
@@ -161,7 +161,7 @@
                 </div>
                 <div class="form-group">
                   <label class="form-label">Suffix</label>
-                  <select class="form-control">
+                  <select class="form-control" id="suffix">
                     <option value="">None</option>
                     <option>Jr.</option>
                     <option>Sr.</option>
@@ -171,11 +171,11 @@
                 </div>
                 <div class="form-group">
                   <label class="form-label">Date of Birth <span class="req">*</span></label>
-                  <input type="date" class="form-control" />
+                  <input type="date" class="form-control" id="dob" />
                 </div>
                 <div class="form-group">
                   <label class="form-label">Sex <span class="req">*</span></label>
-                  <select class="form-control">
+                  <select class="form-control" id="sex">
                     <option value="">Select</option>
                     <option>Male</option>
                     <option>Female</option>
@@ -183,11 +183,11 @@
                 </div>
                 <div class="form-group full">
                   <label class="form-label">Nationality <span class="req">*</span></label>
-                  <input type="text" class="form-control" placeholder="e.g. Filipino" value="Filipino" />
+                  <input type="text" class="form-control" placeholder="e.g. Filipino" value="Filipino" id="nationality" />
                 </div>
                 <div class="form-group full">
                   <label class="form-label">Complete Address <span class="req">*</span></label>
-                  <textarea class="form-control" placeholder="House/Unit No., Street, Barangay, City/Municipality, Province" rows="2"></textarea>
+                  <textarea class="form-control" placeholder="House/Unit No., Street, Barangay, City/Municipality, Province" rows="2" id="address"></textarea>
                 </div>
               </div>
               <div class="form-section">
@@ -199,7 +199,7 @@
                   </div>
                   <div class="form-group">
                     <label class="form-label">Mobile Number <span class="req">*</span></label>
-                    <input type="tel" class="form-control" placeholder="09XX-XXX-XXXX" />
+                    <input type="tel" class="form-control" placeholder="09XX-XXX-XXXX" id="mobile" />
                   </div>
                 </div>
               </div>
@@ -208,11 +208,11 @@
                 <div class="form-grid">
                   <div class="form-group">
                     <label class="form-label">Full Name <span class="req">*</span></label>
-                    <input type="text" class="form-control" placeholder="Parent/Guardian name" />
+                    <input type="text" class="form-control" placeholder="Parent/Guardian name" id="parentName" />
                   </div>
                   <div class="form-group">
                     <label class="form-label">Relationship <span class="req">*</span></label>
-                    <select class="form-control">
+                    <select class="form-control" id="parentRelationship">
                       <option value="">Select</option>
                       <option>Mother</option>
                       <option>Father</option>
@@ -222,11 +222,11 @@
                   </div>
                   <div class="form-group">
                     <label class="form-label">Contact Number <span class="req">*</span></label>
-                    <input type="tel" class="form-control" placeholder="09XX-XXX-XXXX" />
+                    <input type="tel" class="form-control" placeholder="09XX-XXX-XXXX" id="parentContact" />
                   </div>
                   <div class="form-group">
                     <label class="form-label">Email Address</label>
-                    <input type="email" class="form-control" placeholder="parent@email.com" />
+                    <input type="email" class="form-control" placeholder="parent@email.com" id="parentEmail" />
                   </div>
                 </div>
               </div>
@@ -281,7 +281,7 @@
                 <div class="form-section-title">SHS Strand</div>
                 <div class="form-group">
                   <label class="form-label">Preferred Strand <span class="req">*</span></label>
-                  <select class="form-control">
+                  <select class="form-control" id="strand1">
                     <option value="">Select a strand</option>
                     <optgroup label="Academic Track">
                       <option>STEM – Science, Technology, Engineering &amp; Mathematics</option>
@@ -307,7 +307,7 @@
                 </div>
                 <div class="form-group" style="margin-top:0.75rem;">
                   <label class="form-label">Second Strand Preference</label>
-                  <select class="form-control">
+                  <select class="form-control" id="strand2">
                     <option value="">None / Not sure yet</option>
                     <optgroup label="Academic Track">
                       <option>STEM</option>
@@ -366,15 +366,15 @@
               <div class="form-grid">
                 <div class="form-group full">
                   <label class="form-label">Previous / Current School <span class="req">*</span></label>
-                  <input type="text" class="form-control" placeholder="Full school name" />
+                  <input type="text" class="form-control" placeholder="Full school name" id="prevSchool" />
                 </div>
                 <div class="form-group full">
                   <label class="form-label">School Address</label>
-                  <input type="text" class="form-control" placeholder="City / Municipality, Province" />
+                  <input type="text" class="form-control" placeholder="City / Municipality, Province" id="schoolAddress" />
                 </div>
                 <div class="form-group">
                   <label class="form-label">Last Grade Level Completed <span class="req">*</span></label>
-                  <select class="form-control">
+                  <select class="form-control" id="lastGrade">
                     <option value="">Select</option>
                     <option>Grade 6</option>
                     <option>Grade 7</option>
@@ -387,22 +387,22 @@
                 </div>
                 <div class="form-group">
                   <label class="form-label">School Year Completed <span class="req">*</span></label>
-                  <input type="text" class="form-control" placeholder="e.g. 2024–2025" />
+                  <input type="text" class="form-control" placeholder="e.g. 2024–2025" id="syCompleted" />
                 </div>
                 <div class="form-group">
                   <label class="form-label">General Average <span class="req">*</span></label>
-                  <input type="number" class="form-control" placeholder="e.g. 90" min="60" max="100" step="0.01" />
+                  <input type="number" class="form-control" placeholder="e.g. 90" min="60" max="100" step="0.01" id="generalAverage" />
                 </div>
                 <div class="form-group">
                   <label class="form-label">Awards / Honors Received</label>
-                  <input type="text" class="form-control" placeholder="e.g. With Honors, N/A" />
+                  <input type="text" class="form-control" placeholder="e.g. With Honors, N/A" id="awards" />
                 </div>
               </div>
               <div class="form-section">
                 <div class="form-section-title">Extracurricular Activities</div>
                 <div class="form-group">
                   <label class="form-label">Organizations / Activities (optional)</label>
-                  <textarea class="form-control" placeholder="List any clubs, sports teams, or organizations you participated in..." rows="3"></textarea>
+                  <textarea class="form-control" placeholder="List any clubs, sports teams, or organizations you participated in..." rows="3" id="activities"></textarea>
                   <span class="form-hint">This helps us understand your interests and potential contributions to campus life.</span>
                 </div>
               </div>

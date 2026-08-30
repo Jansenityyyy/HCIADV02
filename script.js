@@ -691,7 +691,18 @@ const articleData = {
   document.querySelectorAll('input[name="level"], input[name="apptype"]')
     .forEach(r => r.addEventListener('change', updateReview));
 
-  // ---- Submit application ----
+  // ---- Submit application (via Web3Forms) ----
+  // Get a free access key at https://web3forms.com and paste it below.
+  // Note: the Web3Forms free tier does not deliver file attachments — the
+  // four document uploads on this form are NOT included in this submission.
+  // See the "documents" note in the payload below for a simple workaround.
+  const WEB3FORMS_ACCESS_KEY = '593a9aa8-efd3-4ba2-b910-50eb2f81ba83';
+
+  function fieldVal(id) {
+    const el = document.getElementById(id);
+    return el ? el.value.trim() : '';
+  }
+
   window.submitApplication = function () {
     const allAgreed = ['agree1', 'agree2', 'agree3']
       .every(id => document.getElementById(id)?.checked);
@@ -701,15 +712,93 @@ const articleData = {
       return;
     }
 
-    const ref = 'AA-2026-' + String(Math.floor(10000 + Math.random() * 90000));
-    const refEl = document.getElementById('refNumber');
-    if (refEl) refEl.textContent = ref;
-
-    const overlay = document.getElementById('successOverlay');
-    if (overlay) {
-      overlay.classList.add('show');
-      document.body.style.overflow = 'hidden';
+    const requiredIds = ['firstName', 'lastName', 'dob', 'sex', 'nationality', 'address', 'email', 'mobile'];
+    const missing = requiredIds.filter(id => !fieldVal(id));
+    if (missing.length) {
+      alert('Please complete all required fields before submitting.');
+      return;
     }
+
+    const levelRadio = document.querySelector('input[name="level"]:checked');
+    const typeRadio = document.querySelector('input[name="apptype"]:checked');
+    const syRadio = document.querySelector('input[name="sy"]:checked');
+    const levelMap = { JHS: 'Junior High School', SHS: 'Senior High School' };
+    const typeMap = { new: 'New Student', transfer: 'Transferee', returning: 'Returning Student' };
+
+    const submitBtn = document.querySelector('.btn-submit');
+    const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '';
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Submitting…';
+    }
+
+    const payload = {
+      access_key: WEB3FORMS_ACCESS_KEY,
+      subject: 'New Application — Amore Academy',
+      from_name: `${fieldVal('firstName')} ${fieldVal('lastName')}`.trim(),
+      'First Name': fieldVal('firstName'),
+      'Middle Name': fieldVal('middleName'),
+      'Last Name': fieldVal('lastName'),
+      'Suffix': fieldVal('suffix'),
+      'Date of Birth': fieldVal('dob'),
+      'Sex': fieldVal('sex'),
+      'Nationality': fieldVal('nationality'),
+      'Complete Address': fieldVal('address'),
+      'Email Address': fieldVal('email'),
+      'Mobile Number': fieldVal('mobile'),
+      'Parent/Guardian Name': fieldVal('parentName'),
+      'Parent/Guardian Relationship': fieldVal('parentRelationship'),
+      'Parent/Guardian Contact': fieldVal('parentContact'),
+      'Parent/Guardian Email': fieldVal('parentEmail'),
+      'School Year': syRadio ? syRadio.value : '',
+      'Level of Application': levelRadio ? (levelMap[levelRadio.value] || levelRadio.value) : '',
+      'Preferred Strand': fieldVal('strand1'),
+      'Second Strand Preference': fieldVal('strand2'),
+      'Application Type': typeRadio ? (typeMap[typeRadio.value] || typeRadio.value) : '',
+      'Previous/Current School': fieldVal('prevSchool'),
+      'School Address': fieldVal('schoolAddress'),
+      'Last Grade Level Completed': fieldVal('lastGrade'),
+      'School Year Completed': fieldVal('syCompleted'),
+      'General Average': fieldVal('generalAverage'),
+      'Awards/Honors': fieldVal('awards'),
+      'Extracurricular Activities': fieldVal('activities'),
+      'Documents Note': 'Applicant will email Report Card, PSA Birth Certificate, 2x2 photo, and Good Moral Certificate separately (not attached — see admissions office instructions).',
+    };
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(payload),
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHTML;
+        }
+
+        if (!data.success) {
+          alert('Something went wrong submitting your application. Please try again or contact the admissions office.');
+          return;
+        }
+
+        const ref = 'AA-2026-' + String(Math.floor(10000 + Math.random() * 90000));
+        const refEl = document.getElementById('refNumber');
+        if (refEl) refEl.textContent = ref;
+
+        const overlay = document.getElementById('successOverlay');
+        if (overlay) {
+          overlay.classList.add('show');
+          document.body.style.overflow = 'hidden';
+        }
+      })
+      .catch(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHTML;
+        }
+        alert('Network error — please check your connection and try again.');
+      });
   };
 
   window.closeSuccess = function () {
