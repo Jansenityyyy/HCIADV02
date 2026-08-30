@@ -691,12 +691,11 @@ const articleData = {
   document.querySelectorAll('input[name="level"], input[name="apptype"]')
     .forEach(r => r.addEventListener('change', updateReview));
 
-  // ---- Submit application (via Web3Forms) ----
-  // Get a free access key at https://web3forms.com and paste it below.
-  // Note: the Web3Forms free tier does not deliver file attachments — the
-  // four document uploads on this form are NOT included in this submission.
-  // See the "documents" note in the payload below for a simple workaround.
-  const WEB3FORMS_ACCESS_KEY = '593a9aa8-efd3-4ba2-b910-50eb2f81ba83';
+  // ---- Submit application (via Netlify Function + Resend) ----
+  // Sends to /.netlify/functions/send-application, which formats a branded
+  // HTML email and delivers it through Resend. Set RESEND_API_KEY and
+  // ADMISSIONS_EMAIL in Netlify → Site settings → Environment variables.
+  // Note: file uploads still aren't attached — see the note in the email.
 
   function fieldVal(id) {
     const el = document.getElementById(id);
@@ -733,41 +732,37 @@ const articleData = {
     }
 
     const payload = {
-      access_key: WEB3FORMS_ACCESS_KEY,
-      subject: 'New Application — Amore Academy',
-      from_name: `${fieldVal('firstName')} ${fieldVal('lastName')}`.trim(),
-      'First Name': fieldVal('firstName'),
-      'Middle Name': fieldVal('middleName'),
-      'Last Name': fieldVal('lastName'),
-      'Suffix': fieldVal('suffix'),
-      'Date of Birth': fieldVal('dob'),
-      'Sex': fieldVal('sex'),
-      'Nationality': fieldVal('nationality'),
-      'Complete Address': fieldVal('address'),
-      'Email Address': fieldVal('email'),
-      'Mobile Number': fieldVal('mobile'),
-      'Parent/Guardian Name': fieldVal('parentName'),
-      'Parent/Guardian Relationship': fieldVal('parentRelationship'),
-      'Parent/Guardian Contact': fieldVal('parentContact'),
-      'Parent/Guardian Email': fieldVal('parentEmail'),
-      'School Year': syRadio ? syRadio.value : '',
-      'Level of Application': levelRadio ? (levelMap[levelRadio.value] || levelRadio.value) : '',
-      'Preferred Strand': fieldVal('strand1'),
-      'Second Strand Preference': fieldVal('strand2'),
-      'Application Type': typeRadio ? (typeMap[typeRadio.value] || typeRadio.value) : '',
-      'Previous/Current School': fieldVal('prevSchool'),
-      'School Address': fieldVal('schoolAddress'),
-      'Last Grade Level Completed': fieldVal('lastGrade'),
-      'School Year Completed': fieldVal('syCompleted'),
-      'General Average': fieldVal('generalAverage'),
-      'Awards/Honors': fieldVal('awards'),
-      'Extracurricular Activities': fieldVal('activities'),
-      'Documents Note': 'Applicant will email Report Card, PSA Birth Certificate, 2x2 photo, and Good Moral Certificate separately (not attached — see admissions office instructions).',
+      firstName: fieldVal('firstName'),
+      middleName: fieldVal('middleName'),
+      lastName: fieldVal('lastName'),
+      suffix: fieldVal('suffix'),
+      dob: fieldVal('dob'),
+      sex: fieldVal('sex'),
+      nationality: fieldVal('nationality'),
+      address: fieldVal('address'),
+      email: fieldVal('email'),
+      mobile: fieldVal('mobile'),
+      parentName: fieldVal('parentName'),
+      parentRelationship: fieldVal('parentRelationship'),
+      parentContact: fieldVal('parentContact'),
+      parentEmail: fieldVal('parentEmail'),
+      schoolYear: syRadio ? syRadio.value : '',
+      level: levelRadio ? (levelMap[levelRadio.value] || levelRadio.value) : '',
+      strand1: fieldVal('strand1'),
+      strand2: fieldVal('strand2'),
+      applicationType: typeRadio ? (typeMap[typeRadio.value] || typeRadio.value) : '',
+      prevSchool: fieldVal('prevSchool'),
+      schoolAddress: fieldVal('schoolAddress'),
+      lastGrade: fieldVal('lastGrade'),
+      syCompleted: fieldVal('syCompleted'),
+      generalAverage: fieldVal('generalAverage'),
+      awards: fieldVal('awards'),
+      activities: fieldVal('activities'),
     };
 
-    fetch('https://api.web3forms.com/submit', {
+    fetch('/.netlify/functions/send-application', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
     })
       .then(res => res.json())
