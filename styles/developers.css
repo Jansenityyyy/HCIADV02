@@ -357,7 +357,7 @@
   .dev-hero-text { display: flex; flex-direction: column; align-items: center; }
   .dev-editor-titlebar { margin-left: auto; margin-right: auto; }
   .dev-hero-stats { justify-content: center; }
-  .dev-hero-avatars { max-width: 380px; margin: 1rem auto 0; }
+  .dev-hero-avatars { width: 100%; max-width: 380px; margin: 1rem auto 0; }
 }
 @media (max-width: 640px) {
   .dev-team-grid { grid-template-columns: 1fr; }
